@@ -1,0 +1,77 @@
+\documentclass[$if(fontsize)$$fontsize$,$else$12pt$endif$]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage[usenames]{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{url}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{listings}
+\usepackage{titling}
+\usepackage{url}
+\usepackage{subfig}
+
+% Primary Font: Roboto Slab
+\setmainfont{Roboto Slab Regular}
+% Secondary Font: Roboto
+% \setmainfont{Roboto Medium}
+
+\definecolor{BengalBlack}{RGB}{0, 0, 0}
+\definecolor{Roarange}{RGB}{244, 121, 32}
+\definecolor{RoarangeLight}{RGB}{246, 146, 64}
+\definecolor{GrowlingGray}{RGB}{130, 130, 130}
+\definecolor{GrowlingGrayLight}{RGB}{230, 231, 232}
+\definecolor{GrowlingGrayMedium}{RGB}{167, 167, 167}
+
+\geometry{verbose,tmargin=0.75in,bmargin=0.75in,lmargin=0.25in,rmargin=0.25in}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%\setitemize[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+%\setenumerate[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+			\node[shape=circle,fill=Roarange,draw,inner sep=2pt] (char) {#1};}}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\lstset{%set Code listings styles
+	language=Java, % program language for keywords and comments styles
+	basicstyle=\small, %font size and style
+	identifierstyle=\color{black}, %variable name style
+	stringstyle=\ttfamily, %string style
+	keywordstyle=\color{blue}\bfseries, %language keyword style
+	commentstyle=\color{Roarange}\itshape, %commentstyle
+	breaklines=true,  % sets automatic line breaking
+	breakatwhitespace=false,   %break line not just at whitespaces
+	showspaces=false,
+	showstringspaces=false,
+}
+
+\setlist[enumerate]{label=\protect\circled{\arabic*}}
+
+\newcommand{\passthrough}[1]{#1}
+
+\begin{document}
+
+\title{$title$}
+\author{$author$\\$institute$}
+\date{$date$}
+
+\maketitle
+
+$body$
+
+\end{document}

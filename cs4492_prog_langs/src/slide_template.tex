@@ -1,0 +1,141 @@
+\documentclass[t,pdf,xcolor=svgnames,aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{default}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{multicol}
+%\usepackage{enumitem}
+
+\usetheme{Copenhagen}
+% \usecolortheme{dolphin}
+\useinnertheme{circles}
+\setbeamertemplate{navigation symbols}{}
+\usepackage[svgnames]{xcolor,colortbl}
+
+\definecolor{MSUBlue}{RGB}{9, 31, 98}
+\definecolor{MSUGold}{RGB}{240, 173, 0}
+\definecolor{ISULtOrange}{RGB}{247, 148, 30}
+\definecolor{ISUDkOrange}{RGB}{246, 132, 40}
+\definecolor{ISULtGray}{RGB}{167, 169, 172}
+\definecolor{ISUMdGray}{RGB}{109, 110, 113}
+\definecolor{ISUCream}{RGB}{242, 230, 196}
+\definecolor{ISUTan}{RGB}{213, 172, 108}
+\definecolor{ISUBrown}{RGB}{68, 32, 17}
+\definecolor{ISULtGreen}{RGB}{146, 177, 118}
+\definecolor{ISUGreen}{RGB}{123, 152, 78}
+\definecolor{ISULimeGreen}{RGB}{155, 191, 59}
+
+\setbeamercolor{palette primary}{bg=MSUBlue,fg=white}
+\setbeamercolor{palette secondary}{bg=MSUBlue,fg=white}
+\setbeamercolor{palette tertiary}{bg=MSUBlue,fg=white}
+\setbeamercolor{palette quaternary}{bg=MSUBlue,fg=white}
+\setbeamercolor{structure}{fg=MSUBlue} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=MSUBlue} % TOC sections
+\setbeamercolor{subsection in head/foot}{bg=MSUGold,fg=black}
+\setbeamercolor{block title}{bg=MSUBlue, fg=white}
+\setbeamercolor{block title example}{bg=MSUGold, fg=black}
+\setbeamercolor{page number in head/foot}{fg=white}
+
+% Fonts
+% Futura BT
+% Futura BT Italic
+% Futura BT Bold
+% Futura BT Bold Italic
+% Futura BT Heavy
+% Futura BT Heavy Italic
+% Futura BT Light Condensed
+% Futura BT Medium Condensed
+% Futura BT Bold Condensed
+% Futura BT Bold Condensed Italic
+
+% Agfa Rotis Serif
+% Agfa Rotis Serif Italic
+% Agfa Rotis Serif Bold
+
+\setbeamertemplate{background canvas}
+{%
+  \raisebox{-\paperheight}[0pt][0pt]{%
+    \makebox[\paperwidth][c]{%
+      \includegraphics[width=\paperwidth]{images/slide_footer.png}%
+    }%
+  }%
+}
+
+\setbeamertemplate{footline}{}
+\defbeamertemplate{footline}{centered page number}
+{%
+  \hspace*{\fill}%
+  \usebeamercolor[fg]{page number in head/foot}%
+  \usebeamerfont{section in head/foot}
+  \insertshortauthor\hspace{2em}\insertpagenumber\,/\,\insertpresentationendpage%
+  \hspace*{\fill}\vskip2pt%
+}
+\setbeamertemplate{footline}[centered page number]
+
+\mode<presentation>{}
+
+%% preamble
+\title[Refactoring\hspace{1.5em}\insertframenumber/\inserttotalframenumber]{Refactoring and Code Maintenance}
+\author[I. Griffith]{Isaac Griffith}
+\institute{CSCI 305 Programming Languages\\\vskip1em Gianforte School of Computing\\Montana State University\\Bozeman, MT}
+\date{}
+
+\titlegraphic{\includegraphics[scale=.35]{images/msu_sel_logo.png}}
+
+\lstset{%set Code listings styles
+        language=Java, % program language for keywords and comments styles
+        basicstyle=\tiny, %font size and style
+        identifierstyle=\color{black}, %variable name style
+        stringstyle=\ttfamily, %string style
+        keywordstyle=\color{blue}\bfseries, %language keyword style
+        commentstyle=\color{DarkGreen}\itshape, %commentstyle
+        breaklines=true,  % sets automatic line breaking
+        breakatwhitespace=false,   %break line not just at whitespaces
+        showspaces=false,
+        showstringspaces=false,
+}
+
+\begin{document}
+
+%% title frame
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\begin{frame}{Introduction}
+ \begin{itemize}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+ \end{itemize}
+
+ \begin{enumerate}
+  \item Enum 1
+  \item Enum 2
+  \item Enum 3
+ \end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Blocks}
+ \begin{block}{Block 1}
+  Some text
+ \end{block}
+ 
+ \begin{example}
+  An example
+ \end{example}
+
+ \begin{theorem}
+  Theorem
+ \end{theorem}
+
+
+\end{frame}
+
+
+\end{document}

@@ -1,0 +1,215 @@
+\documentclass{article}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{enumitem,multicol}
+\usepackage{lmodern}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+			\node[shape=circle,fill=blue!20,draw,inner sep=2pt] (char) {#1};}}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=0.75in,bmargin=0.75in,lmargin=0.75in,rmargin=0.75in}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\lstset{%set Code listings styles
+	language=lisp, % program language for keywords and comments styles
+	basicstyle=\small, %font size and style
+	identifierstyle=\color{black}, %variable name style
+	stringstyle=\ttfamily, %string style
+	keywordstyle=\color{blue}\bfseries, %language keyword style
+	commentstyle=\color{OliveGreen}\itshape, %commentstyle
+	breaklines=true,  % sets automatic line breaking
+	breakatwhitespace=false,   %break line not just at whitespaces
+	showspaces=false,
+	showstringspaces=false,
+}
+
+\title{``MLing Sets''}
+\subtitle{ML Programming Lab}
+\author{Concepts of Programming Languages\\CSCI 305, Spring 2018}
+\date{Due: 3/25/2015 @ 12:30 PM}
+
+\begin{document}
+
+\maketitle
+
+\section*{ML}
+For this lab, you will use ML. You may use any flavor of ML of your choice. I recommend the Standard New Jersey flavor.
+
+\section*{Warmup}
+Begin by entering this function in ML. The lines that begin with a semicolon are comment lines that you will fill in.
+
+\begin{lstlisting}
+ (define (f lst)
+    ; (a) ;
+    (if (null? lst)
+	; (b) ;
+	'()
+	; (c) ;
+	(cons (+ 1 (car lst)) (f (cdr lst)))))
+\end{lstlisting}
+
+
+\begin{tcolorbox}[sharp corners]
+ \section*{Lab Questions}
+ \textbf{Question 1:} Run this function as \verb|(f '(3 1 4 1 5 9))|. What output do you get?
+ \\\\
+ \textbf{Question 2:} What does this function \verb|f| do?
+ \\\\
+ \textbf{Question 3:} Give a comment that explains the line following \verb|(a)|.
+ \\\\
+ \textbf{Question 4:} Give a comment that explains the line following \verb|(b)|.
+ \\\\
+ \textbf{Question 5:} Give a comment that explains the line following \verb|(c)|.
+ \\\\
+ \textbf{Question 6:} Trace the call given in Question 1, showing each recursive call to the function. Specifically show each call, expanding the term \verb|lst| to specific lists or atoms at each depth of the recursion.
+\end{tcolorbox}
+
+\section*{Member? function}
+Write a function \verb|member?| that determines if an element \verb|e| is part of list \verb|lst|. This function will return \verb|#t| if \verb|e| is a member of the lsit \verb|lst| and \verb|#f| otherwise. You may use common ML functions (e.g., \verb|car, cdr, cons, eq?, eqv?, equal?,| \verb|null?,| and \verb|list?|). If your ML implementation has a builtin member function, you may \verb|not| use it in your answer. Comment your function.
+
+\begin{lstlisting}
+ (define (member? e lst)
+ 
+ 
+    ; complete this function definition
+    
+    
+ )
+\end{lstlisting}
+
+\section*{Set? function}
+Write a function \verb|set?| that checks whether its argument \verb|lst| is a well formed set, that is a set with no duplicates, and returns true \verb|#t| or false \verb|#f| accordingly. You may find it useful to make use of your \verb|member?| function in your function.
+\\\\
+For example:
+\begin{lstlisting}
+ (set? (x y z)) => #t
+ (set? (a 1 b 2 c 3)) => #t
+ (set? ()) => #t ; empty set is a good set
+ (set? (6 2 2)) => #f ; duplicate, bad set
+ (set? (x y z x)) => #f ; duplicate, bad set
+\end{lstlisting}
+
+\begin{lstlisting}
+ (define (set? lst)
+ 
+ 
+    ; complete this function definition
+    
+    
+ )
+\end{lstlisting}
+
+
+\begin{tcolorbox}[sharp corners]
+ \section*{Lab Questions}
+ Your answers \textbf{must} reflect the output of your code. No credit will be given to answers if you have not submitted the respective correct function implementation.
+ \\\\
+ \textbf{Question 7:} What output do you get for the call: \verb|(member?  'one '(1 2 3 4))|
+ \\\\
+ \textbf{Question 8:} Does your \verb|member?| function use head or tail recursion?
+ \\\\
+ \textbf{Question 9:} What output do you get for the call
+ \begin{center}
+  \verb|(set? '(it was the best of times, it was the worst of times))|
+ \end{center}
+ \textbf{Question 10:} Research \verb|tail recursion|. Describe, in a few short sentences, why it can be beneficial to write tail recursing functions.
+
+\end{tcolorbox}
+\newpage
+\section*{Union function}
+Write a functio \verb|union| that takes the set union of list \verb|lst1| and list \verb|lst2| and returns a list representing the mathematical union of the two lists. Your function does not need to work on embedded lists. You may use the functions you defined previously (\verb|set?| and \verb|member?|), if useful, in addition to the common ML functions mentioned above. If your ML implementation has a union function, you may \textbf{not} use it in your answer. Comment your function.
+\\\\
+\begin{lstlisting}
+ (define (union lst1 lst2)
+ 
+ 
+    ; complete this function defintion
+    
+    
+ )
+\end{lstlisting}
+
+
+\section*{Intersect function}
+Write a function \verb|intersect| that takes the set intersection of list \verb|lst1| and list \verb|lst2| and returns a list representing the mathematical intersection of the two lists. Your function does not need to work on embedded lists. If your ML implementation has an intersection function, you may \textbf{not} use it in your answer. Comment your function.
+\\\\
+\begin{lstlisting}
+ (define (intersect lst1 lst2)
+ 
+ 
+    ; complete this function definition
+    
+    
+ )
+\end{lstlisting}
+
+
+\begin{tcolorbox}[sharp corners]
+ \section*{Lab Questions}
+ Your answers \textbf{must} reflect the output of your code for these functions. No credit will be given to answers if you have not submitted the respective correct function implementation in ML.
+ \\\\
+ \textbf{Question 11:} What output do you get for the call:
+ \begin{center}
+  \verb|(union '(green eggs and) '(ham))|
+ \end{center}
+ \textbf{Question 12:} What output do you get for the call:
+ \begin{center}
+  \verb|(intersect '(stewed tomatoes and macaroni) '(macaroni and cheese))|
+ \end{center}
+
+\end{tcolorbox}
+
+\section*{Troubleshooting}
+This lab requires an independent study of the ML language. You are encouraged to use any web tutorials and resources to learn ML. Given the size of the class, I will not be able to debug your code for you. Please do not send panicked emails requesting I fix your bug for you. Allow yourself plenty of time, and use patience, perseverance, and the internet to debug your code. I will gladly answer clarifying questions about the goals and instructions of the Lab assignment.
+\\\\
+\begin{tcolorbox}[sharp corners]
+ \section*{Lab Questions}
+ The following questions are for feedback and evaluation purposes. Points are awarded for any sincere answer.
+ \\\\
+ \textbf{Question 13:} Name something you like about ML. Explain.
+ \\\\
+ \textbf{Question 14:} Name something you dislike about ML. Explain.
+ \\\\
+ \textbf{Question 15:} Did you enjoy this lab? Which aspects did you like and/or dislike?
+ \\\\
+ \textbf{Question 16:} Approximately how many hours did you spend on this lab?
+ \\\\
+ \textbf{Question 17:} Do you think you will use ML again? For which type(s) of project(s)?
+\end{tcolorbox}
+\vspace{1em}
+\begin{tcolorbox}[sharp corners]
+ \section*{Extra Credit (10 pts)}
+ Write a function \verb|flatten| that takes two lists \verb|lst1| and \verb|lst2| and returns a new list that contains all elements in both lists, but eliminates any embedded lists. You may either retain or eliminate duplicates as your choice. You may freely use any of the functions you wrote for this lab.
+ \begin{lstlisting}
+  (define (flatten lst1 lst2)
+  
+  
+     ; complete this function definition
+     
+     
+  )
+ \end{lstlisting}
+ \textbf{Question EC1:} Calling \verb|flatten '(1 (2 3) 5) '(8 (13 (21 34) 55))|, what output do you get?
+ \\\\
+ \textbf{Question EC2:} Describe, in a few English sentences, how you accomplished your list flattening.
+\end{tcolorbox}
+
+\section*{Submission}
+Each student will complete and submit this assignment individually. Do not consult with others. However, you are encouraged to use the internet to learn ML \textbf{but not to research the questions asked in this lab.}
+\\\\
+Comment your program heavily. Intelligent comments and a clean, readable formatting of your code account for 20\% of your grade.
+\\\\
+Save the final version of yoiur program as \verb|[lastname]_[firstname].ml_lab.ml| Type your lab questions in plain text as \verb|[lastname]_[firstname].ml_lab.txt|. Include your name in the text file.
+\\\\
+Submit your files to the MLLab dropbox folder on BrightSpace. Do not archive your files but instead use two attachements. Submit your file before the due date as late submissions will not be accepted.
+
+\end{document}

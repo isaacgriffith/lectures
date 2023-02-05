@@ -1,0 +1,5 @@
+## Instructor Availability {-}
+
+The instructor will be available during posted office hours, but additional efforts are made to increase accessibility to the students. If the instructor is not available at the telephone number above, the student can leave a detailed voicemail message. However, the instructor's email is checked at a minimum of twice a day and often the student will get an immediate response to questions submitted by email. Email is usually the most reliable means of contact.
+
+Note that I am a working research scientist, thus I may need to attend conferences both with my local colleagues and with my international colleagues. Thus, I am constantly in meetings, both here and abroad. That being said, I work 7 days a week 12 months a year. If you need my help and all other means of scheduling have led to no avail, please do not hesitate to contact me. Note that I am not an emergency service, I will require that you contact me 24 hours prior to an assignment being due, for which you need help. If you do not plan ahead, I cannot help.

@@ -1,0 +1,508 @@
+\documentclass[addpoints]{exam}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=0.75in,bmargin=0.75in,lmargin=0.75in,rmargin=0.75in}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\lstset{%set Code listings styles
+	language=Java, % program language for keywords and comments styles
+	basicstyle=\small, %font size and style
+	identifierstyle=\color{black}, %variable name style
+	stringstyle=\ttfamily, %string style
+	keywordstyle=\color{blue}\bfseries, %language keyword style
+	commentstyle=\color{blue!75}\itshape, %commentstyle
+	breaklines=true,  % sets automatic line breaking
+	breakatwhitespace=false,   %break line not just at whitespaces
+	showspaces=false,
+	showstringspaces=false,
+}
+
+\pagestyle{headandfoot}
+\runningheadrule
+\firstpageheadrule
+\firstpageheader{CSCI 305}{May 2, 2018 -- Final Exam}{Name:\enspace\hspace{1.5in}}
+\runningheader{CSCI 305}{May 2, 2018 -- Final Exam}{Name:\enspace\hspace{1.5in}}
+\firstpagefooter{}{Page \thepage\ of \numpages}{}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+% \printanswers
+
+\begin{document}
+\begin{coverpages}
+\begin{center}
+  {\makebox[3.5in]{\hrulefill}\\
+  \vspace{1.5em}
+  {\Large MONTANA STATE UNIVERSITY}\\
+  \vspace{.5em}
+  PROGRAMMING LANGUAGES\\
+  \vspace{.5em}
+  Final\\
+  \vspace{.5em}
+  SPRING, 2018
+  \\
+  \vspace{1em}
+  \makebox[3.5in]{\hrulefill}\\
+  \par}
+  \vspace{0.5in}
+  \makebox[3.5in]{Name:\enspace\hrulefill}
+
+  \vspace{0.2in}
+
+  \makebox[3.5in]{Student Id:\enspace\hrulefill}
+  \vspace{0.2in}  
+
+  \setlength{\doublerulesep}{0.1in}
+  \gradetable[v][questions]
+\end{center}
+
+\end{coverpages}
+
+\begin{questions}
+\question[30]
+ Mark each question as either True (T) or False (F).\\
+ \begin{parts}
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  A higher order function is one that accepts functions as input or returns a function as output.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  Scheme's syntax avoids the dangling-else problem by having every if-then-else enclosed in its own set of parentheses.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  In Scheme, any value that is not considered as False is interpreted as True.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  Eager evaluation is a technique that can make it easy to avoid unnecessary computation.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  Scheme uses backtracking in order to search for a solution to a function call.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  Both Scheme and Python use dynamic typing.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  A declarative language like Prolog allows us to describe how we solve a problem rather than what the answer will look like.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  Prolog is a statically typed language.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  Prolog's functionality is based on lambda calculus.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  The initial rise in popularity of Object Oriented langugages was related to the sales of home personal computes and the need for GUIs.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  In the model-view-controller design pattern, the controller implements the event handling.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  Java's automatic garbage collection makes heap overflows impossible, unlike C++ where objects had to be explicitly deconstructed.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  When a thread is waiting for a condition that will never happen, it is said to be deadlocked.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  Concurrent programs provide performance improvements even on single processor machines.
+ \end{parts}
+ 
+ \newpage
+ 
+ \question[8]
+ Consider the four programming paradigms and the languages we covered this semester:
+ \begin{center}
+  \begin{enumerate}
+   \item Imperative, Go
+   \item Object-Oriented, Java
+   \item Functional, ML
+   \item Logical, Prolog
+  \end{enumerate}
+ \end{center}
+  
+  For each of the following problems, argue which paradigm is best suited to solve using the language listed above. Make sure you justify your choice. You will answer each paradigm/language pair only once. \textit{Hint: this is not a subjective question. If in doubt, pick the choice you think the professor would choose.}\\\\
+  
+  \begin{parts}
+   \part
+   A program to implement the AI of a character in a virtual world.
+   \vspace*{\stretch{1}}
+   
+   \part
+   A graphical user interface for architecture design software
+   \vspace*{\stretch{1}}
+   
+   \part
+   A program to handle dormitory room assignments for a large university given a set of room preferences
+   \vspace*{\stretch{1}}
+   
+   \part
+   A program that crawls through web page meta data to construct search engine information
+   \vspace*{\stretch{1}}
+   
+  \end{parts}
+
+ \newpage
+
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c|}
+\hline 
+(a) & argument & (i) & event-driven program & (q) & parameter\tabularnewline
+ &  &  &  &  & \tabularnewline
+(b) & activation record & (j) & functor & (r) & parallel program\tabularnewline
+ &  &  &  &  & \tabularnewline
+(c) & atomic proposition & (k) & garbage & (s) & race condition\tabularnewline
+ &  &  &  &  & \tabularnewline
+(d) & backtracking & (l) & horn clause & (t) & resolution\tabularnewline
+ &  &  &  &  & \tabularnewline
+(e) & concurrent program & (m) & lambda expression & (u) & run-time stack\tabularnewline
+ &  &  &  &  & \tabularnewline
+(f) & currying & (n) & lazy evaluation & (v) & semaphore\tabularnewline
+ &  &  &  &  & \tabularnewline
+(g) & deadlock & (o) & model-view-controller & (w) & thread\tabularnewline
+ &  &  &  &  & \tabularnewline
+(h) & eager evaluation & (p) & monitor & (x) & unification\tabularnewline
+\hline 
+\end{tabular}
+\end{center}
+\vspace{3em}
+ 
+ \question[15]
+ Match the term (a -- x) to the definition. Not all terms will be used.
+ \\\\\\
+ \begin{center}
+ \begin{tabular}{|c|l|}
+\hline 
+~~~~term~~~~ & definition\tabularnewline
+\hline 
+ & \tabularnewline
+ & an integer variable and an associated thread queue\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & memory model for keeping track of function calls and returns\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & block of heap memory that cannot be accessed by the program\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & contains a head and a list of predicates\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & a program designed to have two or more execution contexts\tabularnewline
+ & \tabularnewline
+\hline 
+\end{tabular}
+\end{center}
+
+\newpage
+
+Match the term (a -- x) to the definition (\textit{continued})
+
+\begin{center}
+ \begin{tabular}{|c|l|}
+\hline 
+~~~~term~~~~ & definition\tabularnewline
+\hline 
+ & \tabularnewline
+ & a program unit that can be executed concurrently\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & concept particularly useful in event-driven GUI programs\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & a function that is not bound to an identifier\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & a program designed to have multiple threads active on different processors\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & encapsulate a shared variable with operations signal and wait\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & a variable identifier that appears in a function header\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & a declarative sentence that cannot be broken into simpler sentences\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & algorithm for abandoning the failed part of an attempted solution\tabularnewline
+ & \tabularnewline
+\hline 
+ & \tabularnewline
+ & translation of multiple argument function to an equivalent series
+of single argument functions\tabularnewline
+ & \tabularnewline
+\hline 
+\end{tabular}
+\end{center}
+
+\newpage
+
+\question[10]
+Consider this code snippet in some C-like language. Answer the questions below.\\
+Assume indexing starts at 0.
+
+\begin{lstlisting}
+ // global variables
+ int a = 1;
+ int b = 2;
+ void foo(int[] list, int i, int j) {
+    i = i + 1;
+    j = j + 1;
+    list[i] = list[i] + j;
+    print(a);
+    print(b);
+    print(list);
+ }
+ void main() {
+    int x[5] = {5, 9, 7, 1, 5};
+    foo(x, a, b);
+    print(a);
+    print(b);
+    print(x);
+ }
+\end{lstlisting}
+
+\begin{parts}
+ \part
+ In the above code, circle all function \textbf{parameters}.
+ 
+ \part
+ In the above code, draw a rectangle around all function \textbf{arguments}.
+ 
+ \part
+ Which values are printed if the language passes by value?
+ \vspace*{\stretch{1}}
+ 
+ \part Which values are printed if the language passes by value-result?
+ \vspace*{\stretch{1}}
+ 
+ \part Which values are printed if the language passes by reference?
+ \vspace*{\stretch{1}}
+\end{parts}
+
+\newpage
+
+\question[15]
+The following questions deal with functional programming in teh Scheme language. You may use any of the primitive Scheme functions, such as \verb|if, cond, null?, equal?, eq?, eqv?, car, cdr and cons,| \verb|append, list?,| and \verb|member?|
+
+\begin{parts}
+ \part Define a Scheme function, \verb|odds|, that takes a list and returns every other element, starting with the first.
+ \\\\
+ Example use:
+ \begin{lstlisting}{lisp}
+  > (odds '(a b c d e f g))
+  (a c e g)
+  
+  
+  ; Write your function here
+  (define (odds lst)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  ); end define
+ \end{lstlisting}
+
+\part
+Define a Scheme function, \verb|evens|, that takes a list and returns the elements in even positions, starting with the second. You may use your function odds, if useful.
+\\\\
+Example use:
+\begin{lstlisting}{lisp}
+ > (evens '(a b c d e f g))
+ (b d f)
+ 
+ 
+ ; Write your function here
+ (define (evens l)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ); end define
+\end{lstlisting}
+
+\newpage
+
+\part
+Consider these functions. You should assume \verb|odds| and \verb|evens| function correctly even if you did not complete parts (a) and (b).
+\\\\
+\begin{lstlisting}{lisp}
+ (define (plusOne x)
+      (+ 1 x))
+      
+      
+ (define (plusTwo x)
+      (+ 2 x))
+      
+      
+ (define (mystery lst)
+      (if (null? lst)
+      '()
+      (append (map plusTwo (odds lst))
+	   (map plusOne (evens lst))
+      )
+ ))
+\end{lstlisting}
+
+What is the output of this line of Scheme code?
+\\
+\begin{lstlisting}{lisp}
+ > (mystery '(1 2 3 4 5 6))
+\end{lstlisting}
+
+
+
+\end{parts}
+
+\newpage
+
+\question[10]
+What do the following Scheme expressions return?
+\begin{parts}
+ \part
+ \verb|(car '(1 (2) 3 4 (5 6 (7 8)) 9))|
+ \vspace*{\stretch{1}}
+ 
+ \part
+ \verb|(cdr '(1 (2) 3 4 (5 6 (7 8)) 9))|
+ \vspace*{\stretch{1}}
+ 
+ \part
+ \verb|(caadr '(1 (2) 3 4 (5 6 (7 8)) 9))|
+ \vspace*{\stretch{1}}
+ 
+ \part
+ \verb|(cddddr '(1 (2) 3 4 (5 6 (7 8)) 9))|
+ \vspace*{\stretch{1}}
+ 
+ \part
+ \verb|(caar (cddddr '(1 ((2) 4) 3 4 (5 6 (7 8)) 9)))|
+ \vspace*{\stretch{1}}
+ 
+ \part
+ \verb|(caddar (cddddr '(1 ((2) 4) 3 4 (5 6 (7 8)) 9)))|
+ \vspace*{\stretch{1}}
+\end{parts}
+
+\newpage
+
+\question[12]
+Complete the following Prolog definitions.
+\\\\
+\textit{Some Hints:}
+\begin{itemize}
+ \item Underscore (\_) is an anonymous name (i.e., don't care).
+ \item \verb=[A | B]= splits a list into head A and tail B
+ \item \verb=[A, B | C]= takes first two elements A and B, and sets the tail C
+ \item Bang (!) is the cut operator. E.g., \verb=someRule(A, B) :- !=. stops the recursion.
+\end{itemize}
+
+\begin{parts}
+ \part
+ Define \verb|last_but_one/2| function that finds the 2nd-to-last element of a list.
+ \begin{lstlisting}
+  % last_but_one(X, L) :- X is the last but one element of the list L
+ \end{lstlisting}
+ \vspace*{\stretch{1}}
+ 
+ \part
+ Define \verb|get_length/2| function that finds the number of elements of a list.
+ \begin{lstlisting}{prolog}
+  % get_length(L, N) :- the list L contains N elements
+ \end{lstlisting}
+ \vspace*{\stretch{1}}
+ 
+ \part
+ Define \verb|reverse_list/2| function that reverses a list. You may find a helper function to be useful.
+ \begin{lstlisting}{prolog}
+  % reverse_list(L1, L2) :- L2 is the list obtained from L1 by reversing
+ \end{lstlisting}
+ \vspace*{\stretch{1}}
+ 
+ \part
+ Define \verb|is_palindrome/1| function that determines if a list is a palindrome.
+ \begin{lstlisting}{prolog}
+  % is_palindrome(L) :- L is a palindrome list
+ \end{lstlisting}
+ \vspace*{\stretch{1}}
+ 
+ \end{parts}
+
+ \newpage
+ 
+ \fullwidth{\begin{center}THIS PAGE INTENTIONALLY LEFT BLANK\end{center}}
+ 
+\end{questions}
+\end{document}

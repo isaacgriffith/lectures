@@ -1,0 +1,119 @@
+\documentclass[addpoints,11pt]{exam}
+\usepackage{fullpage}
+\usepackage[tmargin = 0.5in, bmargin = 1in, hmargin = 1in]{geometry}     %1-inch margins
+\geometry{letterpaper}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{courier}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titling}
+\usepackage{tikz}
+% \usepackage{fancyhdr}
+\usepackage{inputenc}
+
+\pagestyle{headandfoot}                       %no page numbers
+\thispagestyle{empty}                   %removes first page number
+\setlength{\parindent}{0in}             %no paragraph indents
+\raggedright                            %left justified text
+
+% To show solutions comment the next line
+$if(answers)$
+\printanswers
+$endif$
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+%\pagestyle{fancy}
+% % % \renewcommand{\headrulewidth}{0pt}
+% % % \fancyhf{}
+\lfoot{\footnotesize Points: \makebox[1.0in]{\hrulefill}}
+\cfoot{}
+\rfoot{\footnotesize $instrutor$ Version $version$ Page \thepage}
+% % %
+% % % \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\begin{document}
+
+%\hfill Name:\ \makebox[1.366in]{\hrulefill} Date:\ \makebox[0.5in]{\hrulefill}\\
+% \frontmatter
+\begin{center}
+  $course$ -- $semester$ $year$\\
+  $if(exam)$$exam$\\$endif$
+
+  {\Huge Do Not Turn This Page Until\\
+    Directed to do so.}\\
+  \vspace{0.5in}
+
+  \begingroup
+  \LARGE
+  Name: \makebox[4.0in]{\hrulefill}\\
+  You have $time$ minutes from the start of class to complete this exam.\\
+  \vspace{0.51in}
+
+  $if(allowed)$
+  You \textbf{are} allowed:\\
+  $for(allowed)$
+  $allowed$\\
+  $endfor$
+  \vspace{0.15in}
+  $endif$
+
+  $if(restrictions)$
+  You \textbf{are not} allowed to use:\\
+  $for(restrictions)$
+  $restrictions$\\
+  $endfor$
+  \vspace{0.51in}
+  $endif$
+
+
+  If you fail to turn in your test before leaving the room, check your cell phone, or you use any resource other than
+  your card of notes, your test will be taken and you will be \textbf{given a grade of 0}.\\
+  \vspace{0.2in}
+
+  \textbf{Your note card} must be submitted with the test.\\
+  \vspace{0.2in}
+
+  \textbf{Read the instructions carefully and answer each question as completely as you can.}\\
+  \vspace{0.2in}
+
+  \textbf{There will be no talking during the test. This also means that I will not answer questions.
+    Do what makes sense for each question}.\\
+  \endgroup
+\end{center}
+
+\newpage
+
+\begin{center}
+ \Large
+ \setlength{\doublerulesep}{0.5in}
+ \multicolumngradetable{2}[questions]
+\end{center}
+
+\newpage
+\begin{center}
+  This page is left blank to use as scratch paper.
+\end{center}
+\newpage
+
+% Exam content starts here
+
+\begin{questions}
+
+$body$
+
+\end{questions}
+\vfill
+\begin{center}
+{\LARGE End of Test}
+\end{center}
+
+\end{document}

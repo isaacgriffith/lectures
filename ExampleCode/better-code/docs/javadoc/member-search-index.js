@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"edu.isu.cs.cs2263.examples.better","c":"Library","l":"Library()","url":"%3Cinit%3E()"},{"p":"edu.isu.cs.cs2263.examples.better","c":"Library","l":"someLibraryMethod()"}]

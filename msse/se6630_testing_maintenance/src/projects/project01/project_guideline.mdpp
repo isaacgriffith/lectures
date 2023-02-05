@@ -1,0 +1,29 @@
+---
+course: "SE 6630"
+term: Spring
+year: 202X
+wp: Project Guidelines
+wp_num: 1
+title: Testing Project
+author: Isaac Griffith
+dept: Software Engineering
+date: January 202X
+institute: Idaho State University
+fontsize: 12pt
+...
+
+# Project Objectives
+
+# Tools
+
+# Project
+
+# Project Deliverables
+
+!INCLUDE "d01.md"
+
+!INCLUDE "d02.md"
+
+!INCLUDE "d03.md"
+
+# Grading

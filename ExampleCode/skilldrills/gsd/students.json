@@ -1,0 +1,13 @@
+[
+  {
+    "firstName": "Isaac",
+    "lastName": "Griffith",
+    "courses": [
+      {
+        "number": 1181,
+        "subject": "CS",
+        "title": "Intro to Programming"
+      }
+    ]
+  }
+]

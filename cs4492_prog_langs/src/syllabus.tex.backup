@@ -1,0 +1,310 @@
+%% LyX 2.0.5.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{paper}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=0.75in,bmargin=0.75in,lmargin=0.75in,rmargin=0.75in}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage[table]{xcolor}
+\usepackage{enumitem,multicol}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+			\node[shape=circle,fill=blue!20,draw,inner sep=2pt] (char) {#1};}}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\section*{CSCI 305 -- Concepts of Programming Languages -- Spring 2018}
+\textbf{Instructor:} Isaac Griffith\,\,\,\,\, EPS 355\,\,\,\,\, \textbf{E-Mail:} isaac.griffith@msu.montana.edu\\
+\\
+\textbf{Class meeting time:} MWF, 0800--0850, Roberts 101\\
+\\
+\textbf{Office Hours:} MWF, 0900--1000, EPS 254\\
+\\
+\textbf{Required Textbook:} Modern Programming Languages, A.B. Webber, Franklin Beedle and Associates Inc.
+\\
+\textbf{Optional Textbook:} Concepts of Programming Languages (11th Edition), R.W. Sebasta, Pearson
+\\
+\textbf{Final Exam:} May 2, 2018 from 08:00 to 09:50 in Roberts 101
+\\
+\textbf{Required Software:}
+
+\begin{itemize}
+ \item A machine capable of running a virtual machine with linux
+ \item An internet browser (i.e., Google Chrome, Mozilla FireFox, Opera, etc.)
+ \item PDF Viewer (i.e., Adobe Acrobat Reader) \url{https://get.adobe.com/reader/otherversions/}
+\end{itemize}
+
+\section*{Course Description}
+
+This course is an examination of the constructs of programming languages, the four major programming paradigms, and several programming languages, 
+including their application and underlying execution models. The paradigms examined in this course include object-oriented, functional, and logical. 
+Students will gain exposure to and experience in a variety of languages, including ML, Prolog, and Java. Several other languages will be briefly
+explored through a series of short lectures. 
+
+\subsection*{Pre-requisites}
+\begin{itemize}
+  \item CSCI 132 Basic Data Structures and Algorithms
+  \item CSCI 246 Discrete Mathematics
+\end{itemize}
+
+\section*{Course Objectives}
+
+At the end of this course, the student will be able to:
+\begin{itemize}
+ \item Understand the history of programming and the development of languages
+ \item Interpret and develop specifications for programming languages
+ \item Understand different models for programming and for associated languages
+ \item Understand the relationship between system architectures and programming languages
+ \item Understand the relationship between programming language features and how the language is translated
+ \item Understand how language designers take different design approaches based on the language goals
+ \item Gain practical experience with several new programming languages
+ \item Be prepared to take CSCI 468, Compilers
+\end{itemize}
+
+\section*{Instruction}
+Course schedule, lecture slides, and assignments are available through the course website.
+
+\section*{Grading Policy}
+Grades will be based on participation, three homeworks, six programming labs, two midterm exams, and a final exam.
+
+\section*{Attendance and Participation}
+
+\section*{Students with Disabilities}
+
+
+\section*{Course Schedule}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+ Week & Date & Lecture Topic & Reading\tabularnewline
+\hline 
+\hline 
+\multirow{5}{*}{1} & 5/16 & Course Intro and IIAC & 2.1 -- 2.6 \tabularnewline
+\cline{2-4} 
+ & 5/17 & Lists & 3.1 \tabularnewline
+\cline{2-4} 
+ & 5/18 & Lists & 3.2 -- 3.3 \tabularnewline
+\cline{2-4} 
+ & 5/19 & Lists & 3.2 -- 3.3 \tabularnewline
+\cline{2-4} 
+ & 5/20 & Lists & 3.3 -- 3.4 \tabularnewline
+\hline 
+\hline 
+\multirow{5}{*}{2} & 5/23 & Stacks and Queues & 6.1 \tabularnewline
+\cline{2-4} 
+ & 5/24 & Stacks and Queues & 6.2 -- 6.3 \tabularnewline
+\cline{2-4} 
+ & 5/25 & Priority Queues & 9.1 -- 9.2 \tabularnewline
+\cline{2-4} 
+ & 5/26 & Recursion & 5.1 -- 5.2 \tabularnewline
+\cline{2-4} 
+ & 5/27 & Recursion & 5.3 -- 5.6 \tabularnewline
+\hline 
+\hline 
+\multirow{5}{*}{3} & 5/30 & No Class -- Memorial Day &  \tabularnewline
+\cline{2-4} 
+ & 5/31 & Big-O & 4.1 -- 4.3 \tabularnewline
+\cline{2-4} 
+ & 6/1 & Big-O & 4.3 -- 4.4 \tabularnewline
+\cline{2-4} 
+ & 6/2 & Midterm Exam Review & \tabularnewline
+\cline{2-4} 
+ & 6/3 & Midterm Exam & \tabularnewline
+\hline 
+\hline 
+\multirow{5}{*}{4} & 6/6 & Return Exams and Trees & 8.1 -- 8.2 \tabularnewline
+\cline{2-4} 
+ & 6/7 & Trees & 8.3 -- 8.4 \tabularnewline
+\cline{2-4} 
+ & 6/8 & Trees & 11.1 \tabularnewline
+\cline{2-4} 
+ & 6/9 & Quick Sort & 12.1 \tabularnewline
+\cline{2-4} 
+ & 6/10 & Tree Sort & 12.2 \tabularnewline
+\hline 
+\hline 
+\multirow{5}{*}{5} & 6/13 & Merge Sort & 12.3 -- 12.5 \tabularnewline
+\cline{2-4} 
+ & 6/14 & Insertion Sort &  \tabularnewline
+\cline{2-4} 
+ & 6/15 & Selection Sort &  \tabularnewline
+\cline{2-4} 
+ & 6/16 & Iterators \& Custom Comparators & 7.4 \tabularnewline
+\cline{2-4}
+ & 6/17 & Graphs & 14.1--14.2 \tabularnewline
+\hline 
+\hline 
+\multirow{5}{*}{6} & 6/20 & Graphs & 14.3 -- 14.5 \tabularnewline
+\cline{2-4} 
+ & 6/21 & Graphs & 14.6 -- 14.7 \tabularnewline
+\cline{2-4} 
+ & 6/22 & Heaps & 9.3 \tabularnewline
+\cline{2-4} 
+ & 6/23 & Exam Review & \tabularnewline
+\cline{2-4} 
+ & 6/24 & Final Exam & \tabularnewline
+\hline 
+\end{tabular}
+\end{center}
+
+\section*{Course Assignments}
+The following table contains the dates when assignments are assigned, marked with ``(A)'', and when they are due, marked with ``(D)''. All assignments are due no latter than 12:30 pm of the due date. For further information see the section regarding the policy on late assignments.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Week & Monday & Tuesday & Wednesday & Thursday & Friday \tabularnewline
+\hline
+\hline
+\multirow{2}{*}{1} & & & In Lab 1 (A)  & & In Lab 2 (A) \tabularnewline
+                   & & & Out Lab 1 (A) & & In Lab 1 (D)  \tabularnewline
+\hline
+\hline
+\multirow{3}{*}{2} & In Lab 3 (A) & & In Lab 4 (A) & & Out Lab 1 (D) \tabularnewline
+                   & In Lab 2 (D) & & In Lab 3 (D) & & In Lab 4 (D) \tabularnewline
+                   &              & &              & & In Lab 5 (A) \tabularnewline
+\hline
+\hline
+\multirow{2}{*}{3} & Out Lab 2 (A) & & In Lab 6 (A) & & Midterm Exam \tabularnewline
+                   &               & & In Lab 5 (D) & & In Lab 6 (D) \tabularnewline
+\hline
+\hline
+\multirow{4}{*}{4} & Out Lab 3 (A) & Out Lab 2 (D) & In Lab 7 (A) & & In Lab 8 (A) \tabularnewline
+                   &               &               &              & & In Lab 7 (D) \tabularnewline
+                   &               &               &              & & Out Lab 3 (D) \tabularnewline
+                   &               &               &              & & Out Lab 4 (A) \tabularnewline
+\hline
+\hline
+\multirow{4}{*}{5} & In Lab 9 (A) & & In Lab 10 (A) & & In Lab 11 (A) \tabularnewline
+                   & In Lab 8 (D) & & In Lab 9 (D) & & In Lab 10 (D) \tabularnewline
+                   &              & &              & & Out Lab 4 (D) \tabularnewline
+                   &              & &              & & Out Lab 5 (A) \tabularnewline
+\hline
+\hline
+\multirow{2}{*}{6} & In Lab 12 (A) & &               & & Final Exam \tabularnewline
+                   & In Lab 11 (D) & & In Lab 12 (D) & & Out Lab 5 (D) \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Lab Schedule}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Week & Lab Period & In Lab Topic & Out Lab Topic\tabularnewline
+\hline 
+\hline 
+\multirow{3}{*}{1} & Mon. & No Lab & \multirow{5}{*}{Phone Contact Db}\tabularnewline
+\cline{2-3} 
+ & Wed. & Singly Linked Lists & \tabularnewline
+\cline{2-3} 
+ & Fri. & Doubly Linked Lists & \tabularnewline
+\cline{1-3} 
+\multirow{3}{*}{2} & Mon. & Stacks & \tabularnewline
+\cline{2-4} 
+ & Wed. & Queues & \tabularnewline
+\cline{2-3} 
+ & Fri. & OutLab as InLab & \multirow{3}{*}{Wait-Time Simulator} \tabularnewline
+\cline{1-3} 
+\multirow{3}{*}{3} & Mon. & No Lab & \tabularnewline
+\cline{2-3} 
+ & Wed. & Binary Search & \tabularnewline
+\cline{2-3} 
+ & Fri. & No Lab & \tabularnewline
+\cline{1-4} 
+\multirow{3}{*}{4} & Mon. & No Lab & \multirow{3}{*}{Algorithm Analysis} \tabularnewline
+\cline{2-3} 
+ & Wed. & General Trees & \tabularnewline
+\cline{2-3} 
+ & Fri. & Binary Trees & \tabularnewline
+\cline{1-4} 
+\multirow{3}{*}{5} & Mon. & Binary Search Trees & \multirow{3}{*}{Learning Classification Tree} \tabularnewline
+\cline{2-3} 
+ & Wed. & MergeSort & \tabularnewline
+\cline{2-3} 
+ & Fri. & QuickSort & \multirow{5}{*}{Algorithm Comparision}\tabularnewline
+\cline{1-4} 
+\multirow{3}{*}{6} & Mon. & Tree Sort & \tabularnewline
+\cline{2-3} 
+ & Wed. & OutLab as InLab & \tabularnewline
+\cline{2-3} 
+ & Fri. & No Lab & \tabularnewline
+\hline 
+\end{tabular}
+\end{center}
+
+\section*{Course Evaluation and Expectations}
+This course will be fast paced and will require the students to manage their time effectively. The course evaluation is divided into three components: In Labs, Out Labs and Exams. The In Labs are small programming assignments designed to help the student learn concepts through experience. The Out Labs are meant to be a more extensive assignment to help the student learn and apply the concepts from class. Finally, the examinations are designed to help the students evaluate their level of knowledge and for the instructor to evaluate the class overall.
+
+\begin{itemize}
+\item In Lab Assignments (evenly weighted) -- 20\%
+\item Out Lab Assignments (evenly weighted) -- 55\%
+\item Exam 1 -- 10\%
+\item Exam 2 -- 15\%
+\end{itemize}
+\newpage
+To pass the course, you must average at least 50\% on the exams. The final will not be given early. At the end of the session, grades will be determined (after any curving takes place) based on your class average as follows:
+\begin{itemize}
+\begin{multicols}{3}
+\item 93+: A
+\item 90+: A-
+\item 87+: B+
+\item 83+: B
+\item 80+: B-
+\item 77+: C+
+\item 73+: C
+\item 70+: C-
+\item 67+: D+
+\item 63+: D
+\item 60+: D-
+\item <60: F
+\end{multicols}
+\end{itemize}
+
+\section*{Late Policy}
+If you submit an assignment late (without approval from your instructor) you receive a 0.
+
+\section*{Exams}
+There will be two 50 minute exams, one every 3 weeks, over this 6 week course. As the course proceeds the exams will be weighted more heavily. Note that the exams will focus more on the conceptual and theoretical knowledge from this class while the In Labs and Out Labs will focus on the evaluation of programming skill.
+
+\section*{D2L}
+Desire 2 Learn (D2L), which can be accessed at \url{http://ecat.montana.edu}, is an online learning tool which we will be using to provide lectures, supplementary information, and for tracking student progress in the course. All assignments are to be submitted to D2L via an associated dropbox for the assignment.
+
+\section*{Collaboration Policy}
+You \textit{may} (unless otherwise noted)
+\begin{itemize}
+  \item Share ideas with other people.
+  \item Help other people debug their programs.
+\end{itemize}
+
+\noindent You may \textit{NOT}
+\begin{itemize}
+  \item Share code with other people.
+  \item Submit code that you did not write.
+  \item Modify someone else's solution and claim it as your own, excluding code derived from the book as directed by your instructor.
+  \item Use any outside sources (books, notes, electronic devices, other people) on the midterm or final exam, unless otherwise noted.
+\end{itemize}
+
+Failure to abide by these rules will result in everyone involved being reported to the Dean of Students and receiving an F for the course.
+
+\section*{Policy on Class Attendance}
+
+A large amount of material will be covered in a relatively limited amount of time. In addition, a fairly large amount of work will be done by the student. Consequently, class attendance is strongly recommended but is not required.
+
+\section*{Policy on Cell Phones, Laptops, and Tablets}
+
+Bringing your personal phones, tables or laptops to class is fine. I do require that you set your phones to at least silent, and mute any sounds from either your tablet or laptop. Also refrain from replying or sending texts, social media, or phone calls during class, if you feel that you must do this then please leave the class and take care of it in the hallway. Further, playing games in class will also not be tolerated. The distractions that these actions cause both for your classmates as well as for your instructor are taxing on the limited time we have. If you are found to be performing any of these actions you will be asked to leave the classroom for the day.
+\end{document}

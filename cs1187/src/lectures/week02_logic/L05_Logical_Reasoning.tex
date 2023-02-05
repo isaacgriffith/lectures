@@ -1,0 +1,1636 @@
+% A pure minimalistic LaTeX-Beamer theme for everyone to use.
+% Copyright (C) 2020 Kai Norman Clasen
+
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+% This file is part of beamerthemepureminimalistic.
+
+% If problems/bugs are found or enhancements are desired, please contact
+% me over: https://github.com/kai-tub/latex-beamer-pure-minimalistic
+
+\documentclass[11pt,t,pdf,xcolor=svgnames,aspectratio=169]{beamer}
+% should also look nice for the classic aspectratio
+% of course, than the text has to be refitted
+% \documentclass{beamer} 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{calc,positioning,intersections,quotes,decorations.markings}
+\usepackage{tkz-euclide}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage{textpos}
+%\usepackage{MnSymbol,wasysym}
+%\usepackage{enumitem}
+\usepackage{media9}
+\usepackage{tabulary}
+\usepackage{makecell}
+\usepackage{soul}
+%\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{mathtools}
+\usepackage{blkarray}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+%\usepackage{ebproof}
+\usepackage{bussproofs}
+\usepackage{cancel}
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{48,48,48}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.81,0.69}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.50,0.62,0.50}{\textbf{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.80,0.80,0.80}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.86,0.64,0.64}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.80,0.80,0.80}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.86,0.64,0.64}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.50,0.62,0.50}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.50,0.62,0.50}{\textbf{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.86,0.64,0.64}{\textbf{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.94,0.87,0.69}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.87,0.87,0.75}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.86,0.86,0.80}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.50,0.62,0.50}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.76,0.75,0.62}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.80,0.80,0.80}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.75,0.75,0.82}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.94,0.94,0.56}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.80,0.80,0.80}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.50,0.62,0.50}{\textbf{#1}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.94,0.87,0.69}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.80,0.80,0.80}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.94,0.94,0.82}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.94,0.94,0.56}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{1.00,0.81,0.69}{\textbf{#1}}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.80,0.80,0.80}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.86,0.64,0.64}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.80,0.58,0.58}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.80,0.58,0.58}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.80,0.80,0.80}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.80,0.58,0.58}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.50,0.62,0.50}{\textbf{#1}}}
+
+\usetheme[showmaxslides,darkmode]{pureminimalistic2}
+
+% this makes it possible to add backup slides, without counting them
+\usepackage{appendixnumberbeamer}
+\renewcommand{\appendixname}{\texorpdfstring{\translate{appendix}}{appendix}}
+
+%\useinnertheme{circles}
+% \usefonttheme{protexfessionalfonts}
+\usefonttheme{serif}
+
+\lstset{%set Code listings styles
+        language=Java, % program language for keywords and comments styles
+        basicstyle=\tiny,
+        identifierstyle=\color{black}, %variable name style
+        stringstyle=\ttfamily, %string style
+        keywordstyle=\color{blue}\bfseries, %language keyword style
+        commentstyle=\color{DarkGreen}\itshape, %commentstyle
+        breaklines=true,  % sets automatic line breaking
+        breakatwhitespace=false,   %break line not just at whitespaces
+        showspaces=false,
+        showstringspaces=false,
+}
+\hypersetup{
+  linkcolor=Roarange,
+  hidelinks=false,
+  urlcolor=Roarange,
+  colorlinks=true
+}
+
+% if loaded after begin{document} a warning will appear: "pdfauthor already used"
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+\title{Logic}
+\author{Dr.~Isaac Griffith \and }
+\date{}
+\institute{Idaho State University}
+
+\pgfplotsset{width=\textwidth,compat=1.17}
+
+\definecolor{BengalBlack}{RGB}{0, 0, 0}
+\definecolor{Roarange}{RGB}{244, 121, 32}
+\definecolor{RoarangeLight}{RGB}{246, 146, 64}
+\definecolor{GrowlingGray}{RGB}{130, 130, 130}
+\definecolor{GrowlingGrayLight}{RGB}{230, 231, 232}
+\definecolor{GrowlingGrayMedium}{RGB}{167, 167, 167}
+\definecolor{Links}{RGB}{184, 43, 0}
+\definecolor{Buttons}{RGB}{212, 68, 28}
+
+\setbeamercolor{structure}{bg=GrowlingGrayLight,fg=BengalBlack}
+\setbeamerfont{structure}{series=\bfseries}
+
+\renewcommand{\beamertitlecolor}{Roarange}
+\renewcommand{\logoheader}{\includegraphics[width=.9\linewidth]{images/header-logo.png}}
+\renewcommand{\logofooter}{\includegraphics[width=.25\linewidth]{images/footer-logo.png}}
+\renewcommand{\logotitle}{\includegraphics[width=.2\linewidth]{images/title-logo.png}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{5pt}\setlength{\parskip}{0pt}}
+
+\setmainfont{Roboto}
+\setsansfont{Roboto}
+\usefonttheme{serif}
+
+\begin{document}
+% has to be loaded outside of a frame to work!
+\maketitle
+
+% For longer table of contents, I find it cleaner to
+% use no footline.
+
+\begin{frame}{Outcomes}
+\protect\hypertarget{outcomes}{}
+After today's lecture you will:
+
+\begin{columns}[T]
+\begin{column}{.7\textwidth}
+\begin{itemize}
+\tightlist
+\item
+  Introduce the course and review the syllabus
+\item
+  Learn the basics of Haskell
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Running Haskell Scripts and using the GHCi
+  \item
+    Haskell Types and Expressions
+  \item
+    Basic Haskell Data Structures
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Lists and List Comprehensions
+    \item
+      Tuples
+    \end{itemize}
+  \item
+    Functions
+  \end{itemize}
+\end{itemize}
+\end{column}
+
+\begin{column}{.25\textwidth}
+\vfill
+\vspace{5.75em}
+\centering
+
+\includegraphics[width=\textwidth]{images/brain-gears-invert2.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section}{}
+\centering
+\vfill
+\begin{minipage}{.45\textwidth}
+\begin{center}
+\includegraphics[width=13pt]{images/mark.png}
+\Huge Proof Checking by Computer
+\end{center}
+\vskip-1em
+\textcolor{GrowlingGray}{\rule{\textwidth}{2pt}}
+\large \color{Roarange}\textbf{\hfill CS 1187}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Proof Checking}
+\protect\hypertarget{proof-checking}{}
+\begin{itemize}
+\tightlist
+\item
+  \small \textcolor{Roarange}{\textbf{Proof Checker}} -- a program that
+  reads in a theorem and a proof, and determines whether the proof is
+  valid and actually establishes the theorem
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \footnotesize \textcolor{Buttons}{\textit{Advantage}} -- can
+    \textcolor{Roarange}{\textbf{always}} determine whether a purported
+    proof is valid or invalid. Useful to verify hand checked theorems.
+  \end{itemize}
+\end{itemize}
+
+\vskip.5em
+
+\begin{itemize}
+\tightlist
+\item
+  \small \textcolor{Roarange}{\textbf{Theorem Prover}} -- a program that
+  reads a theorem and attempts to generate a proof from scratch.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \footnotesize \textcolor{Buttons}{\textit{Advantage}} -- can
+    sometimes save the user a lot of work
+  \item
+    \footnotesize \textcolor{Buttons}{\textit{Disadvantage}} -- does not
+    always succeed
+  \end{itemize}
+\end{itemize}
+
+\vskip.5em
+
+\begin{itemize}
+\tightlist
+\item
+  \small \textcolor{Roarange}{\textbf{Proof Tools}} -- any computer
+  software that helps with formal proofs, this includes both proof
+  checkers and theorem provers.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \footnotesize Active area of research, but is gaining practical use
+  \item
+    \footnotesize Most industrial strength poof tools are implemented in
+    functional languages like Haskell
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Example}
+\protect\hypertarget{example}{}
+\begin{center}
+\small \textcolor{Roarange}{\textbf{Theorem:}} $\vdash Q \to ((P \land Q) \to (R \land Q))$
+\end{center}
+
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\footnotesize
+
+\textcolor{Roarange}{\textbf{Proof Tree:}}
+
+\begin{prooftree}
+\AxiomC{$\cancel{P \land R}$}
+  \RightLabel{\scriptsize $\{\land E_R\}$}
+  \UnaryInfC{$R$}
+\AxiomC{$\cancel{Q}$}
+  \RightLabel{\scriptsize $\{\land I$}
+  \BinaryInfC{$R \land Q$}
+    \RightLabel{\scriptsize $\{\to I\}$}
+    \UnaryInfC{$\left(P \land R\right) \to (R \land Q)$}
+      \RightLabel{\scriptsize $\{\to\}$}
+      \UnaryInfC{$Q \to ((P \land R) \to (R \land Q))$}
+\end{prooftree}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\footnotesize
+
+\textcolor{Roarange}{\textbf{Code:}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OtherTok{proof1 ::} \DataTypeTok{Proofalgorithms}\NormalTok{\textbackslash{}textcolor\{}\DataTypeTok{Roarange}\NormalTok{\}\{\textbackslash{}textbf\{}
+\NormalTok{proof1 }\OtherTok{=}
+  \DataTypeTok{ImplI}
+\NormalTok{    (}\DataTypeTok{ImpI}
+\NormalTok{      (}\DataTypeTok{AndI}
+\NormalTok{        ((}\DataTypeTok{AndER}
+\NormalTok{            (}\DataTypeTok{Assume}\NormalTok{ (}\DataTypeTok{And} \DataTypeTok{P} \DataTypeTok{R}\NormalTok{))}
+            \DataTypeTok{R}\NormalTok{),}
+          \DataTypeTok{Assume} \DataTypeTok{Q}\NormalTok{)}
+\NormalTok{        (}\DataTypeTok{And} \DataTypeTok{R} \DataTypeTok{Q}\NormalTok{))}
+\NormalTok{      (}\DataTypeTok{Imp}\NormalTok{ (}\DataTypeTok{And} \DataTypeTok{P} \DataTypeTok{R}\NormalTok{) (}\DataTypeTok{And} \DataTypeTok{R} \DataTypeTok{Q}\NormalTok{)))}
+\NormalTok{    (}\DataTypeTok{Imp} \DataTypeTok{Q}\NormalTok{ (}\DataTypeTok{Imp}\NormalTok{ (}\DataTypeTok{And} \DataTypeTok{P} \DataTypeTok{R}\NormalTok{) (}\DataTypeTok{And} \DataTypeTok{R} \DataTypeTok{Q}\NormalTok{)))}
+\end{Highlighting}
+\end{Shaded}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Representing WFFs}
+\protect\hypertarget{representing-wffs}{}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\tightlist
+\item
+  WFFs can be modeled in Haskell as an Algebraic Data Type
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Boolean constants are represented by \texttt{TRUE} and
+    \texttt{FALSE}
+  \item
+    Propositional variables are represented as upper-case letters
+    (except \texttt{T} and \texttt{F})
+  \item
+    We can make a string a propositional variable using
+    \texttt{Pvar\ "name"}
+  \item
+    Additional types are for the different operators
+  \end{itemize}
+\end{itemize}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{data} \DataTypeTok{Prop}
+  \OtherTok{=} \DataTypeTok{FALSE}
+  \OperatorTok{|} \DataTypeTok{TRUE}
+  \OperatorTok{|} \DataTypeTok{A} \OperatorTok{|} \DataTypeTok{B} \OperatorTok{|} \DataTypeTok{C} \OperatorTok{|} \DataTypeTok{D} \OperatorTok{|} \DataTypeTok{E} \OperatorTok{|} \DataTypeTok{G} \OperatorTok{|} \DataTypeTok{H} \OperatorTok{|} \DataTypeTok{I} \OperatorTok{|} \DataTypeTok{J} \OperatorTok{|} \DataTypeTok{K} \OperatorTok{|} \DataTypeTok{L} \OperatorTok{|} \DataTypeTok{M}
+  \OperatorTok{|} \DataTypeTok{N} \OperatorTok{|} \DataTypeTok{O} \OperatorTok{|} \DataTypeTok{P} \OperatorTok{|} \DataTypeTok{Q} \OperatorTok{|} \DataTypeTok{R} \OperatorTok{|} \DataTypeTok{S} \OperatorTok{|} \DataTypeTok{U} \OperatorTok{|} \DataTypeTok{V} \OperatorTok{|} \DataTypeTok{W} \OperatorTok{|} \DataTypeTok{X} \OperatorTok{|} \DataTypeTok{Y} \OperatorTok{|} \DataTypeTok{Z}
+  \OperatorTok{|} \DataTypeTok{Pvar} \DataTypeTok{String}
+  \OperatorTok{|} \DataTypeTok{And} \DataTypeTok{Prop} \DataTypeTok{Prop}
+  \OperatorTok{|} \DataTypeTok{Or} \DataTypeTok{Prop} \DataTypeTok{Prop}
+  \OperatorTok{|} \DataTypeTok{Not} \DataTypeTok{Prop}
+  \OperatorTok{|} \DataTypeTok{Imp} \DataTypeTok{Prop} \DataTypeTok{Prop}
+  \OperatorTok{|} \DataTypeTok{Equ} \DataTypeTok{Prop} \DataTypeTok{Prop}
+  \KeywordTok{deriving}\NormalTok{ (}\DataTypeTok{Eq}\NormalTok{, }\DataTypeTok{Show}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Exercises}
+\protect\hypertarget{exercises}{}
+\begin{itemize}
+\item
+  Load \texttt{Stdm} and use it to define each of the following in
+  Haskell using the \texttt{Prop} type
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(Q \lor \textsf{False}\)
+  \item
+    \(Q \to (P \to (P \lor Q))\)
+  \end{itemize}
+\item
+  Translate the following from Haskell into logical notation:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{Imp\ (Not\ P)\ (Or\ R\ S)}
+  \item
+    \texttt{Equ\ (Imp\ P\ Q)\ (Or\ (Not\ P)\ Q)}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Representing Proofs}
+\protect\hypertarget{representing-proofs}{}
+\begin{itemize}
+\item
+  Just like with WFFs we can also model a proof as a Haskell algebraic
+  data type
+\item
+  A Proof contains both a proposition and a formal argument for the
+  truth of that proposition
+\item
+  We then have the following (1st Arg are the assumptions, 2nd the
+  conclusion)
+\end{itemize}
+
+\begin{columns}[T]
+\begin{column}{.05\textwidth}
+\end{column}
+
+\begin{column}{.475\textwidth}
+\begin{itemize}
+\tightlist
+\item
+  \texttt{Assume\ Prop}
+\item
+  \texttt{AndI\ (Proof,\ Proof)\ Prop}
+\item
+  \texttt{AndEL\ Proof\ Prop}
+\item
+  \texttt{AndER\ Proof\ Prop}
+\item
+  \texttt{OrIL\ Proof\ Prop}
+\item
+  \texttt{OrIR\ Proof\ Prop}
+\end{itemize}
+\end{column}
+
+\begin{column}{.475\textwidth}
+\begin{itemize}
+\tightlist
+\item
+  \texttt{OrE\ (Proof,\ Proof,\ Proof)\ Prop}
+\item
+  \texttt{ImpI\ Proof\ Prop}
+\item
+  \texttt{ImpE\ (Proof\ Proof)\ Prop}
+\item
+  \texttt{ID\ Proof\ Prop}
+\item
+  \texttt{CTR\ Proof\ Prop}
+\item
+  \texttt{RAA\ Proof\ Prop}
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Representing Proofs}
+\protect\hypertarget{representing-proofs-1}{}
+\begin{itemize}
+\item
+  We can also represent a theorem as a list of assumptions and a single
+  conclusion
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \KeywordTok{data} \DataTypeTok{Theorem} \OtherTok{=} \DataTypeTok{Theorem}\NormalTok{ [}\DataTypeTok{Prop}\NormalTok{] }\DataTypeTok{Prop}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{Example:} Represent Theorem: \(a_1, a_2, a_3 \vdash c\)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \DataTypeTok{Theorem}\NormalTok{ [a1, a2, a3] c}
+\end{Highlighting}
+\end{Shaded}
+\item
+  All of these data types and the means to check them are provided in
+  the \texttt{Stdm} module
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-1}{}
+\centering
+\vfill
+\begin{minipage}{.45\textwidth}
+\begin{center}
+\includegraphics[width=13pt]{images/mark.png}
+\Huge Equational Reasoning
+\end{center}
+\vskip-1em
+\textcolor{GrowlingGray}{\rule{\textwidth}{2pt}}
+\large \color{Roarange}\textbf{\hfill CS 1187}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Boolean Algebra}
+\protect\hypertarget{boolean-algebra}{}
+\begin{itemize}
+\item
+  Takes an \emph{axiomatic} approach to logic based on mathematical
+  reasoning
+\item
+  Originally developed by George Boole
+\item
+  A form of \emph{equational reasoning} embodying two crucial ideas:
+
+  \begin{enumerate}
+  \tightlist
+  \item
+    We show two values are the same by building up \emph{chains of
+    inequalities}
+  \item
+    We can \emph{substitute equals for equals} in order to add a new
+    link to the chain
+  \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Boolean Algebra}
+\protect\hypertarget{boolean-algebra-1}{}
+\begin{itemize}
+\item
+  A \emph{chain of equalities} relies on the fact that if we know
+  \(a = b\) and \(b = c\), then we can deduce \(a = c\)
+\item
+  \emph{substituting equals for equals} means that if we know \(x = y\)
+  and we have a big expression containing \(x\), we can replace \(x\)
+  with \(y\) without changing the value of the expression.
+\end{itemize}
+
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\item
+  \textbf{Example:}
+
+  \(\begin{array}{rcl} x & = & 2 + p \\ y & = & 5x + 3 \\ \\ y & = & 5(2 + p) + 3 \end{array}\)
+\end{itemize}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Note:} You should remember to apply parentheses to ensure
+  substitutions act as a single value.
+\end{itemize}
+\end{column}
+\end{columns}
+
+\begin{itemize}
+\tightlist
+\item
+  It is good practice to provide justification for each substitution in
+  the chain
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Laws of Boolean Algebra}
+\protect\hypertarget{laws-of-boolean-algebra}{}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Laws:} set of equations that describe the basic algebraic
+  properties of propositions
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A law is a proposition that is always true for all assignments to
+    its variables
+  \end{itemize}
+\item
+  The essence of Boolean Algebra is:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We can use equations to state axioms on a set of operators
+  \item
+    We can then use equational reasoning to explore the resulting system
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Operations w/ Constants}
+\protect\hypertarget{operations-w-constants}{}
+\begin{itemize}
+\tightlist
+\item
+  These laws describe how \(\land\) and \(\lor\) interact with the
+  Boolean constants True and False
+\end{itemize}
+
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{Laws:}
+
+\begin{center}
+$\begin{array}{rcll}
+a \land \textsf{False} & = & \textsf{False} & \{\land\,\, \textrm{null}\} \\
+a \lor \textsf{True}   & = & \textsf{True}  & \{\lor\,\, \textrm{null}\} \\
+a \land \textsf{True}  & = & a              & \{\land\,\, \textrm{identity}\} \\
+a \lor \textsf{False}  & = & a              & \{\lor\,\, \textrm{identity}\}
+\end{array}$
+\end{center}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\textbf{Example:}
+
+\emph{Proof:}
+\(\left(P \land \textsf{True}\right) \lor \textsf{False} = P\)
+
+\begin{center}
+$\begin{array}{lr}
+\left(P \land \textsf{True}\right) \lor \textsf{False} & \\
+\,\,\,= P \land \textsf{True}                          & \{\land\,\, \textrm{identity}\} \\
+\,\,\,= P                                              & \{\land\,\, \textrm{identity}\}
+\end{array}$
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Exercises}
+\protect\hypertarget{exercises-1}{}
+\begin{itemize}
+\item
+  Simplify
+  \(\left(P \land \textsf{False}\right) \lor (Q \land \textsf{True})\)
+\item
+  Prove the Equation:
+  \(\left(P \land \textsf{False}\right) \land \textsf{True} = \textsf{False}\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Basic Properties of \(\land\) and \(\lor\)}
+\protect\hypertarget{basic-properties-of-land-and-lor}{}
+\begin{itemize}
+\tightlist
+\item
+  These laws describe the basic properties of the \(\land\) and \(\lor\)
+  opeations
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{idempotent} - property which allows us to reduce expressions
+    like \(a \land a \land a\) to \(a\)
+  \item
+    \textbf{commutative} - property in which the order of operands can
+    be reversed
+  \item
+    \textbf{associative} - property wherein the grouping of parentheses
+    may be changed without changing the meaning
+  \end{itemize}
+\end{itemize}
+
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{Laws:}
+
+\begin{center}
+$\begin{array}{rcll}
+a                   & \to & a \lor b            & \{\textrm{disjunctive implication}\} \\
+a \land b           & \to & a                   & \{\textrm{conjunctive implication}\} \\
+a \land a           & =   & a                   & \{\land\,\, \textrm{idempotent}\} \\
+a \lor a            & =   & a                   & \{\lor\,\ \textrm{idempotent}\} \\
+a \land b           & =   & b \land a           & \{\land\,\, \textrm{commutative}\} \\
+a \lor b            & =   & b \lor a            & \{\lor\,\, \textrm{commutative}\} \\
+(a \land b) \land c & =   & a \land (b \land c) & \{\land\,\, \textrm{associative}\} \\
+(a \lor b) \lor c   & =   & a \lor (b \lor c)   & \{\lor\,\, \textrm{associative}\}
+\end{array}$
+\end{center}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\textbf{Example:} Prove
+\(\left(\textsf{False} \land P\right) \lor Q = Q\)
+
+\(\begin{array}{lr} (\textsf{False} \land P) \lor Q & \\ \,\,\,= (P \land \textsf{False}) \lor Q & \{\land\,\, \textrm{commutative}\} \\ \,\,\,= \textsf{False} \lor Q & \{\land\,\, \textrm{null}\} \\ \,\,\,= Q \lor \textsf{False} & \{\lor\,\, \textrm{commutative}\} \\ \,\,\,= Q & \{\lor\,\, \textrm{identity}\} \end{array}\)
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Exercises}
+\protect\hypertarget{exercises-2}{}
+\begin{itemize}
+\item
+  Prove:
+  \(\left(P \land ((Q \lor R) \lor Q)\right) \land S = S \land ((R \lor Q) \land P)\)
+\item
+  Prove:
+  \(P \land (Q \land (R \land S)) = ((P \land Q) \land R) \land S\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Distributive and DeMorgan's Laws}
+\protect\hypertarget{distributive-and-demorgans-laws}{}
+\begin{itemize}
+\tightlist
+\item
+  These laws describe important properties of expressions containing
+  both the \(\lor\) and \(\land\) operators
+\end{itemize}
+
+\textbf{Laws:}
+
+\begin{center}
+$\begin{array}{rcll}
+a \land (b \lor c) & = & (a \land b) \lor (a \land c) & \{\land\,\, \textrm{distributes over}\,\, \lor\} \\
+a \lor (b \land c) & = & (a \lor b) \land (a \lor c)  & \{\lor\,\, \textrm{distributes over}\,\, \land\} \\
+\lnot (a \land b)  & = & \lnot a \lor \lnot b         & \{\textrm{DeMorgan's law}\} \\
+\lnot (a \lor b)   & = & \lnot a \land \lnot b        & \{\textrm{DeMorgan's law}\}
+\end{array}$
+\end{center}
+\end{frame}
+
+\begin{frame}{Laws of Negation}
+\protect\hypertarget{laws-of-negation}{}
+\begin{itemize}
+\tightlist
+\item
+  These laws state the basic properties of negation
+\end{itemize}
+
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{center}
+$\begin{array}{rcll}
+\lnot\textsf{True}  & = & \textsf{False} & \{\textrm{negate}\,\,\textsf{True}\} \\
+\lnot\textsf{False} & = & \textsf{True}  & \{\textrm{negate}\,\,\textsf{False}\} \\
+a \land \lnot a     & = & \textsf{False} & \{\land\,\,\textrm{complement}\} \\
+a \lor \lnot a      & = & \textsf{True}  & \{\lor\,\,\textrm{complement}\} \\
+\lnot (\lnot a)     & = & a              & \{\textrm{double negation}\}
+\end{array}$
+\end{center}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\textbf{Example:} Simplify \(P \land \lnot (Q \lor P)\)
+
+\(\begin{array}{lr} P \land \lnot (Q \lor P) & \\ \,\,\,= P \land (\lnot Q \land \lnot P) & \{\textrm{DeMorgan's law}\} \\ \,\,\,= P \land (\lnot P \land \lnot Q) & \{\land\,\, \textrm{commutative}\} \\ \,\,\,= (P \land \lnot P) \land \lnot Q & \{\land\,\, \textrm{associative}\} \\ \,\,\,= \textsf{False}\,\, \land \lnot Q & \{\land\,\, \textrm{complement}\} \\ \,\,\,= \lnot Q \land\,\, \textsf{False} & \{\land\,\, \textrm{commutative}\} \\ \,\,\,= \textsf{False} & \{\land\,\, \textrm{null}\} \end{array}\)
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Laws of Implication}
+\protect\hypertarget{laws-of-implication}{}
+\begin{itemize}
+\tightlist
+\item
+  These laws are frequently used in solving problems
+\end{itemize}
+
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{Laws:}
+
+\begin{center}
+$\begin{array}{rcll}
+a \land (a \to b)               & \to & b                             & \{\textrm{\textit{Modus Ponens}}\} \\
+(a \to b) \land \lnot b         & \to & \lnot a                       & \{\textrm{\textit{Modus Tollens}}\} \\
+(a \lor b) \land \lnot a        & \to & b                             & \{\textrm{disjunctive syllogism}\} \\
+(a \to b) \land (b \to c)       & \to & a \to c                       & \{\textrm{implication chain}\} \\
+(a \to b) \land (c \to d)       & \to & (a \land c) \to (b \land d)   & \{\textrm{implication combination}\} \\
+(a \land b) \to c               & =   & a \to (b \to c)               & \{\textrm{Currying}\} \\
+a \to b                         & =   & \lnot a \lor b                & \{\textrm{implication}\} \\
+a \to b                         & =   & \lnot b \to \lnot a           & \{\textrm{contrapositive}\} \\
+(a \to b) \land (a \to \lnot b) & =   & \lnot a                       & \{\textrm{absurdity}\}
+\end{array}$
+\end{center}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\item
+  Some laws are implications and some are equations
+\item
+  The implications only work in the direction of the arrow and cannot be
+  applied in the opposite direction.
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Equivalence}
+\protect\hypertarget{equivalence}{}
+\begin{itemize}
+\tightlist
+\item
+  Equivalence is no necessarily needed, as shown in the following law:
+\end{itemize}
+
+\begin{center}
+$\begin{array}{rcll}
+a \leftrightarrow b & = & (a \to b) \land (b \to a) & \{\textrm{equivalence}\}
+\end{array}$
+\end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  Equivalence is similar to equality, but there is a subtle difference
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(P \land P \leftrightarrow P\) is a proposition which has the value
+    of \textbf{True}
+  \item
+    \(P \land P = P\) is an equation not a proposion
+
+    \begin{itemize}
+    \tightlist
+    \item
+      However, both the left- and right-hand sides of the equation are
+      propositions
+    \end{itemize}
+  \end{itemize}
+\item
+  An equation is a statement in the \emph{meta-language}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    It is a statement \emph{about} propositions expressed using the
+    \emph{object language}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-2}{}
+\centering
+\vfill
+\begin{minipage}{.45\textwidth}
+\begin{center}
+\includegraphics[width=13pt]{images/mark.png}
+\Huge Logic in Computer Science
+\end{center}
+\vskip-1em
+\textcolor{GrowlingGray}{\rule{\textwidth}{2pt}}
+\large \color{Roarange}\textbf{\hfill CS 1187}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Formal Correctness of Software}
+\protect\hypertarget{formal-correctness-of-software}{}
+\begin{itemize}
+\tightlist
+\item
+  We can use English to Logic translation, in the specification of
+  hardware and software systems
+\item
+  We take natural language requirements and translate them to precise
+  and unambiguous specifications
+\item
+  These specifications can then be used as the basis for system
+  development
+\end{itemize}
+
+\vskip0.5em \pause
+
+\begin{itemize}
+\tightlist
+\item
+  \textcolor{Roarange}{\textbf{Example:}}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Express the specification ``The automated reply cannot be sent when
+    the file system is full''
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \(p\): ``The automated reply can be sent''
+    \item
+      \(q\): ``The file system is full'' \pause
+    \item
+      Specification - \(q \to \lnot p\)
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Isomorphism and Type Systems}
+\protect\hypertarget{isomorphism-and-type-systems}{}
+\begin{itemize}
+\item
+  Modern programming languages (especially functional ones) have very
+  powerful and expressive type systems
+\item
+  The rules of logic and those for type systems are deeply connected
+\item
+  Thus, we need effective methods to deal with tyep systems for
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Programmers
+  \item
+    Compiler writers
+  \item
+    Language designers
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Translating English Sentences}
+\protect\hypertarget{translating-english-sentences}{}
+\begin{itemize}
+\tightlist
+\item
+  English (like other human languages) tends to be ambiguous
+\item
+  Hence, translating to propositional logic removes this ambiguity
+
+  \begin{itemize}
+  \tightlist
+  \item
+    However, this does involve making certain assumptions
+  \end{itemize}
+\item
+  Once translated, we must assign truth values to reason about the
+  propositions
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Boolean Searches}
+\protect\hypertarget{boolean-searches}{}
+\begin{itemize}
+\tightlist
+\item
+  \textcolor{Roarange}{\textbf{Boolean Searches}} - Logical connectives
+  are extensively used in information searches (such as Google)
+\end{itemize}
+
+\vskip1em \pause
+
+\begin{itemize}
+\tightlist
+\item
+  \textcolor{Roarange}{\textbf{Example queries:}}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``New Mexico'' AND Universities
+  \item
+    (New AND Mexico OR Arizona) AND Universities
+  \item
+    (Mexico AND Universities) NOT New
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Digital Hardware Design}
+\protect\hypertarget{digital-hardware-design}{}
+\begin{itemize}
+\tightlist
+\item
+  Propositional logic can be applied to the design of computer hardware
+\end{itemize}
+
+\vskip0.5em \pause
+
+\begin{itemize}
+\tightlist
+\item
+  \textcolor{Roarange}{\textbf{Logic Circuit}} - receives input signals
+  \(p_1,\,p_2,\,\ldots,\,p_n\), each a bit and produces output signals
+  \(s_1,\,s_2,\,\ldots,\,s_n\), also each a bit.
+\end{itemize}
+
+\vskip0.5em \pause
+
+\begin{itemize}
+\tightlist
+\item
+  \textcolor{Roarange}{\textbf{Gates}} - the basic circuits used to
+  construct more complex logic circuits. The following are the basic
+  gates:
+\end{itemize}
+
+\vskip1em \pause
+
+\footnotesize
+
+\begin{columns}[T]
+\begin{column}{.333\textwidth}
+\centering
+
+\begin{tikzpicture}
+
+% Circuit style
+\ctikzset{
+    logic ports=ieee,
+    logic ports/scale=0.8,
+}
+
+% Logic ports
+\node[not port,color=white] (NOTa) at (0,0){};
+%\node[or port] (ORb) at (0,-1){};
+
+% Connection
+\draw (NOTa.out) -- ++(1,0) node[near end,above]{$\lnot p$};
+
+\draw (NOTa.in 1) -- ++(-1.0,0)node[left]{$p$};
+
+\end{tikzpicture}
+
+\textcolor{Roarange}{\textbf{Inverter}}
+\end{column}
+
+\begin{column}{.333\textwidth}
+\centering
+\pause
+
+\begin{tikzpicture}
+
+% Circuit style
+\ctikzset{
+    logic ports=ieee,
+    logic ports/scale=0.8,
+}
+
+% Logic ports
+\node[or port,color=white] (ORa) at (0,0){};
+%\node[or port] (ORb) at (0,-1){};
+
+% Connection
+\draw (ORa.out) -- ++(1,0) node[near end,above]{$p \lor q$};
+
+\draw (ORa.in 1) -- ++(-1.0,0)node[left]{$p$};
+\draw (ORa.in 2) -- ++(-1.0,0)node[left]{$q$};
+
+\end{tikzpicture}
+
+\textcolor{Roarange}{\textbf{OR Gate}}
+\end{column}
+
+\begin{column}{.333\textwidth}
+\centering
+\pause
+
+\begin{tikzpicture}
+
+% Circuit style
+\ctikzset{
+    logic ports=ieee,
+    logic ports/scale=0.8,
+}
+
+% Logic ports
+\node[and port,color=white] (ANDa) at (0,0){};
+%\node[and port] (ANDb) at (0,-1){};
+
+% Connection
+\draw (ANDa.out) -- ++(1,0) node[near end,above]{$p \land q$};
+
+\draw (ANDa.in 1) -- ++(-1.0,0)node[left]{$p$};
+\draw (ANDa.in 2) -- ++(-1.0,0)node[left]{$q$};
+
+\end{tikzpicture}
+
+\textcolor{Roarange}{\textbf{AND Gate}}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Logic Circuit Example}
+\protect\hypertarget{logic-circuit-example}{}
+\scriptsize
+\centering
+
+\begin{itemize}
+\tightlist
+\item
+  \scriptsize Logic Circuit for
+  \(\left(p \land \lnot q\right) \lor \lnot r\)
+\end{itemize}
+
+\pause
+
+\begin{tikzpicture}
+
+\ctikzset{
+  logic ports=ieee,
+  logic ports/scale=0.5,
+}
+
+% Logic ports
+
+\node[not port,color=white] (NOTa) at (0,0){};
+\node[not port,color=white] (NOTb) at (0,-0.75){};
+\node[and port,color=white] (ANDa) at (2,0.15){};
+\node[or port,color=white] (ORa) at (4,0){};
+
+% Connections
+
+\draw (NOTa.in 1) -- ++(-1.0,0)node[left]{$q$};
+\draw (NOTb.in 1) -- ++(-1.0,0)node[left]{$r$};
+%\draw (ANDa.in 1) -- ++(-1.0,0)node[left]{$p$};
+
+\draw (NOTa.out) -- node[near start,below]{$\lnot q$}(ANDa.in 2);
+\draw (-1.45,0.35) node[left]{$p$} -| (ANDa.in 1);
+\draw (NOTb.out) -| node[near start,above]{$\lnot r$}(ORa.in 2);
+\draw (ANDa.out) -- node[above]{$p \land \lnot q$}(ORa.in 1);
+\draw (ORa.out) -- ++(2.0,0)node[near end,above]{$\left(p \land \lnot q\right) \lor \lnot r$};
+
+\end{tikzpicture}
+
+\vskip1em \pause
+
+\begin{itemize}
+\tightlist
+\item
+  \scriptsize Logic Circuit for
+  \(\left(p \lor \lnot r\right) \land (\lnot p \lor (q \lor \lnot r))\)
+\end{itemize}
+
+\pause
+
+\begin{tikzpicture}
+
+\ctikzset{
+  logic ports=ieee,
+  logic ports/scale=0.5,
+}
+
+% Logic ports
+
+\node[not port,color=white] (NOTa) at (0,0){};
+\node[not port,color=white] (NOTb) at (0,-0.75){};
+\node[not port,color=white] (NOTc) at (0,-1.5){};
+\node[or port,color=white] (ORa) at (2,0.15){};
+\node[or port,color=white] (ORb) at (2,-1.35){};
+\node[or port,color=white] (ORc) at (4,-1){};
+\node[and port,color=white] (ANDa) at (7,-0.5){};
+
+% Connections
+
+\draw (ANDa.out) -- ++(3.0,0)node[near end,above]{$\left(p \lor \lnot r\right) \land (\lnot p \lor (q \lor \lnot r))$};
+\draw (ORc.out) -| node[near start,below]{$\lnot p \lor (q \lor \lnot r)$}(ANDa.in 2);
+\draw (ORa.out) -| node[near start,above]{$p \lor \lnot r$}(ANDa.in 1);
+\draw (NOTb.out) -| node[near start,above]{$\lnot p$}(ORc.in 1);
+\draw (ORb.out) -| node[near start,below]{$q \lor \lnot r$}(ORc.in 2);
+\draw (NOTc.out) -- node[near start,below]{$\lnot r$}(ORb.in 2);
+\draw (NOTa.out) -- node[near start,below]{$\lnot r$}(ORa.in 2);
+\draw (NOTa.in 1) -- ++(-1.0,0)node[left]{$r$};
+\draw (NOTb.in 1) -- ++(-1.0,0)node[left]{$p$};
+\draw (NOTc.in 1) -- ++(-1.0,0)node[left]{$r$};
+\draw (-1.45,0.35) node[left]{$p$} -| (ORa.in 1);
+\draw (-1.45,-1.15) node[left]{$q$} -| (ORb.in 1);
+
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Exercises}
+\protect\hypertarget{exercises-3}{}
+Translate the following statements into propositional logic using the
+propositions provided:
+
+\begin{enumerate}
+\tightlist
+\item
+  \footnotesize You cannot edit a protected Wikipedia entry unless you
+  are an administrator.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \scriptsize \(e\): ``You can edit a protected Wikipedia entry''
+  \item
+    \scriptsize \(a\): ``You are an administrator'' \vskip0.5em \pause
+  \end{itemize}
+
+  \scriptsize
+
+  \textcolor{Roarange}{\textbf{Solution:}}
+  \textcolor{Roarange}{$\lnot a \to \lnot e$}
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \footnotesize You can graduate only if you have completed the
+  requirements of your major and you do not owe money to the university
+  and you do not have an overdue library book.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \scriptsize \(g\): ``You can graduate''
+  \item
+    \scriptsize \(m\): ``You owe money to the university''
+  \item
+    \scriptsize \(r\): ``You have completed the requirements of your
+    major''
+  \item
+    \scriptsize \(b\): ``You have an overdue library book'' \vskip0.5em
+    \pause
+  \end{itemize}
+
+  \scriptsize
+
+  \textcolor{Roarange}{\textbf{Solution:}}
+  \textcolor{Roarange}{$g \to (r \land \lnot m \land \lnot b)$}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Exercises}
+\protect\hypertarget{exercises-4}{}
+Express these specifications using the following propositions:
+
+\begin{itemize}
+\tightlist
+\item
+  \footnotesize \(p\): ``The user enters a valid password''
+\item
+  \footnotesize \(q\): ``Access is granted''
+\item
+  \footnotesize \(r\): ``The user has paid the subscription fee''
+\end{itemize}
+
+\vskip0.5em
+
+\begin{enumerate}
+\item
+  \footnotesize~``The user has paid the subscription fee, but does not
+  enter a valid password'' \vskip0.5em \pause
+
+  \scriptsize
+
+  \textcolor{Roarange}{\textbf{Solution:}}
+  \textcolor{Roarange}{$r \land \lnot p$}
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item
+  \footnotesize~``If the user has not entered a valid password but has
+  paid the subscription fee, then access is granted'' \vskip0.5em \pause
+
+  \scriptsize
+
+  \textcolor{Roarange}{\textbf{Solution:}}
+  \textcolor{Roarange}{$\left(\lnot p \land \lnot r\right) \to g$}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Exercise}
+\protect\hypertarget{exercise}{}
+Construct a combinatorial circuit using inverters, OR gates, and AND
+gates such that:
+
+\begin{itemize}
+\tightlist
+\item
+  \footnotesize Produces the output
+  \(\left((\lnot p \lor \lnot r\right) \land \lnot q) \lor (\lnot p \land (q \lor r))\)
+\item
+  \footnotesize From input bits \(p\), \(q\), and \(r\).
+\end{itemize}
+
+\pause
+\scriptsize
+\vfill
+
+\centering
+
+\begin{tikzpicture}
+
+\ctikzset{
+  logic ports=ieee,
+  logic ports/scale=0.5,
+}
+
+% Logic ports
+
+\node[not port,color=white] (NOTa) at (0,.65){};
+\node[not port,color=white] (NOTb) at (0,0){};
+\node[not port,color=white] (NOTc) at (0,-.65){};
+\node[not port,color=white] (NOTd) at (0,-1.35){};
+\node[or port,color=white] (ORa) at (2,0.15){};
+\node[or port,color=white] (ORb) at (2,-2.15){};
+\node[or port,color=white] (ORc) at (7,-1){};
+\node[and port,color=white] (ANDa) at (4,-0.5){};
+\node[and port,color=white] (ANDb) at (4,-1.5){};
+
+% Connections
+
+\draw (ANDa.out) -| node[near start,above]{$\left(\lnot p \lor \lnot r\right) \land \lnot q$}(ORc.in 1);
+\draw (ANDb.out) -| node[near start,below]{$\lnot p \land (q \lor r)$}(ORc.in 2);
+\draw (ORa.out) -| node[near start,above]{$\lnot p \lor \lnot r$}(ANDa.in 1);
+\draw (ORb.out) -| node[near start,below]{$q \lor r$}(ANDb.in 2);
+\draw (NOTc.out) -- node[near start,above]{$\lnot q$}(ANDa.in 2);
+\draw (NOTd.out) -- node[near start,above]{$\lnot p$}(ANDb.in 1);
+\draw (NOTb.out) -- node[near start,above]{$\lnot r$}(ORa.in 2);
+\draw (NOTa.out) -| node[near start,above]{$\lnot p$}(ORa.in 1);
+\draw (NOTa.in 1) -- ++(-1.0,0)node[left]{$p$};
+\draw (NOTb.in 1) -- ++(-1.0,0)node[left]{$r$};
+\draw (NOTc.in 1) -- ++(-1.0,0)node[left]{$q$};
+\draw (NOTd.in 1) -- ++(-1.0,0)node[left]{$p$};
+\draw (ORb.in 1) -- ++(-2.9,0)node[left]{$q$};
+\draw (ORb.in 2) -- ++(-2.9,0)node[left]{$r$};
+\draw (ORc.out) -- ++(4.0,0)node[near end,above]{$\left((\lnot p \lor \lnot r\right) \land \lnot q) \lor (\lnot p \land (q \lor r))$};
+
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-3}{}
+\centering
+\vfill
+\begin{minipage}{.45\textwidth}
+\begin{center}
+\includegraphics[width=13pt]{images/mark.png}
+\Huge Satisfiability
+\end{center}
+\vskip-1em
+\textcolor{GrowlingGray}{\rule{\textwidth}{2pt}}
+\large \color{Roarange}\textbf{\hfill CS 1187}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Satisfiability}
+\protect\hypertarget{satisfiability}{}
+\begin{itemize}
+\tightlist
+\item
+  \textcolor{Roarange}{\textbf{Satisfiable}} - when a compound
+  proposition has an assignment of truth values to its variables that
+  makes it true (i.e., it is a tautology or contingency)
+\end{itemize}
+
+\vskip.5em \pause
+
+\begin{itemize}
+\tightlist
+\item
+  \textcolor{Roarange}{\textbf{Unsatisfiable}} - when a compound
+  proposition is false for all assignments of truth values to its
+  variables
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \footnotesize A proposition is only unsatisfiable if its negation is
+    true for all assignments of truth values to its variables
+  \end{itemize}
+\end{itemize}
+
+\vskip.5em \pause
+
+\begin{itemize}
+\tightlist
+\item
+  \textcolor{Roarange}{\textbf{Solution}} - to a satisfiability problem
+  is a particular assignment of truth values that makes a compound
+  proposition true
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Satisfiability Examples}
+\protect\hypertarget{satisfiability-examples}{}
+Determine whether the following compound propositions are satisfiable
+
+\begin{itemize}
+\tightlist
+\item
+  \(\left(p \lor \lnot q\right) \land (q \lor \lnot r) \land (r \lor \lnot p)\)
+  \pause
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \footnotesize We can reason about truth value, and with that we can
+    see that this is true, as long as \(p\), \(q\), and \(r\) all have
+    the same truth value
+  \end{itemize}
+\end{itemize}
+
+\vskip1em \pause
+
+\begin{itemize}
+\tightlist
+\item
+  \(\left(p \lor q \lor r\right) \land (\lnot p \lor \lnot q \lor \lnot r)\)
+  \pause
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \footnotesize Again we reason about truth values, and we can see
+    that as long as one variable is true and another false, then this
+    proposition is true
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Applications of Satisfiability}
+\protect\hypertarget{applications-of-satisfiability}{}
+Satisfiability problems come into play in several areas
+
+\begin{itemize}
+\tightlist
+\item
+  Constraint satisfaction
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \footnotesize Planning systems
+  \item
+    \footnotesize Suduko
+  \item
+    \footnotesize N-Queens problems
+  \end{itemize}
+\end{itemize}
+
+\vskip.5em
+
+\begin{itemize}
+\tightlist
+\item
+  Complexity Analysis and Theory
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercises}
+\protect\hypertarget{exercises-5}{}
+\begin{itemize}
+\tightlist
+\item
+  \footnotesize Use the conditional-disjunction equivalence to find an
+  equivalent compound proposition that does not involve conditionals
+\end{itemize}
+
+\centering
+
+\small
+
+\(p \to \lnot q\) \pause \scriptsize \textcolor{Roarange}{
+\begin{eqnarray*}
+  p \to \lnot q & \equiv & \lnot p \lor \lnot q \,\,\,\textrm{by the conditional-disjunction equivalence}
+\end{eqnarray*}}
+
+\vskip1em \pause
+
+\small
+
+\(\left(p \to q\right) \to r\) \pause \scriptsize \textcolor{Roarange}{
+\begin{eqnarray*}
+    (p \to q) \to r & \equiv & \lnot (p \to q) \lor r \,\,\,\,\,\,\,\,\textrm{by the conditional-disjunction equivalence}\\
+                    & \equiv & \lnot (\lnot p \lor q) \lor r \,\,\,\,\,\,\,\textrm{by the conditional-disjunction equivalence} \\
+                    & \equiv & (\lnot \lnot p \land \lnot q) \lor r \,\,\,\textrm{by the second De Morgan's Law} \\
+                    & \equiv & (p \land \lnot q) \lor r \,\,\,\,\,\,\,\,\,\,\,\textrm{by the Double Negation Law}
+\end{eqnarray*}}
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-4}{}
+\centering
+\vfill
+\begin{minipage}{.45\textwidth}
+\begin{center}
+\includegraphics[width=13pt]{images/mark.png}
+\Huge Meta-Logic
+\end{center}
+\vskip-1em
+\textcolor{GrowlingGray}{\rule{\textwidth}{2pt}}
+\large \color{Roarange}\textbf{\hfill CS 1187}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Meta-Logic}
+\protect\hypertarget{meta-logic}{}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Meta-Logic:} concerned with stepping outside of the language
+  of logic
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Allows us to make statements about the properties of a logical
+    system
+  \item
+    Allows us to talk about logic rather than to simply use logic
+  \end{itemize}
+\item
+  We looked at three methods of reasoning, each with different styles
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Truth tables: enable the calculation of values (meanings) of
+    propositions, yielding \emph{semantic reasoning}
+  \item
+    Inference rules allowed reasoning based on structure
+    (\emph{syntactic reasoning})
+  \item
+    Boolean algebra allowed for reasoning to prove equality of two
+    expressions, or to calculate the values of expressions
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Meta-Logic}
+\protect\hypertarget{meta-logic-1}{}
+\begin{itemize}
+\item
+  To use meta-logic, we need a vocabulary
+\item
+  Towards this, we have two notions of truth: \emph{semantic} and
+  \emph{syntactic}, corresponding to the \(\vDash\) and \(\vdash\)
+  operators, respectively
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(P_1, P_2, \ldots, P_n \vdash Q\) means that there is a proof which
+    infers \(Q\) from the assumptions \(P_1,P_2,\ldots,P_n\) using rules
+    of inference and natural deduction.
+  \item
+    \(P_1,P_2,\ldots,P_n \vDash Q\) means that \(Q\) must be True if
+    \(P_1,P_2,\ldots,P_n\) are all true, but it says nothing about
+    whether we have proof or if one is possible.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Meta-Logic}
+\protect\hypertarget{meta-logic-2}{}
+\begin{itemize}
+\item
+  \textbf{Consistent:} A formal system is consistent if the following
+  statement is true for all WFFs \(a\) and \(b\):
+
+  \(\textsf{If }\,\, a \vdash b\,\,\textsf{ then }\,\, a \vDash b\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    That is, the system is \emph{consistent} if each proposition is
+    provable using inference rules is \emph{actually} true.
+  \end{itemize}
+\item
+  \textbf{Complete:} A formal system is complete if the following
+  statement is true for all WFFs \(a\) and \(b\):
+
+  \(\textsf{If }\,\, a \vDash b\,\, \textsf{ then }\,\, a \vdash b\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The system is complete if the inference rules are powerful enough to
+    prove every proposition which is true
+  \end{itemize}
+\item
+  \textbf{Theorem:} Propositional Logic is both consistent and complete
+\item
+  \textbf{Godel's Theorem:} Any logical system powerful enough to
+  express ordinary arithmetic must be either inconsistent or incomplete.
+  Thus it is impossible to capture all of mathematics in a safe logical
+  system.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{For Next Time}
+\protect\hypertarget{for-next-time}{}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\tightlist
+\item
+  Review DMUC Chapter 6.6 -- 6.10
+\item
+  Review this Lecture
+\item
+  Read Chapter 7
+\item
+  Come To Lecture
+\end{itemize}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\centering
+
+\includegraphics[width=.85\textwidth]{images/next_time-invert2.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-5}{}
+\vfill
+\centering
+
+\includegraphics[scale=.40]{images/questions-invert2.png}
+
+\Huge \textbf{Are there any questions?}
+\end{frame}
+
+\end{document}

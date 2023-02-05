@@ -1,0 +1,682 @@
+%This first part is called the Preamble.  It is where you put the document class, packages, definitions, and enhancements to LaTeX that affect the entire document.
+% BTW "%" is the symbol for comments that do not show up in the document.
+\documentclass[12pt]{article}
+
+% Much of this first part is due to Robert Kelvey, a visiting professor at the College of Wooster.
+%For the serious user, I recommend the book "More Math into LaTeX" by George Gratzer (Springer) which I also used here.
+%10 pt font is the default. You can also do 11 and others. Google it if you are curious.  I prefer 12 pt because I like to see ;-)
+%There are other document classes: letter...book....etc. This uses the article class.  You can try amsart for a different look.  "ams" stands for American Mathematical Society.
+%I am not crazy about amsart but AMS journals use it.
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+%Automatically sets margins as indicated
+\usepackage{amsmath}
+\usepackage{amssymb,latexsym}
+%Loads these packages for math symbols.  
+\usepackage{amsxtra}
+%Loads extra accent symbols.
+\usepackage{amsthm}
+%Let you use the nice Theorem and Definition Environments.
+\usepackage{graphicx}
+%Lets you put graphics into your document.  I won't go into that here.
+\usepackage{setspace}
+%This is George Greenwade's package.  You can set spacing to be one-half or double using the following commands right here in the preamble:
+\onehalfspacing
+%\doublespacing would use double-spacing.
+%\usepackage{hyperref}  %This allows you to make hyperlinks in your pdf and also within the document itself. We do not need this now but it could be useful later.
+\usepackage{wasysym} %You can make smiley faces with this package. There are other symbols, too.  Google it.  Again, we likely will not use this.
+\usepackage{verbatim} %This allows you to include LaTeX commands in your document (as text) that do not execute.  I use this to show you the LaTeX to type.
+\usepackage{arcs}%You only need this if you are creating notation for arcs in geometry.  See Section 6.10
+
+%What follows are called "Proclamations."  They are displayed text environments.
+
+\theoremstyle{definition}
+%This sets the style for proclamations.  The options are plain, definition, and remark.  You can try all three to see what they do.  "definition" does not put things in italics
+%Since I do not like my theorems in italics, I use "definition."
+%The following set up your declarations. For example, the first one writes "Definition" and the section number after you begin a definition. This helps with automatic numbering.
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem*{fact}{Fact}
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{lemma}{Lemma}[section]
+
+%If you do not want these numbered, add an asterisk after\newtheorem: \newtheorem*
+%\newtheorem*{definition}{Definition}
+%\newtheorem*{example}{Example}
+%\newtheorem*{theorem}{Theorem}
+%\newtheorem*{proposition}{Proposition}
+%\newtheorem*{fact}{Fact}
+%\newtheorem*{corollary}{Corollary}
+%\newtheorem*{lemma}{Lemma}
+
+% I do not want my facts numbered, so notice what I used.
+
+%Next you can have some defintions, or shortcuts you use often.  Youwill come up with these for things you find yourself typing a lot.
+\newcommand{\df}{\displaystyle \frac} 
+\newcommand{\dlim}{\displaystyle \lim}
+\newcommand{\dint}{\displaystyle \int}
+%You can use these so that you can type fractions or limits, and integrals within a line of text, and have it appear still in displaystyle. This is because I do not like the look of these inline.
+
+
+%The actual document starts now.
+
+\begin{document}
+
+\title{Example Document}
+
+\author{Gary Stoudt, after Robert Kelvey, College of Wooster}
+\maketitle % This actually puts the title, author, and date in.
+This is not to be read as a PDF file.  Ideally, you will look at the *.tex file and the *.pdf file side-by-side to read the comments and see the commands that created the PDF file.
+\section{Introduction} In the article class, you can make sections, subsections, and sub-subsections.
+
+\subsection{Introduction Subsection}  This would be a subsection of the first section.
+
+\subsubsection{Introduction sub-subsection} This would be a sub-subsection of the first subsection.
+
+\section{Next Section} \LaTeX does all the numbering work for you.
+%BTW \LaTeX types out LaTeX in its fancy way.
+\section*{Next Section} \LaTeX \thinspace does all the numbering work for you.  Do you notice the extra space?  Why isn't this section numbered?  See the *.tex file.
+%Notice that I added a bit of space after LaTeX because I think it looks better.  Generally you do not have to do this.
+%Also notice this section does not have a number.  If you want a new proclamation without a number add the asterix after it.
+\setcounter{section}{5}
+\section{Out of Order Section}
+\setcounter{subsection}{3}
+\subsection{Out of Order Subsection}
+Notice I renumbered the sections.  Normally you wouldn't do this, but you can.
+\setcounter{section}{2}%Let's set the section counter back to where it should be.
+\section{Lists}
+Here is how you can use the numbered list environment in \LaTeX.  As always, look directly at the \LaTeX \thinspace file (*.tex) to see how it is done.
+\begin{enumerate} %Use enumerate for numbered lists
+
+\item This is the first problem.
+	
+\item The second problem.
+	
+\item The third problem.
+	
+	\begin{enumerate}
+		\item In case your problem has parts a, b, c, etc.
+		
+		\item What is nice is that \LaTeX \thinspace does all the numbering automatically.
+		
+		\item So if at some point you decide you need another item in here, you can add it in without worrying about changing all the other numberings in the list!
+		\begin{enumerate}
+			\item So you can see how the depth works.
+			
+			\item There are ways to change the type of numbering you have: numeric, Roman, lettered, etc. That would be a good reason to use Google \smiley. 
+%Look, a smiley face
+		\end{enumerate}
+	\end{enumerate}
+	
+	\item And we are back to the numbers. But now it's time to end the list.
+
+\end{enumerate}
+You can also do bulleted lists. Here is how you can use the bulleted list environment in \LaTeX.
+
+\begin{itemize} %Use itemize for bulleted lists
+
+\item First Item
+\item Second Item
+           \begin{itemize}
+		\item Sub-item. You can nest within.
+		\item Next Sub-item \eighthnote \uranus %Both of these are from the "wasysym" package
+	\end{itemize}
+	
+\item Third Item
+		
+\item Again, there are ways to change the symbols used for your bulleted list. Use Google.
+
+\end{itemize}
+Finally, you can caption (label the steps) your lists.
+\begin{description} %Use description to label your list items.
+\item[Step 1] This is step 1 %Notice the square bracket instead of the curly brace.
+\item[Second Thing to Do] This is step 2
+\item[Last] This is step 3
+\end{description}
+
+Maybe you would like to create a table?  Use the tabular environment (look directly at the \LaTeX \thinspace file). For this example the table is inline.
+\begin{tabular}{| l | r | r | c |}
+\hline
+Name &1 &2 &3 \\ \hline
+Peter & 2.45 & 34.12 & 1.00 \\ \hline
+John & 0.00 & 12.89 & 3.71 \\ \hline
+David & 2.00 & 1.85 & 0.71 \\ \hline
+\end{tabular}
+%Make sure you understand what every part of the tabular environment does.
+You can also center your table on the page.
+\begin{center}
+\begin{tabular}{| l | r | r | c |}
+\hline
+Name &1 &2 &3 \\ \hline
+Peter & 2.45 & 34.12 & 1.00 \\ \hline
+John & 0.00 & 12.89 & 3.71 \\ \hline
+David & 2.00 & 1.85 & 0.71 \\ \hline
+\end{tabular}
+\end{center}
+%You can also label and number your tables.  For that use the table environment (Google "latex table environment").
+
+\section{Breaks, etc.}
+Some times you need a line break or a page break. You actually saw it above in the tabular environment.  For a line break use two backwards slashes. \verb!\\!. \\ %Like this.
+Or, if your paragraph is going on too long  if your paragraph is going on too long if your paragraph is going on too long if your paragraph is going on too long if your paragraph is going on too long if your paragraph is going on too long if your paragraph is going on too long if your paragraph is going on too long if your paragraph is going on too long if your paragraph is going on too long if your paragraph is going on too long if your paragraph is going on too long you need a new paragraph.  Use \verb!\par!.
+%Here we used the verbatim package defined in the preamble to show the LaTeX commands on the page instead of having LaTeX compile them.
+%\verb!your verbatim text! is the inline version, where the exclamation point signals the beginning and the end of the verbatim text.
+\par%Starts a new paragraph
+So now you have a new paragraph.  Notice above that none of the above typing had indents on the first line of typing.  If you wanted that indent you would use a paragraph break beforehand. I won't get into things like indenting or not indenting or a hanging indent.  You can use Google for that. How about a new page?  Use \verb!\newpage!.
+%Here we used the verbatim package defined in the preamble to show the LaTeX commands on the page instead of having LaTeX compile them.
+%\verb!your verbatim text! is the inline version, where the exclamation point signals the beginning and the end of the verbatim text.
+\newpage %This starts a new page
+And now we have a new page, with a new paragraph.  If you did not want a new paragraph, you would add \verb!\noindent! after \verb!\newpage!.
+
+\section{Font Styles}
+I will not get into different font sizes and font families.  Please use the defaults.  Use Google if you are curious.  However, we will have need of font styles.  There is \verb!\textit{italic}! for italics: \textit{italic}; \verb!\textbf{bold face}! for bold face: \textbf{bold face}; \verb!\textsl{slanted shape}! for slanted shape: \textsl{slanted shape}; or \verb!\textsc{slanted capitals}! for small capitals: \textsc{small capitals}.
+
+\section{Typing Mathematics}
+This is sort of the whole point, isn't it?  Mathematics is typed two ways: \textbf{inline} and \textbf{display}.  For inline math begin and end with a dollar sign: type \verb!$ax+b=0\$! to produce $ax+b=0$.
+%Notice here I used the verbatim package defined in the preamble to show the LaTeX commands on the page instead of having LaTeX compile them.
+%Please note: the "\verb" before the $ told LaTeX to not compile it but to print it as normal so you could see what to type.  The item not to compile is between the !
+%The only reason you would need this package is if you are making LaTeX handouts.
+Notice that in mathematics,  variables, parameters, and constants are in a form of italics.  Did you ever notice that in all your math books?  Even if you just write a variable, use inline math: Let $A$ be a set instead of let A be a set.
+\\ \\
+Displaying formulas looks different:
+\[
+ax+b=0.
+\]
+%Make note of the way this was done.
+%Notice here I used the verbatim package defined in the preamble to show the LaTeX commands on the page instead of having LaTeX compile them.
+To get this you type \verb!\[ ax+b=0.\]!
+\\Maybe you want to number your equations for future reference.
+\begin{equation}\label{E:quadform}
+x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}
+\end{equation}
+%Notice how this has a fraction, an exponent, a square root, and a plus/minus symbol in it!
+%In the \label command, an equation starts with E, "quadform" is the name I gave it so I can refer to it later.
+
+You can subsequently refer to this equation by its name. To solve $ax^{2}+bx+c=0$, use equation \eqref{E:quadform} on page \pageref{E:quadform}.
+
+\subsection{Wikipedia and Google}
+You should definitely look at \begin{verbatim} https://en.wikipedia.org/wiki/List_of_mathematical_symbols_by_subject \end{verbatim} 
+which has some more things than what I have below.  Also, when in doubt, use Google!
+\subsection{Directly from Keyboard}
+In math mode (either inline or displayed) some math symbols come directly from the keyboard: $+, -, /, =, <, >,!,|x|$
+
+\subsection{Basic Things}%Notice I am using tables here.
+\begin{tabular}{| l | l | l |} \hline
+\textit{Description} & \textit{Command} & \textit{Output}\\ \hline
+plus or minus & \verb!\pm! & $\pm$\\ \hline
+multiplication (times) & \verb!\times! & $\times$\\ \hline
+multiplication (dot) & \verb!\cdot! & $\cdot$\\ \hline
+division symbol & \verb!\div! & $\div$\\ \hline
+circle plus & \verb!\oplus! & $\oplus$\\ \hline
+circle times & \verb!\otimes! & $\otimes$\\ \hline
+not equal & \verb!\ne! & $\ne$\\ \hline
+less than or equal to & \verb!\le! & $\le$\\ \hline
+greater than or equal to & \verb!\ge! & $\ge$\\ \hline
+approximately equal to & \verb!\approx! & $\approx$\\ \hline
+proportional to  & \verb+propto+ &$\propto$\\ \hline
+infinity & \verb!\infty! & $\infty$\\ \hline
+low dots & \verb!1,2,3,\ldots! & $1,2,3,\ldots$\\ \hline
+centered dots & \verb!1+2+3+\cdots! & $1+2+3+\cdots$\\ \hline
+fraction & \verb!\frac{a}{b}! & $\frac{a}{b}$\\ \hline
+binomial coefficients & \verb!$\binom{n}{k}$! & $\binom{n}{k}$ \\ \hline
+exponentiation & \verb!a^b! & $a^{b}$\\ \hline
+subscript & \verb!a_b! & $a_{b}$\\ \hline
+degree & \verb!\deg(f)! & $\deg(f)$\\ \hline
+\end{tabular}
+\\
+\subsection{Greek and Other Letters}
+Greek letters are typed in ``math mode."  For example \verb!$\alpha$! produces $\alpha$, \verb!$\gamma$! produces $\gamma$, and \verb!$\Gamma$! produces $\Gamma$.  Should you require it, you can also use \verb!$\varGamma$! for $\varGamma$
+\\ \\
+For accent marks use \verb!\'{a}! to produce \'{a}, \verb!\`{a}! to produce \`{a}, or \verb!\~{n}! to produce \~{n}.  However, in math mode you would use \verb!$\acute{a}$! to produce $\acute{a}$, \verb!$\grave{a}! to produce $\grave{a}$.
+\\ \\
+You can get other accents, like umlauts and cedillas, but you can use Google for that.  I can't tell you everything that will come up!
+\subsection{Functions}
+\begin{tabular}{| l | l | l |}
+\hline
+\textit{Description} &\textit{Command} & \textit{Output} \\ \hline
+maps to &\verb!\to! &$\to$\\ \hline
+composition&\verb!\circ! &$\circ$\\ \hline
+ceiling &\verb!\lceil x \rceil! &$\lceil x \rceil$\\ \hline
+floor &\verb!\lfloor x \rfloor! &$\lfloor x \rfloor$\\ \hline
+piecewise function& 
+\begin{tabular}{l}
+\verb!|x|=\begin{cases}!\\ \verb!x & x\ge 0\\!\\ \verb!-x & x<0!\\ \verb!\end{cases}!
+\end{tabular}&$\displaystyle |x|=\begin{cases}x&x\ge 0\\-x&x<0\end{cases}$\\ \hline
+square root & \verb!\sqrt{x}! & $\sqrt{x}$\\ \hline
+$n$th root & \verb!\sqrt[n]{x}! & $\sqrt[n]{x}$\\ \hline
+natural log  & \verb!\ln(x)! & $\ln(x)$\\ \hline
+logarithms & \verb!\log_{a}b! & $\log_{a}b$\\ \hline
+exponential function & \verb!e^{x}=\exp(x)! & $e^{x}=\exp(x)$\\ \hline
+sine& \verb!\sin{\theta} or \sin(\theta)! & $\sin{\theta}$ or $\sin(\theta)$\\ \hline
+cosine& \verb!\cos{\theta} or \cos(\theta)! & $\cos{\theta}$ or $\cos(\theta)$\\ \hline
+tangent& \verb!\tan{\theta}! & $\tan{\theta}$\\ \hline
+cotangent& \verb!\cot{\theta}! & $\cot{\theta}$\\ \hline
+secant& \verb!\sec{\theta}! & $\sec{\theta}$\\ \hline
+cosecant& \verb!\csc{\theta}! & $\csc{\theta}$\\ \hline
+inverse sine& \verb!\arcsin{x} or \arcsin(x)! & $\arcsin{x}$ or $\arcsin(x)$\\ \hline
+inverse cosine& \verb!\arccos{x}! & $\arccos{x}$\\ \hline
+inverse tangent& \verb!\arctan{x}! & $\arctan{x}$\\ \hline
+\end{tabular}
+\\ \\
+Now would be a good time to talk about parentheses, brackets, and braces. You can use them directly from the keyboard, but if you want them to stretch to match what they enclose, use the \LaTeX \thinspace versions, which open with \verb!\left! and close with \verb!\right! followed by the symbol.
+\[
+\verb!$\left( \frac{1}{2} \right)^{n}! \longrightarrow \left( \frac{1}{2} \right)^{n}
+\]
+\[
+\verb!$\left[ \frac{1}{2} \right]^{n}! \longrightarrow \left[ \frac{1}{2} \right]^{n}
+\]
+\[
+\verb!$\left \{ \frac{1}{2} \right \}^{n}! \longrightarrow \left \{ \frac{1}{2} \right \}^{n}
+\]
+\[
+\verb!$\left \langle \frac{1}{2} \right \rangle^{n}! \longrightarrow \left \langle \frac{1}{2} \right \rangle^{n}
+\]
+\[
+\verb!$\left \vert \frac{1}{2} \right \vert ^{n}! \longrightarrow \left \vert \frac{1}{2} \right \vert^{n}
+\]
+\subsection{Logic}
+\begin{tabular}{| l | l | l |}
+\hline
+\textit{Description} & \textit{Command} & \textit{Output}\\ \hline
+not & \verb!\sim! or \verb+\neg+ & $\sim$ or $\neg$\\ \hline
+and & \verb!\wedge! & $\wedge$\\ \hline
+or & \verb!\vee! & $\vee$\\ \hline
+if...then & \verb!\to! & $\to$\\ \hline
+if and only if & \verb!\leftrightarrow! & $\leftrightarrow$\\ \hline
+logical equivalence & \verb!\equiv! & $\equiv$\\ \hline
+therefore & \verb!\therefore! & $\therefore$\\ \hline
+there exists  & \verb!\exists! & $\exists$\\ \hline
+for all & \verb!\forall! & $\forall$\\ \hline
+implies & \verb!\Rightarrow! or \verb!\Leftarrow!& $\Rightarrow$ or $\Leftarrow$\\ \hline
+equivalent & \verb!\Leftrightarrow! or \verb!\Longleftrightarrow!& $\Leftrightarrow$ or $\Longleftrightarrow$\\ \hline
+\end{tabular}
+\\
+\subsection{Sets}
+\begin{tabular}{| l | l | l |} \hline
+\textit{Description} & \textit{Command} & \textit{Output}\\ \hline
+set brackets & \verb!\{1,2,3\}! & $\{1,2,3\}$\\ \hline
+element of & \verb!\in! & $\in$\\ \hline
+not an element of & \verb!\notin! & $\notin$\\ \hline
+subset of & \verb!\subset! & $\subset$\\ \hline
+subset of & \verb!\subseteq! & $\subseteq$\\ \hline
+not a subset of & \verb!\not\subset! & $\not\subset$\\ \hline
+contains & \verb!\supset! & $\supset$\\ \hline
+contains & \verb!\supseteq! & $\supseteq$\\ \hline
+union & \verb!\cup! & $\cup$\\ \hline
+intersection & \verb!\cap! & $\cap$\\ \hline
+big union & 
+\verb!\bigcup_{n=1}^{10}A_n! &
+$\displaystyle \bigcup_{n=1}^{10}A_{n}$\\ \hline %\displaystye forces the math symbol to be the larger display style rather than the smaller inline style.
+big intersection & \verb!\bigcap_{n=1}^{10}A_n! &$\displaystyle \bigcap_{n=1}^{10}A_{n}$\\ \hline
+empty set & \verb!\emptyset! or \verb+\varnothing+ & $\emptyset$ or $\varnothing$\\ \hline
+power set & \verb!\mathcal{P}! & $\mathcal{P}$\\ \hline
+complement & \verb!\overline{A}! & $\overline{A}$\\  \hline
+\end{tabular}
+\\
+\subsection{Special Sets}
+The symbols we use for special sets use the font \textbf{Blackboard bold}.
+\\ \\
+\begin{tabular}{| l | l | l |} \hline
+\textit{Description} & \textit{Command} & \textit{Output}\\ \hline
+Natural numbers & \verb!\mathbb{N}! & $\mathbb{N}$\\ \hline
+Whole numbers & \verb!\mathbb{W}! & $\mathbb{W}$\\ \hline %The \; after the | and before the b is to give some space.  Try it without and see what it looks like.
+Integers & \verb!\mathbb{Z}! & $\mathbb{Z}$\\ \hline
+Rational numbers & \verb!\mathbb{Q}! & $\mathbb{Q}$\\ \hline
+Real numbers & \verb!\mathbb{R}! & $\mathbb{R}$\\ \hline
+Complex numbers & \verb!\mathbb{C}! & $\mathbb{C}$\\ \hline
+\end{tabular}
+\\
+
+\subsection{Number Theory}
+\begin{tabular}{| l | l | l |} \hline
+\textit{Description} & \textit{Command} & \textit{Output}\\ \hline
+divides & \verb!$a|b$! & $a|b$\\ \hline
+does not divide & \verb!$a\not | \;b! & $a\not | \;b$\\ \hline %The \; after the | and before the b is to give some space.  Try it without and see what it looks like.
+mod & \verb!$a \equiv b \mod{n}$! & $a \equiv b \mod{n}$\\ \hline
+(mod) & \verb!$a \equiv b \pmod{n}$! & $a \equiv b \pmod{n}$\\ \hline
+greatest common divisor & \verb!\gcd(a,b)! & $\gcd(a,b)$\\ \hline
+\end{tabular}
+\subsection{Geometry}
+\renewcommand{\arraystretch}{1.5} %This gives a bit more room in the vertical spacing of the table
+\begin{tabular}{| l | l | l |} \hline
+\textit{Description} & \textit{Command} & \textit{Output}\\ \hline
+angle& \verb!\angle ABC! & $\angle ABC$\\ \hline
+degree& \verb!90^{\circ}! & $90^{\circ}$\\ \hline
+triangle& \verb!\triangle ABC! & $\triangle ABC$\\ \hline
+square or rectangle& \verb!\square ABCD! & $\square ABCD$\\ \hline
+circle & \verb!\bigodot C! &$\bigodot C$\\ \hline
+segment& \verb!\overline{AB}! & $\overline{AB}$\\ \hline
+ray & \verb!\overrightarrow{AB}! & $\overrightarrow{AB}$ \\ \hline
+line & \verb!\overleftrightarrow{AB}! &$\overleftrightarrow{AB}$ \\ \hline
+arc &\verb!$\overarc{AB}$ ! &$\overarc{AB}$ \\ \hline%Requires the package \usepackage{arcs}
+arc &\verb!$\overarc{ABC}$ ! &$\overarc{ABC}$ \\ \hline %Requires the package \usepackage{arcs}
+script l for line & \verb!\ell! & $\ell$ \\ \hline
+congruent& \verb!\cong! & $\cong$\\ \hline
+similar & \verb!\sim! & $\sim$ \\ \hline
+parallel & \verb!\ell \parallel m! & $\ell \parallel m$\\ \hline
+not parallel & \verb!\ell \nparallel m! & $\ell \nparallel m$\\ \hline
+perpendicular & \verb!\ell \perp m! & $\ell \perp m$\\ \hline
+\end{tabular}
+\\
+\subsection{Calculus}
+\renewcommand{\arraystretch}{1.3} %This gives a bit more room in the vertical spacing of the table
+\begin{tabular}{| l | l | l |} \hline
+\textit{Description} & \textit{Command} & \textit{Output}\\ \hline
+derivative & \verb!\frac{df}{dx}! & $\displaystyle \frac{df}{dx}$\\ \hline  %\displaystye forces the math symbol to be the larger display style rather than the smaller inline style.
+derivative & \verb!\f'! or \verb!\f''! & $f'$ or $f''$\\ \hline
+partial derivative & \verb!\displaystyle\frac{\partial f}{\partial x}! & $ \displaystyle\frac{\partial f}{\partial x}$\\ \hline
+integral & \verb!\int! & $\displaystyle\int$\\ \hline
+double integral & \verb!\iint! & $\displaystyle\iint$\\ \hline
+triple integral & \verb!\iiint! & $\displaystyle\iiint$\\ \hline
+line integral & \verb!\oint! & $\displaystyle\oint$\\ \hline
+limits & \verb!\lim_{x\to \infty}! & $\displaystyle \lim_{x\to \infty}$\\ \hline
+summation  & 
+\verb!\sum_{n=1}^{\infty}a_n! &
+$\displaystyle \sum_{n=1}^{\infty}a_n$\\ \hline
+product  & 
+\verb!\prod_{n=1}^{\infty}a_n! &
+$\displaystyle \prod_{n=1}^{\infty}a_n$ \\ \hline
+\end{tabular}\\ \\
+For a definite integral, use \verb!$\int_{a}^{b} f(x) \;dx$! \\ $\int_{a}^{b} f(x) \;dx$ \\ \\
+Double definite integral:  \verb!$\int_{a}^{b} \int_{c}^{d} f(x,y) \;dydx$!\\ $\int_{a}^{b} \int_{c}^{d} f(x,y) \;dydx$ \\ \\
+Triple definite integral:  \verb!$\int_{a}^{b} \int_{c}^{d} \int_{e}^{f} g(x,y,z) \;dzdydx$! \\ $\int_{a}^{b} \int_{c}^{d} \int_{e}^{f} g(x,y,z) \;dzdydx$ \\ \\
+Higher order derivatives: \verb!$\frac{d^{2}f}{dx^{2}}$! \\ $\displaystyle \frac{d^{2}f}{dx^{2}}$\\   \\
+%\displaystye forces the math symbol to be the larger display style rather than the smaller inline style.
+Evaluate a derivative at a point:  \verb!$\frac{df}{dx} \Bigr|_{x=0}$! \\ $\displaystyle \frac{df}{dx} \Bigr|_{x=0}$\\   \\
+Integral evaluation:  \verb!$F(x) \Bigr|^{b}_{a}$! \\ $\displaystyle F(x) \Bigr|^{b}_{a}$\\  
+
+\subsection{Linear Algebra}
+You might notice in your linear algebra book that vectors and matrices are sometimes typeset as bold and not italic.  For that we use \verb!$\mathbf{v}$! for $\mathbf{v}$, which is the \textbf{math boldface font}.\\ \\
+\renewcommand{\arraystretch}{1.5} %This gives a bit more room in the vertical spacing of the table
+\begin{tabular}{| l | l | l |} \hline
+\textit{Description} & \textit{Command} & \textit{Output}\\ \hline
+vector & \verb!\vec{v}! & $\vec{v}$\\ \hline
+vector & \verb!\mathbf{v}! & $\mathbf{v}$\\ \hline
+unit vectors & \verb!\hat{\textbf{\i}},\hat{\textbf{\j}},\hat{\textbf{k}}! & $\hat{\textbf{\i}},\hat{\textbf{\j}},\hat{\textbf{k}}$\\ \hline  %\i gives i with no dot over it.  Same for \j.
+length & \verb!\vert\vect{v}\vert!& $\vert\vec{v}\vert$\\ \hline 
+norm & \verb!\Vert\vec{v}\Vert! & $\Vert\vec{v}\Vert$\\ \hline  % Notice that Vert is capitalized t oget bwo vertical bars
+dot product & \verb!\mathbf{v}\cdot\mathbf{w}! & $\mathbf{v}\cdot\mathbf{w}$\\ \hline
+dot product & \verb!(\mathbf{v},mathbf{w})! & $(\mathbf{v},\mathbf{w})$\\ \hline
+dot product & \verb!\langle\mathbf{v},mathbf{w}\rangle! & $\langle\mathbf{v},\mathbf{w}\rangle$\\ \hline
+cross product & \verb!\mathbf{v}\times\mathbf{w}! & $\mathbf{v}\times\mathbf{w}$\\ \hline
+determinant & \verb!\det(A)! & $ \det(A)$\\ \hline
+trace & \verb!\operatorname{tr}(A)! & $\operatorname{tr}(A)$\\ \hline
+dimension & \verb!\dim(V)! & $\dim(V)$\\ \hline
+transpose & \verb!A^{\mathsf{T}})! & $A^{\mathsf{T}}$\\ \hline
+conjugate transpose & \verb!A^{\mathsf{H}})! & $A^{\mathsf{H}}$\\ \hline
+inverse & \verb!A^{-1)! & $A^{-1}$\\ \hline
+%You will probably get a lot of arguments among professors about transpose.  Some will say just use T or H.  Fine for them, but not for me.
+\end{tabular}
+\\ \\If you need vector arrow over two letters, use ``ray" from the Geometry section above.
+\\
+\newpage
+\noindent
+Here we will make matrices/determinants.  Please make note of the syntax.\\ \\
+\verb!A=\begin{bmatrix}!\\
+\verb!1 & 2 & 3 \\!\\
+\verb!4 & 5 & 6 \\!\\
+\verb!7 & 8 & 9!\\
+\verb!\end{bmatrix}!\\
+\[
+A=\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\]
+\\
+\verb!B=\begin{pmatrix}!\\
+\verb!1 & 2 & 3 \\!\\
+\verb!4 & 5 & 6 \\!\\
+\verb!7 & 8 & 9!\\
+\verb!\end{pmatrix}!\\
+\[
+B=\begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{pmatrix}
+\]
+\\
+\verb!\vert A \vert =!\\
+\verb!\begin{vmatrix}!\\
+\verb!1 & 2 & 3 \\!\\
+\verb!4 & 5 & 6 \\!\\
+\verb!7 & 8 & 9!\\
+\verb!\end{vmatrix}!\\
+
+\[
+\vert A \vert=
+\begin{vmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{vmatrix}
+\]
+\newpage
+\noindent %I didn't want my new page to start on an indentation for a new paragraph.
+There is also a small matrix for inline mathematics use.\\ \\
+\verb!A=\left(\begin{smallmatrix}!\\
+\verb!1 & 2 & 3 \\!\\
+\verb!4 & 5 & 6 \\!\\
+\verb!7 & 8 & 9!\\
+\verb!\end{smallmatrix}!\\
+\verb!\right)!\\ \\
+This matrix
+$A=\left(\begin{smallmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{smallmatrix}
+\right)$
+is inline.\\ \\
+If you want more control over the spacing of your matrix, use the array environment \verb!\begin{array}! and \verb!\end{array}! instead of the matrix environment. Use Google.\\ \\
+Here are some general vectors and matrices for you to copy. Look at the *.tex file.
+\[
+\begin{bmatrix}
+a_{11} & a_{12} & \dots   & a_{1n}\\
+a_{21} & a_{22} & \dots   & a_{2n}\\
+\vdots  & \vdots    & \ddots & \vdots \\
+a_{m1} & a_{m2} & \dots  & a_{mn}
+\end{bmatrix}
+\]
+\[
+\begin{pmatrix}
+x_{1},x_{2},\dots,x_{n}
+\end{pmatrix}
+\]
+\[
+\begin{pmatrix}
+x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{pmatrix}
+\]
+\newpage
+\noindent
+\subsection{Statistics}
+Most of the symbolism in statistics is covered above.  However, for a predicted value or estimator, you use a ``hat."  
+You can use \verb!$\hat{p}$! to get $\hat{p}$.  If you need more symbols under a hat, use \verb!$\widehat{price}$! to get $\widehat{price}$.  Instead of using  
+\verb!$\overline{x}$! to get $\overline{x}$ you can use \verb!$\bar{x}$! to get $\bar{x}$ to see which you like better.
+
+\subsection{Adding Text in a Math Environment}
+Some times you need to add text in a math environment.  Just use \verb!{\text{ your text here }!.  We actually used this to create the unit vectors in the Linear Algebra section, when we used \verb!{\textbf{ your text here }! for boldfaced text.  Here is an example.
+\[
+A_1 \cup A_2 \cup A_3 \cup \dots \cup A_n =\{x:x\in A_i \text{ for } \textit{at least one } \text{set } A_i, \text{ for } 1\le x \le n \},\\
+\]
+%When you use \align, you do not need the displayed equation command
+\subsection{Aligning Equations}
+If you have a string of equations (or inequalities), you often want to line them up on the equal sign (or inequality symbol).  This is accomplished with the \verb!\align! environment.  Make sure you look at the *.tex file to see how it is done.  The \verb!\align! environment automatically numbers the equations.  If you do not wish to number them, recall that an asterisk after the command will stop the numbering: \verb!\align*!.  Recall we did this on the first page with one of the sections.  If you want to number some but not others, use \verb!\notag! after each line you do not want numbered.  You will also notice that the \verb!\align! environment automatically puts you in ``display" mode for the equations.  Look carefully at the *.tex file!
+\\ \\
+Using \verb!\align!
+\begin{align}
+T&=70+30 e^{-0.018t}\\  %Why did the numbering start at 2?  We had an equation 1 earlier in the section.
+76&=70+30 e^{-0.018t}\\
+6&=30 e^{-0.018t}\\
+\frac{1}{5}&=e^{-0.018t}\\
+\ln\left(\frac{1}{5}\right)&=-0.018t\\
+t&=\frac{\ln(0.20)}{-0.018}\\
+t&\approx 89.41
+\end{align}
+
+Using \verb!\align*!
+\begin{align*}
+T&=70+30 e^{-0.018t}\\
+76&=70+30 e^{-0.018t}\\
+6&=30 e^{-0.018t}\\
+\frac{1}{5}&=e^{-0.018t}\\
+\ln\left(\frac{1}{5}\right)&=-0.018t\\
+t&=\frac{\ln(0.20)}{-0.018}\\
+t&\approx 89.41
+\end{align*}
+
+Using \verb!\align! with \verb!\notag!
+\begin{align}
+T&=70+30 e^{-0.018t}\\
+76&=70+30 e^{-0.018t}\notag \\
+6&=30 e^{-0.018t}\notag \\
+\frac{1}{5}&=e^{-0.018t}\notag \\
+\ln\left(\frac{1}{5}\right)&=-0.018t\\
+t&=\frac{\ln(0.20)}{-0.018}\notag \\
+t&\approx 89.41
+\end{align}
+
+\newpage
+\noindent
+
+If you want to give reasons for your steps, use the ``annotated alignment" environment.
+\begin{align*}
+T&=70+30 e^{-0.018t} && \text{(initial formula)} \\
+76&=70+30 e^{-0.018t} && \text{(since $T=76$)} \\
+6&=30 e^{-0.018t} && \text{(subtract $70$ from both sides)} \\
+\frac{1}{5}&=e^{-0.018t} && \text{(divide by $30$)} \\
+\ln\left(\frac{1}{5}\right)&=-0.018t && \text{(apply logarithm to both sides)} \\
+t&=\frac{\ln(0.20)}{-0.018} && \text{(solve for $t$)}\\
+t&\approx 89.41 && \text{(calculator)}
+\end{align*}
+
+\section{Let's Look at a Definition, Theorem, and Proof}
+For homework you may not want to number theorems, etc., so read the preamble again (commented lines) about what to do to not number them.
+\begin{definition}
+An integer $n$ is \textbf{even} if there exists an integer $x$ such that $n=2x$.  An integer $n$ is \textbf{odd} if there exists an integer $x$ such that $n=2x+1$.
+\end{definition}
+\begin{fact}
+If $n$ is an even integer, then $5n-3$ is an odd integer.
+\end{fact}
+\noindent
+Because of the way I set up the preamble, ``Facts" are not numbered.  Compare this to a ``Proposition," which I want numbered.
+\begin{proposition}
+If $n$ is an even integer, then $5n-3$ is an odd integer.
+\end{proposition}
+\noindent
+A proof uses the ``proof environment."  It begins with \verb!\begin{proof}! and ends with \verb!\end{proof}!.
+\begin{fact}
+If $n$ is an even integer, then $5n-3$ is an odd integer.
+\end{fact}
+\begin{proof}
+Let $n$ be an even integer.  Then by definition there is an integer $x$ such that $n=2x$.  Therefore
+\[
+5n-3=5(2x)-3=10x-3=2(5x-2)+1.
+\]
+Since $5x-2$ is also an integer, then by definition $5n-3$ is odd.
+\end{proof}
+\noindent
+Notice the proof ends with a type of square, a Q.E.D. (\textit{Quod Erat Demonstrandum}) symbol.
+\section{An Abstract Algebra Proof}
+From \textbf{A First Course in Abstract Algebra} by John B. Fraleigh.
+\begin{corollary}[\textbf{The Factor Theorem}]
+An element $a \in F$ is a zero of $f(x) \in F[x]$ if and only if $x-a$ is a factor of $f(x)$ in $F[x]$.
+\end{corollary}
+\begin{proof}
+Suppose that for $a \in F$ we have $f(a)=0$.  By the \textbf{Division Algorithm for} $\boldsymbol{F[x]}$, there exist $q(x),r(x) \in F[x]$ such that
+%In math mode, \boldsymbol{  } allows the math to be in bold type
+\[
+f(x)=(x-a)q(x)+r(x),
+\]
+where $\deg(r)<\deg(x-a)=1.$  Then we must have $r(x)=c$ for $c \in F$, so
+\[
+f(x)=(x-a)q(x)+c.
+\]
+Applying the evaluation homomorphism $\phi_{a}:F[x] \to F$ we find
+\[
+0=f(a)=0q(a)+c,
+\]
+so it must be that $c=0$.  Then $f(x)=(x-a)q(a)$, and so $x-a$ is a factor of $f(x)$ in $F[x]$.
+\par
+Conversely, if $a \in F$ and $x-a$ is a factor of $f(x)$ in $F[x]$, then there exists a $q(x) \in F[x]$ such that $f(x)=(x-a)q(x)$ and applying the evaluation homomorphism $\phi_{a}$ to
+\linebreak
+ $f(x)=(x-a)q(x)$ we have $f(a)=0q(a)=0$.
+\end{proof}
+%Notice here I used \linebreak instead of \\ 
+%\linebreak ends the line and stretches it to match the rest of the line.
+% \\ cuts the line right where it is.
+%Check with your instructor to see if breaking math expressions between lines is OK.
+\section{An Advanced Calculus Proof}
+From \textbf{Understanding Analysis} by Stephen Abbott.
+\begin{theorem}[\textbf{Monotone Convergence Theorem}]
+If a sequence of real numbers is monotonic and bounded, then it converges.
+\end{theorem}
+\begin{proof}
+Let $\left( a_{n} \right)$ be monotone and bounded.  To prove $\left( a_{n} \right)$ converges we are going to need a candidate for the limit.  Let's assume the sequence is increasing (the decreasing case is handled similarly), and consider the \textit{set} of points $\{a_{n}:n \in \mathbb{N}\}$.  By assumption, this set is bounded, so we can let
+\[
+s=\sup \{a_{n}:n \in \mathbb{N} \}.
+\]
+It seems reasonable to claim that $\dlim_{n \to \infty} \left( a_{n} \right)=s$. 
+\\ %Notice here I made use of the definition \dlim from the preamble.  Try just \lim and notice the difference.
+\par
+To prove this, let $\epsilon > 0$.  Because $s$ is the least upper bound of $\{a_{n}:n \in \mathbb{N}\}$, $s-\epsilon$ is not an upper bound, so there exists a point in the sequence $a_{N}$ such that $s- \epsilon<a_{N}$.  Now, the fact that $\left( a_{n} \right)$ is increasing implies that if $n \ge N$, then $a_{N} \le a_{n}$.  Hence, for all $n \ge N$,
+\[
+s- \epsilon<a_{N} \le a_{n} \le s < s+ \epsilon,
+\]
+which implies $| a_{n}-s | < \epsilon$, as desired.
+\end{proof}
+\section{A Linear Algebra Proof}
+From \textbf{Linear Algebra Done Right} by Sheldon Axler.
+\begin{theorem}[\textbf{Linearly Independent Eigenvectors}]
+Let $T \in \mathcal{L}(V)$.  Suppose $\lambda_{1},\ldots ,\lambda_{m}$ are \textit{distinct} eigenvalues of $T$ and $v_{1},\ldots ,v_{m}$ are the corresponding eigenvectors.  Then $v_{1},\ldots ,v_{m}$ is linearly independent.
+\end{theorem}
+\begin{proof}
+Suppose $\lambda_{1},\ldots ,\lambda_{m}$ are distinct eigenvalues of $T$ and $v_{1},\ldots ,v_{m}$ are the corresponding eigenvectors.  For the sake of contradiction, suppose $v_{1},\ldots ,v_{m}$ is linearly dependent.  Using the Linear Dependence Lemma, let $k$ be the smallest positive integer such that 
+\setcounter{equation}{0}%Since I want this to look "stand alone," I am resetting the numbers of my equations.
+\begin{equation}%I am using \begin{equation} instead of a displayed equation because I wish to number it.
+v_{k} \in \text{span}\left( v_{1},\ldots ,v_{k-1} \right).\label{E:eq1}%I am labeling the equation for future citation.
+\end{equation}
+Thus there exist $a_{1},\ldots ,a_{k-1} \in \boldsymbol{F}$ such that
+\begin{equation}
+v_{k} = a_{1}v_{1}+ \cdots + a_{k-1}v_{k-1}. \label{E:eq2}%I am labeling the equation for future citation.
+\end{equation}
+Apply $T$ to both sides of \eqref{E:eq2}, yielding
+\begin{equation}
+\lambda_{k}v_{k}= a_{1}\lambda_{1}v_{1}+ \cdots + a_{k-1}\lambda_{k-1}v_{k-1}.\label{E:eq3}
+\end{equation}
+Mutiply both sides of \eqref{E:eq2} by $\lambda_{k}$ and then subtract \eqref{E:eq3}, yielding
+\begin{equation}
+0=a_{1}\left( \lambda_{k}-\lambda_{1} \right)v_{1}+\cdots+a_{k-1} \left( \lambda_{k}-\lambda_{k-1} \right) v_{k-1}.\label{E:eq4}
+\end{equation}
+Because we chose $k$ to be the smallest positive integer satisfying \eqref{E:eq1}, $v_{1},\ldots ,v_{k-1}$ is linearly independent.  Thus equation \eqref{E:eq4} implies that
+$a_{1}= \cdots =a_{k-1}=0$ because $\lambda_{k}$ is distinct from $\lambda_{1}, \dots,\lambda_{k-1}$ by hypothesis.  However, by \eqref{E:eq2} this implies $v_{k}=0$, contradicting our hypothesis that $v_{k}$ is an eigenvector.  Therefore our assumption that $v_{1},\ldots ,v_{m}$ is linearly dependent was false.
+\end{proof}
+
+\section{A Topology Proof}
+From \textbf{Topology for Analysis} by Albert Wilansky.
+\begin{definition}
+Let $X$ and $Y$ be topologial spaces and $f:X \to Y$.  We say that $f$ is \textbf{continuous at} $\boldsymbol{x \in X}$ if, for each neighborhood $N$ of $f(x)$, $f^{-1}[N]$ is a neighborhood of $x$.  We say $f$  is \textbf{continuous on} $\boldsymbol{X}$ if $f$ is continuous at every $x \in X$.
+\end{definition}
+\begin{theorem}
+A set is open if and only if it is a neighborhood of each of its points.\label{T:nbhd}
+\end{theorem}
+\begin{theorem}[\textbf{Characterization of Continuity by Open Sets}]
+A function $f:X \to Y$ is continuous on $X$ if and only if whenever $G$ is an open set in $Y, f^{-1}[G]$ is an open set in $X$.
+\end{theorem}
+\begin{proof}
+Let $f$ be continuous on $X$ and $G$ be an open set in $Y$.  Let $x \in f^{-1}[G]$.  Since $G$ is a neighborhood of $f(x), f^{-1}[G]$ is a neighborhood of $x$ by the definition of continuity.  Thus $f^{-1}[G]$ is open, since it is a neighborhood of each of its points, by Theorem \ref{T:nbhd}.
+\par
+Conversely, suppose that $f^{-1}[G]$ is open whenever $G$ is open.  Let $x \in X$, and let $N$ be a neighborhood of $f(x)$.  Then there exists an open set $G$ with $f(x) \in G \subset N$, by definition of neighborhood.  Now $f^{-1}[G]$ is open by hypothesis, contains $x$, and hence is a neighborhood of $x$.  Thus $f$ is continuous at $x$.  Since $x \in X$ was arbitrary, $f$ is continuous on $X$.
+\end{proof}
+
+\section{Conclusion}
+I hope you have seen enough to get you using \LaTeX \thinspace for your assignments.  If you ever come across anything you want to do that is not explained here, use Google.  If you are serious about using \LaTeX, say you are going to graduate school, I would invest in a copy of \textbf{\textit{More} Math into \LaTeX}, 4th edition, by George Gr\"{a}tzer, published by Springer.  It has everything you would ever need, and more.
+
+\end{document}

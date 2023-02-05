@@ -1,0 +1,103 @@
+\documentclass[a4paper,$if(fontsize)$$fontsize$$else$11pt$endif$]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage[usenames]{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{url}
+\usepackage{hyperref}
+
+% Primary Font: Roboto Slab
+\setmainfont{Roboto Slab Regular}
+% Secondary Font: Roboto
+% \setmainfont{Roboto Medium}
+
+\geometry{verbose,tmargin=0.75in,bmargin=0.75in,lmargin=0.25in,rmargin=0.25in}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%\setitemize[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+%\setenumerate[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+
+\definecolor{BengalBlack}{RGB}{0, 0, 0}
+\definecolor{Roarange}{RGB}{244, 121, 32}
+\definecolor{RoarangeLight}{RGB}{246, 146, 64}
+\definecolor{GrowlingGray}{RGB}{130, 130, 130}
+\definecolor{GrowlingGrayLight}{RGB}{230, 231, 232}
+\definecolor{GrowlingGrayMedium}{RGB}{167, 167, 167}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+			\node[shape=circle,fill=Roarange,draw,inner sep=2pt]
+			(char)
+{#1};}}
+
+\setlength{\columnseprule}{3pt}
+\newcommand{\latexcolumnseprulecolor}{\color{GrowlingGrayLight}}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@outputdblcol{% find
+  \normalcolor\vrule
+}{% and replace by
+  \latexcolumnseprulecolor\vrule
+}{% success
+}{% failure
+  \@latex@warning{Patching \string\@outputdblcol\space failed}%
+}
+\makeatother
+
+\newlength{\seplinewidth}
+\newlength{\seplinesep}
+\setlength{\seplinewidth}{1mm}
+\setlength{\seplinesep}{2mm}
+\colorlet{sepline}{Roarange}
+\newcommand*{\sepline}{%
+  \par
+  \vspace{\dimexpr\seplinesep+.5\parskip}%
+  \cleaders\vbox{%
+    \begingroup % because of color
+      \color{sepline}%
+      \hrule width\linewidth height\seplinewidth
+    \endgroup
+  }\vskip\seplinewidth
+  \vspace{\dimexpr\seplinesep-.5\parskip}%
+}
+
+\hypersetup{
+  linkcolor=Roarange,
+  hidelinks=false,
+  urlcolor=Roarange,
+  colorlinks=true
+}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+%\maketitle
+
+%$if(courseInfo)$
+
+\begin{center}
+\includegraphics[scale=.45]{images/wide.png}
+
+{\huge \color{GrowlingGray}$courseInfo.title$}
+\vskip1em
+{\LARGE \color{GrowlingGray}$courseInfo.number$ -- $courseInfo.semester$ $courseInfo.year$}
+\end{center}
+%$endif$
+
+\vskip1em
+
+$body$
+
+\end{document}

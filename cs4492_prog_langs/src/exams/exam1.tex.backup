@@ -1,0 +1,340 @@
+\documentclass[addpoints]{exam}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=0.75in,bmargin=0.75in,lmargin=0.75in,rmargin=0.75in}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\lstset{%set Code listings styles
+	language=Java, % program language for keywords and comments styles
+	basicstyle=\small, %font size and style
+	identifierstyle=\color{black}, %variable name style
+	stringstyle=\ttfamily, %string style
+	keywordstyle=\color{blue}\bfseries, %language keyword style
+	commentstyle=\color{blue!75}\itshape, %commentstyle
+	breaklines=true,  % sets automatic line breaking
+	breakatwhitespace=false,   %break line not just at whitespaces
+	showspaces=false,
+	showstringspaces=false,
+}
+
+\pagestyle{headandfoot}
+\runningheadrule
+\firstpageheadrule
+\firstpageheader{CSCI 111}{July 17, 2015 -- Midterm Exam}{Name:\enspace\hspace{1.5in}}
+\runningheader{CSCI 111}{July 17, 2015 -- Midterm Exam}{Name:\enspace\hspace{1.5in}}
+\firstpagefooter{}{Page \thepage\ of \numpages}{}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\printanswers
+
+\begin{document}
+\begin{coverpages}
+\begin{center}
+  {\makebox[3.5in]{\hrulefill}\\
+  \vspace{1.5em}
+  {\Large MONTANA STATE UNIVERSITY}\\
+  \vspace{.5em}
+  PROGRAMMING LANGUAGES\\
+  \vspace{.5em}
+  Midterm\\
+  \vspace{.5em}
+  SPRING, 2018
+  \\
+  \vspace{1em}
+  \makebox[3.5in]{\hrulefill}\\
+  \par}
+  \vspace{0.5in}
+  \makebox[3.5in]{Name:\enspace\hrulefill}
+
+  \vspace{0.2in}
+
+  \makebox[3.5in]{Student Id:\enspace\hrulefill}
+  \vspace{0.2in}  
+
+  \gradetable[v][questions]
+\end{center}
+
+\end{coverpages}
+
+\begin{questions}
+ \question[30]
+ Mark each question as either True (T) or False (F).\\
+ \begin{parts}
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  C++ is considered by many to be the first object-oriented programming language.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  COBOL was designed as a programming language for business applications.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  LISP was originally developed for Artificial Intelligence problems.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  A strongly typed programming language is one that detects all type errors at either compile time or run time.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  A non-terminal that occurs on the far left of any production rule is left associative.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  The ``Von Neuman'' architecture is still used for the basis of most computers today.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  Any finite language can be defined by a regular expression.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  A grammar with a finite set of terminal symbols can only define a finite language.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  EBNF was designed to make context free grammars easier to read. It does not offer any more descriptive power than BNF.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  Associativity rules only apply to operators of the same precedence.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  The order of production rules is not significant, i.e., two grammars with identical rules but given in a different order will always define the same language.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  Overloading functions and operators can only be done in dynamically typed languages because of their greater flexibility.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  An advantage of using an interpreted language is that it runs faster than compiled code.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  A programming language that uses dynamic scoping allows programs to see every symbol table on the stack.\\
+  \part
+  \begin{oneparcheckboxes}
+    \choice T
+    \choice F
+  \end{oneparcheckboxes}
+  The procedural programming paradigm treats procedures as first class objects.
+ \end{parts}
+
+ \newpage
+
+\question[2]
+When two variable identifiers are allowed to share the same address pointer it is known as:\\
+\begin{choices}
+ \choice dynamic binding
+ \choice dynamic scoping
+ \choice aliasing
+ \choice weak typing
+ \choice dynamic typing
+\end{choices}
+
+\vspace{2em}
+
+\question[2]
+Context free grammars are used to capture which aspect of a programming language?\\
+\begin{choices}
+ \choice lexical structure
+ \choice syntax
+ \choice type system
+ \choice operational semantics
+ \choice axiomatic semantics
+\end{choices}
+
+\vspace{2em}
+
+\question[2]
+Choose the (one) example of orthoganality from the statements below\\
+\begin{choices}
+ \choice An array element can be any data type except void or a function.
+ \choice All statements (including assignment, if, and while) return some value.
+ \choice Parameters are passed by value, unless they are arrays, in which case they are pased by reference.
+ \choice Structures (but not arrays) may be returned from a function.
+ \choice Function passing is not permitted.
+\end{choices}
+
+\vspace{2em}
+
+\question[2]
+In Java, a method declared in an interface is implicitly:\\
+\begin{choices}
+ \choice static
+ \choice private
+ \choice final
+ \choice abstract
+ \choice none of the above
+\end{choices}
+
+\vspace{2em}
+
+\question[2]
+Circle all of the following that are Object Oriented languages.\\
+\begin{choices}
+ \choice C\#
+ \choice Fortran 77
+ \choice Java
+ \choice LISP
+ \choice Perl
+\end{choices}
+
+\newpage
+
+\question[10]
+Consider the following code in some C-style language. Assume the \verb|writeln| function prints to standard output followed by an \verb|EOL|.
+
+\begin{lstlisting}
+ // global variables
+ int foo = 3;
+ int bar = 5;
+ 
+ void printmult(int bar) {
+     writeln foo * bar;
+ }
+ 
+ void addbar(int bar) {
+     foo = foo + bar;
+     printmult(foo);
+ }
+ 
+ void test() {
+     int foo = 2;
+     int bar = 7;
+     printmult(4);
+     
+     foo = 1;
+     bar = 13;
+     addbar(9);
+     writeln foo;
+ }
+\end{lstlisting}
+
+\begin{parts}
+ \part[5]
+ What does the function \verb|test| print if the language uses static scoping?
+ \vspace*{\stretch{1}}
+ 
+ \part[5]
+ What does the function \verb|test| print if the language uses dynamic scoping?
+ \vspace*{\stretch{1}}
+ 
+\end{parts}
+
+\newpage
+
+\question[15]
+Answer these questions about the following grammar. The starting symbol is \verb|<re>|.\\
+
+\begin{verbatim}
+ <do> ::= <me>
+ <do> ::= <do> % <me>
+ <re> ::= <do> & <re>
+ <re> ::= <do>
+ <me> ::= ( <re> )
+ <me> ::= a | b
+\end{verbatim}
+\vspace{2em}
+
+\begin{parts}
+ \part[2]
+ Which operator has higher precedence?
+ \vspace*{\stretch{1}}
+ 
+ \part[2]
+ What is the associativity of the \verb|%| operator?
+ \vspace*{\stretch{1}}
+ 
+ \part[2]
+ What is the associativity of the \verb|&| operator?
+ \vspace*{\stretch{1}}
+ 
+ \part[2]
+ Does this grammar describe a finite or an infinite language?
+ \vspace*{\stretch{1}}
+ 
+ \part[2]
+ Is this grammar ambiguous?
+ \vspace*{\stretch{1}}
+ 
+ \part[5]
+ Draw a parse tree to explain the string:
+ \begin{center}\verb|b & a % (a & b) & a|.\end{center}
+ \vspace*{\stretch{1}}
+\end{parts}
+
+\newpage
+
+\question[15]
+complete the following Java loop skeleton below. Your code should match street addresses of a certain format and print out the information in the manner described below.
+
+Using regular expressions, match street addresses of the format: a number followed by one or more words and ending in the string ``st'', ``dr'', or ``ave''. For example, your regex should be able to return ``1212 pine st''. You do not need to worry about all of the other possible road types, just the three listed above.
+
+The following is an example input:
+
+\begin{verbatim}
+      Thomas Aquinas, (555) 555-5555, 1212 Pine St Bozeman, MT 59715
+      Bram Stoker, (123) 456-7890, 123 W College Dr, Helena, MT 59601
+      Ben Kingsley, (321) 123-6756, 9876 N 13th Ave, Nome, AL 99762
+\end{verbatim}
+
+\begin{lstlisting}
+ // This loop processes some text file line by line
+ // You only need to complete the code within the loop
+ 
+ while(my $line = <STDIN>) {
+ 
+      // Coverts all text to lower case
+      $line = lc($line);
+\end{lstlisting}
+\vspace*{\stretch{1}}
+\begin{lstlisting}
+ } // End while loop
+\end{lstlisting}
+
+
+
+ 
+\end{questions}
+\end{document}

@@ -1,0 +1,331 @@
+% A pure minimalistic LaTeX-Beamer theme for everyone to use.
+% Copyright (C) 2020 Kai Norman Clasen
+
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+% This file is part of beamerthemepureminimalistic.
+
+% If problems/bugs are found or enhancements are desired, please contact
+% me over: https://github.com/kai-tub/latex-beamer-pure-minimalistic
+
+\documentclass[$if(fontsize)$$fontsize$,$else$12pt,$endif$t,pdf,xcolor=svgnames,aspectratio=169]{beamer}
+% should also look nice for the classic aspectratio
+% of course, than the text has to be refitted
+% \documentclass{beamer} 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{graphs,arrows.meta,calc,positioning,intersections,quotes,decorations.markings,matrix,backgrounds,shapes.geometric}
+\usepackage{tkz-euclide}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage{textpos}
+%\usepackage{MnSymbol,wasysym}
+%\usepackage{enumitem}
+\usepackage{media9}
+\usepackage{tabulary}
+\usepackage{makecell}
+\usepackage{soul}
+%\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{mathtools}
+\usepackage{blkarray}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+%\usepackage{ebproof}
+\usepackage{bussproofs}
+\usepackage{cancel}
+\usepackage{blkarray, bigstrut}
+\usepackage{calc}
+
+$if(tables)$
+\usepackage{booktabs}
+\usepackage{longtable}
+% These lines are needed to make table captions work with longtable:
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+$endif$
+$if(url)$
+\usepackage{url}
+$endif$
+$if(graphics)$
+\usepackage{graphicx}
+% Redefine \includegraphics so that, unless explicit options are
+% given, the image width will not exceed the width of the page.
+% Images get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\ScaleIfNeeded{%
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+%\renewcommand{\includegraphics}[2][]{\Oldincludegraphics[width=\ScaleIfNeeded]{#2}}
+$endif$
+$if(verbatim-in-note)$
+\usepackage{fancyvrb}
+$endif$
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+$if(csquotes)$
+\usepackage{csquotes}
+$endif$
+
+\usetheme[showmaxslides,darkmode]{pureminimalistic2}
+
+% this makes it possible to add backup slides, without counting them
+\usepackage{appendixnumberbeamer}
+\renewcommand{\appendixname}{\texorpdfstring{\translate{appendix}}{appendix}}
+
+%\useinnertheme{circles}
+% \usefonttheme{protexfessionalfonts}
+\usefonttheme{serif}
+
+\lstset{%set Code listings styles
+        language=Java, % program language for keywords and comments styles
+        basicstyle=\tiny,
+        identifierstyle=\color{black}, %variable name style
+        stringstyle=\ttfamily, %string style
+        keywordstyle=\color{blue}\bfseries, %language keyword style
+        commentstyle=\color{DarkGreen}\itshape, %commentstyle
+        breaklines=true,  % sets automatic line breaking
+        breakatwhitespace=false,   %break line not just at whitespaces
+        showspaces=false,
+        showstringspaces=false,
+}
+\hypersetup{
+  linkcolor=Roarange,
+  hidelinks=false,
+  urlcolor=Roarange,
+  colorlinks=true
+}
+
+% if loaded after begin{document} a warning will appear: "pdfauthor already used"
+$if(strikeout)$
+\usepackage[normalem]{ulem}
+% avoid problems with \sout in headers with hyperref:
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
+$endif$
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+$if(numbersections)$
+$else$
+\setcounter{secnumdepth}{0}
+$endif$
+$if(verbatim-in-note)$
+\VerbatimFootnotes % allows verbatim text in footnotes
+$endif$
+$if(lang)$
+\usepackage[$lang$]{babel}
+$endif$
+$if(title)$
+\title$if(shorttitle)$[$shorttitle$]$endif${$title$}
+$endif$
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+$if(author)$
+\author{$if(wideLogo)$\includegraphics[scale=0.25]{$wideLogo$}\\$endif$$for(author)$$author$ \and $endfor$}
+$endif$
+$if(date)$
+\date{$date$}
+$else$
+\date{}
+$endif$
+$if(institute)$
+\institute{$institute$}
+$endif$
+
+\pgfplotsset{width=\textwidth,compat=1.17}
+
+\definecolor{BengalBlack}{RGB}{0, 0, 0}
+\definecolor{Roarange}{RGB}{244, 121, 32}
+\definecolor{RoarangeLight}{RGB}{246, 146, 64}
+\definecolor{GrowlingGray}{RGB}{130, 130, 130}
+\definecolor{GrowlingGrayLight}{RGB}{230, 231, 232}
+\definecolor{GrowlingGrayMedium}{RGB}{167, 167, 167}
+\definecolor{Links}{RGB}{184, 43, 0}
+\definecolor{Buttons}{RGB}{212, 68, 28}
+\definecolor{DarkGray}{RGB}{40, 40, 40}
+
+\definecolor{SmokyBlack}{HTML}{191010}   % Black
+\definecolor{Isabelline}{HTML}{F1E8E5}   % White
+\definecolor{BlueDeFrance}{HTML}{008BF5} % Blue
+\definecolor{Bluetiful}{HTML}{4371EF}    % Blue
+\definecolor{BurntSienna}{HTML}{DE6C3F}  % Orange
+\definecolor{Olivine}{HTML}{9BC087}      % Green
+\definecolor{AshGray}{HTML}{AAB1A9}      % Gray
+\definecolor{Amethyst}{HTML}{A85AED}     % Purple
+\definecolor{Jasmine}{HTML}{F2D57D}      % Yellow
+\definecolor{FireOpal}{HTML}{E95949}     % Red
+
+\setbeamercolor{structure}{bg=GrowlingGrayLight,fg=BengalBlack}
+\setbeamerfont{structure}{series=\bfseries}
+
+\renewcommand{\beamertitlecolor}{Roarange}
+\renewcommand{\logoheader}{\includegraphics[width=.9\linewidth]{$headerlogo$}}
+\renewcommand{\logofooter}{\includegraphics[width=.25\linewidth]{$footerlogo$}}
+\renewcommand{\logotitle}{\includegraphics[width=.2\linewidth]{$titlelogo$}}
+
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\textcolor{Roarange}{\oldtextbf{#1}}}
+\let\oldtextit\textit
+\renewcommand{\textit}[1]{\textcolor{FireOpal}{\oldtextit{#1}}}
+\let\oldemph\emph
+\renewcommand{\emph}[1]{\textcolor{FireOpal}{\oldemph{#1}}}
+
+\newcommand{\ex}{\textcolor{Olivine}{\bfseries\underline{Example}:\ }}
+\newcommand{\exs}{\textcolor{Olivine}{\bfseries\underline{Examples}:\ }}
+\newcommand{\sol}{\textcolor{BlueDeFrance}{\bfseries\underline{Solution}:\ }}
+\newcommand{\prf}{\textcolor{Jasmine}{\bfseries\underline{Proof}:\ }}
+\newcommand{\exercise}{\textcolor{Amethyst}{\bfseries\underline{Exercise}:\ }}
+
+\newcommand{\portrait}[3]{%
+\begin{figure}
+\centering
+\includegraphics[width=#2\textwidth]{#3}
+\caption{#1}
+\end{figure}
+
+}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{5pt}\setlength{\parskip}{0pt}}
+
+\setmainfont{Roboto}
+\setsansfont{Roboto}
+\usefonttheme{serif}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\imod}{\mathbf{mod}}
+\DeclareMathOperator{\idiv}{\mathbf{div}}
+\DeclareMathOperator{\lub}{lub}
+\DeclareMathOperator{\glb}{glb}
+
+\def\nullvalue{}
+\def\drawarraystack(#1, #2, #3){
+  \begin{tikzpicture}
+    \def\scale{0.5}
+    \def\array{#1}
+    \def\top{#2}
+    \def\length{#3}
+    \foreach \i/\j in \array {
+      \node[minimum size=\scale cm] at (\i * \scale, \scale) (index\i) {\footnotesize \i};
+      \ifthenelse{\equal{\j}{\nullvalue}}{
+        \def\fillcolor{lightgray}
+      }{
+        \def\fillcolor{lightgray!40}
+      }
+      \node[draw, fill=\fillcolor, minimum size=\scale cm] at (\i * \scale, 0) {\j};
+    }
+    \fill [fill=lightgray] (\length * \scale + \scale * 0.5, 0 - \scale * 0.5) -- +(\scale, 0) -- +(\scale, \scale) -- +(0, \scale) -- cycle;
+    \draw (\length * \scale + \scale * 0.5, 0 - \scale * 0.5) -- +(\scale, 0);
+    \draw (\length * \scale + \scale * 0.5, 0 + \scale * 0.5) -- +(\scale, 0);
+    \node at (0, 0) (start) {\small $S$};
+  \end{tikzpicture}
+}
+
+\newcommand{\ts}[1]{%
+\centering
+\vfill
+\begin{minipage}{\widthof{\includegraphics[width=13pt]{images/mark.png}\Huge #1}+5pt}
+{
+\includegraphics[width=13pt]{images/mark.png}
+\Huge #1
+}
+\vskip-.5em
+\textcolor{GrowlingGray}{\rule{\textwidth}{2pt}}
+\large \textbf{\hfill $course$}
+\end{minipage}
+}
+
+$if(course)$
+\newcommand{\titleslide}[2]{%
+\centering
+\vfill
+\begin{minipage}{#1}
+{
+\includegraphics[width=13pt]{images/mark.png}
+\Huge #2
+}
+\vskip-.5em
+\textcolor{GrowlingGray}{\rule{\textwidth}{2pt}}
+\large \textbf{\hfill $course$}
+\end{minipage}
+}
+$else$
+\newcommand{\titleslide}[3]{%
+\centering
+\vfill
+\begin{minipage}{#1}
+{
+\includegraphics[width=13pt]{images/mark.png}
+\Huge #2
+}
+\vskip-.5em
+\textcolor{GrowlingGray}{\rule{\textwidth}{2pt}}
+\large \textbf{\hfill #3}
+\end{minipage}
+}
+$endif$
+
+\def\LinkedList#1{%
+  \foreach \element in \list {
+     \node[node of list, right = of aux, name=ele] {\element};
+     \node[node of list, name=aux2, anchor=west] at ([xshift=-.4pt] ele.east) {};
+     \draw[link] (aux) -- (ele);
+     \coordinate (aux) at (aux2);
+   }
+   \fill (aux) circle(2pt);
+}
+
+\begin{document}
+% has to be loaded outside of a frame to work!
+\maketitle
+
+% For longer table of contents, I find it cleaner to
+% use no footline.
+$if(outline)$
+\begin{frame}[plain, noframenumbering]{Outline}
+  \tableofcontents
+\end{frame}
+$endif$
+
+$body$
+
+\end{document}
