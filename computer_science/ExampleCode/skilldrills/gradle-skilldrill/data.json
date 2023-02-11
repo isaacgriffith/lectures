@@ -1,0 +1,34 @@
+[
+  {
+    "firstName": "Bob",
+    "lastName": "Sampson",
+    "courses": [
+      {
+        "number": 2263,
+        "subject": "CS",
+        "title": "Advanced OO Programming"
+      },
+      {
+        "number": 1187,
+        "subject": "MATH",
+        "title": "Discrete Structures"
+      }
+    ]
+  },
+  {
+    "firstName": "Terry",
+    "lastName": "Stevens",
+    "courses": [
+      {
+        "number": 1143,
+        "subject": "MATH",
+        "title": "College Algebra"
+      },
+      {
+        "number": 1181,
+        "subject": "CS",
+        "title": "Introduction to Programming"
+      }
+    ]
+  }
+]

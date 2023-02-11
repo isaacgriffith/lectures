@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite.isu-composite.iml" filepath="$PROJECT_DIR$/.idea/modules/composite.isu-composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite.isu-composite.main.iml" filepath="$PROJECT_DIR$/.idea/modules/composite.isu-composite.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite.isu-composite.test.iml" filepath="$PROJECT_DIR$/.idea/modules/composite.isu-composite.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flyweight.isu-flyweight.iml" filepath="$PROJECT_DIR$/.idea/modules/flyweight.isu-flyweight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flyweight.isu-flyweight.main.iml" filepath="$PROJECT_DIR$/.idea/modules/flyweight.isu-flyweight.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flyweight.isu-flyweight.test.iml" filepath="$PROJECT_DIR$/.idea/modules/flyweight.isu-flyweight.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-adapter.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-adapter.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-adapter.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-adapter.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-command.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-command.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-composite.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-composite.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-composite.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-composite.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-composite.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-decorator.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-decorator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-decorator.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-decorator.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-decorator.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-decorator.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-facade.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-facade.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-facade.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-facade.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-facade.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-factory.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-factory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-factory.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-factory.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-factory.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-factory.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-flyweight.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-flyweight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-flyweight.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-flyweight.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-flyweight.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-flyweight.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-iterator.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-iterator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-iterator.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-iterator.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-iterator.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-iterator.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-observer.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-observer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-observer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-observer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-observer.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-observer.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-singleton.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-singleton.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-singleton.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-singleton.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-singleton.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-state.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-state.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-state.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-state.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-state.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-state.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-strategy.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-strategy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-strategy.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-strategy.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-strategy.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-strategy.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-template.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-template.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-template.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isu-template.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isu-template.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/iterator.isu-iterator.iml" filepath="$PROJECT_DIR$/.idea/modules/iterator.isu-iterator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/iterator.isu-iterator.main.iml" filepath="$PROJECT_DIR$/.idea/modules/iterator.isu-iterator.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/iterator.isu-iterator.test.iml" filepath="$PROJECT_DIR$/.idea/modules/iterator.isu-iterator.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/state.isu-state.iml" filepath="$PROJECT_DIR$/.idea/modules/state.isu-state.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/state.isu-state.main.iml" filepath="$PROJECT_DIR$/.idea/modules/state.isu-state.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/state.isu-state.test.iml" filepath="$PROJECT_DIR$/.idea/modules/state.isu-state.test.iml" />
+    </modules>
+  </component>
+</project>

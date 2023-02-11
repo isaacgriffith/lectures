@@ -3,3 +3,7 @@
 *.log
 bin/
 build/
+*.class
+*.jar
+*.exe
+*.mp4

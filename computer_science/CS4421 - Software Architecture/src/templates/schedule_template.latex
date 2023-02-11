@@ -1,0 +1,105 @@
+\documentclass[a4paper,$if(fontsize)$$fontsize$$else$11pt$endif$]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage[usenames]{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{url}
+\usepackage{hyperref}
+\setmainfont[
+    Ligatures=TeX
+]{Futura}
+
+\geometry{verbose,tmargin=0.75in,bmargin=0.75in,lmargin=0.25in,rmargin=0.25in}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%\setitemize[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+%\setenumerate[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+
+\definecolor{ISUBlack}{RGB}{0, 0, 0}
+\definecolor{ISUOrange}{RGB}{244, 121, 32}
+\definecolor{ISUGrey}{RGB}{88, 89, 91}
+\definecolor{ISULtOrange}{RGB}{247, 148, 30}
+\definecolor{ISUDkOrange}{RGB}{246, 132, 40}
+\definecolor{ISULtGray}{RGB}{167, 169, 172}
+\definecolor{ISUMdGray}{RGB}{109, 110, 113}
+\definecolor{ISUCream}{RGB}{242, 230, 196}
+\definecolor{ISUTan}{RGB}{213, 172, 108}
+\definecolor{ISUBrown}{RGB}{68, 32, 17}
+\definecolor{ISULtGreen}{RGB}{146, 177, 118}
+\definecolor{ISUGreen}{RGB}{123, 152, 78}
+\definecolor{ISULimeGreen}{RGB}{155, 191, 59}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+			\node[shape=circle,fill=ISULtOrange,draw,inner sep=2pt]
+			(char)
+{#1};}}
+
+\setlength{\columnseprule}{3pt}
+\newcommand{\latexcolumnseprulecolor}{\color{ISULtGray}}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@outputdblcol{% find
+  \normalcolor\vrule
+}{% and replace by
+  \latexcolumnseprulecolor\vrule
+}{% success
+}{% failure
+  \@latex@warning{Patching \string\@outputdblcol\space failed}%
+}
+\makeatother
+
+\newlength{\seplinewidth}
+\newlength{\seplinesep}
+\setlength{\seplinewidth}{1mm}
+\setlength{\seplinesep}{2mm}
+\colorlet{sepline}{ISULtOrange}
+\newcommand*{\sepline}{%
+  \par
+  \vspace{\dimexpr\seplinesep+.5\parskip}%
+  \cleaders\vbox{%
+    \begingroup % because of color
+      \color{sepline}%
+      \hrule width\linewidth height\seplinewidth
+    \endgroup
+  }\vskip\seplinewidth
+  \vspace{\dimexpr\seplinesep-.5\parskip}%
+}
+
+\hypersetup{
+  linkcolor=ISUGreen,
+  hidelinks=false,
+  urlcolor=ISUGreen,
+  colorlinks=true
+}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+%\maketitle
+
+%$if(courseInfo)$
+
+\begin{center}
+{\LARGE \color{ISUBrown}$courseInfo.number$ -- $courseInfo.semester$ $courseInfo.year$}\\
+{\huge \color{ISUBrown}$courseInfo.title$}
+\end{center}
+%$endif$
+
+\vskip1em
+
+$body$
+
+\end{document}

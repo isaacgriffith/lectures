@@ -1,0 +1,203 @@
+\documentclass[dissertation,appendmultiple]{MSUstyle}
+%
+%  Created by Seth Humphries
+%  Update and maintained by Prof. Mark Owkes mark.owkes@montana.edu
+%
+%%    Copyright (c) 2007-2012 Seth D. Humphries
+%%    This work is licensed under the Creative Commons
+%%    Attribution-Noncommercial-Share Alike 3.0 License. To view a copy
+%%    of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/;
+%%    or, (b) send a letter to Creative Commons, 171 2nd Street, Suite
+%%    300, San Francisco, California, 94105, USA.
+%
+%  Version 2.0, check for periodic updates on the bitbucket repository
+%
+% DEFAULTS --------------------
+% The default options are as follows:
+%   \documentclass[12pt,letterpaper,oneside,openright,%
+%       doublespaced,normalmargins,dissertation,final,numreset]{MSUstyle}
+%
+% default options do not need to be entered. Defaults will generate a document
+% that conforms to the MSU Electronic Thesis/Dissertation  (ETD) guidelines.
+%
+% MASTERS THESIS ---------------
+%  use \documentclass[thesis]{MSUstyle} to adjustment the front matter according to ETD style rules that
+% are different for a thesis than for a dissertation.
+%
+% ADDITIONAL OPTIONS ----------
+% 10pt, singlespaced, and draft allow you to require less number of pages for editing
+% A draft version number can be set with, e.g., \draftver{1.0}
+%
+% numberedsections provides numbered chapter and section titles
+%
+% appendsingle/appendmultiple is required if you have one/multiple appendices, remove if you do not have an appendix
+%
+% nonumreset does not add chapter to labels of figures, tables, etc. (not recommended)
+%
+% PRINTING OPTIONS ------------
+% oneside,openright (defaults) 1" margin on all sides of pages (use for electronic documents and submission to grad school)
+% oneside,openright,bigmargin larger margin on left side of pages (optionally use for electronic documents and submission to grad school)
+% twoside,openany  larger margins alternate left/right sides for binding (use for printing on minimal number of pages)
+% twoside,openright larger margins alternate left/right sides for binding and ...
+%                               blank pages added so chapter start on right page (use for nicest printed material)
+
+% ========================= %
+%  Packages                 %
+%  (add as needed)          %
+% ========================= %
+\usepackage[final]{graphicx} %for the \includegraphics command and figures put [final] before ...
+%%    {graphix} if you want figures to show up even while in draft mode
+\usepackage{amsrefs}
+\usepackage{subfig}    % to be able to have multiple plots in one figure
+\usepackage{color} % for changing text color in chapters \textcolor{red}{red text read here}.
+\usepackage{varioref}  % for \vref{figure} which shows up like ``figure 4 on page 6''
+\usepackage{rotating}  % to rotate figures and captions
+\usepackage{courier}
+
+\usepackage{pdflscape}		%command to rotate a page into landscape mode
+\usepackage{setspace}		%\vspace command
+\usepackage{mathrsfs}			%a fancy script for fourier and hilbert transform symbols
+\usepackage{mathtools}
+\usepackage{verbatim}			%add the \comment option
+\usepackage{multirow}
+\usepackage[final]{listings} %used for formatting code
+% \usepackage{minted}
+\usepackage{hyperref}
+\usepackage{cite} %compresses the citations so \cite{ref1,ref2,ref3,ref4} is printed as [1-4] instead of [1,2,3,4]
+\usepackage{svg}
+\usepackage{subfig}
+\usepackage{IEEEtrantools}
+
+\usepackage{tikz} % used for creating figures
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{arrows}
+
+\usepackage{latexsym}
+\usepackage{bm,array}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{afterpage}
+\usepackage{fancyhdr}
+\usepackage{lipsum} % Generates random text
+\usepackage{textcomp}
+\usepackage{enumitem}
+\usepackage{tabto}
+\usepackage{setspace}
+\usepackage[epsilon]{backnaur}
+\usepackage{textcomp}
+\usepackage{ebnf}
+\usepackage{tabularx}
+\usepackage{stfloats}
+\usepackage{rotating}
+\usepackage{epigraph}
+\usepackage{url}
+
+
+\lfoot{}\cfoot{}\rfoot{}  %clear footers
+\lhead{}\chead{}\rhead{}  %clear headers
+\renewcommand{\headrulewidth}{0pt} %Do not print a line below the header
+
+\usepackage{attachfile} %used to attach files into final pdf, must be included after pdftex package
+
+% Style of code listings (Change as needed)
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1.0,1.0,1.0}
+
+\lstdefinelanguage{flow}
+ {morekeywords={workflow,phase,in,parallel},
+  sensitive=false,
+  morestring=[b]',
+ }
+
+ \lstdefinelanguage{pgcl}
+ {morekeywords={pattern,cue,role,event,content,definition}
+  sensitive=false,
+  morestring=[b]",
+ }
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbersep=0pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% ======================= %
+%  User defined commands  %
+% ======================= %
+\newcommand{\etc}{etc. }
+\newcommand{\eg}{e.g. }
+\newcommand{\ie}{i.e. }
+\newcommand{\etal}{et al.}
+\newcommand{\mm}{meta-model}
+
+% =============================== %
+%  Definitions: Change as needed  %
+% =============================== %
+\Name{$author$} %PUT your FULL name here
+\DocTitle{\texorpdfstring{$title$}{$title$}}
+\OWNwebpage{$website$} %your personal webpage
+\degreetitle{$degree$} % may be different than department... ie MS in Electrical Engineering is not Elect. and Com. Engnr degree.
+\department{$institute$}
+\committeechair{$committeeChair$}
+\departmentchair{$deptChair$}
+\graduatedean{$gradDean$}
+\submitdate{$submitDate$}
+\copyrightyear{$copyrightYear$} %add one to year if document submitted in Dec.
+\draftver{$version$} %versioning for use with draft option
+
+% put searchable words you want internet search engines to find here
+\keys{$keywords$}
+
+\bibfiles{dissertation.bib} %your .bib file(s), files containing bibliographic
+
+%  Configuration of hyperref package
+\hypersetup{%
+	baseurl={\OWNwebpage}, %baseurl is url that is in pdf document properties
+% 	bookmarks=true, %show bookmarks when opening pdf
+	citecolor=black, %citations show up black
+	colorlinks=true, %use colored links
+	draft=false, % prevents hyperref from draft mode...keeps bookmarks and hyperlinks in draft mode
+	filecolor=black, %included file links are black text
+	linkcolor=black, %the colored links are black for an ETD but can be otherwise
+	pdfauthor={\Name}, %pdf document maker is you
+	pdfcreator={\Name}, %pdf document maker is you
+	pdfdisplaydoctitle=true, % make display title the same as the document title instead of the filename
+	pdffitwindow=true, %fits one page into the open pdf reader window
+	pdfkeywords={\keys}, %searchable keywords
+	pdfsubject={\degreetype \ for \Name}, %the \  is to give a space
+	pdftitle={\DocTitle}, %pdf document title is now ETD title
+	plainpages=false, %use hyperlinks in pages, gets rid of a lot of warnings too
+	urlcolor=black %website links are black text
+}%
+
+% ================================ %
+%         Actual Document                                              %
+% ================================ %
+\begin{document}
+
+$body$
+
+\end{document}
+% do not put anything after this
+

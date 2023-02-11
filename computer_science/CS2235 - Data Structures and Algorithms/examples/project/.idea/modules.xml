@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L01_Java_I.iml" filepath="$PROJECT_DIR$/.idea/modules/L01_Java_I.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L02_Java_II.iml" filepath="$PROJECT_DIR$/.idea/modules/L02_Java_II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L03_Java_III.iml" filepath="$PROJECT_DIR$/.idea/modules/L03_Java_III.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L04_Java_IV.iml" filepath="$PROJECT_DIR$/.idea/modules/L04_Java_IV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L05_Recursion.iml" filepath="$PROJECT_DIR$/.idea/modules/L05_Recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L06_Alg_Analysis_I.iml" filepath="$PROJECT_DIR$/.idea/modules/L06_Alg_Analysis_I.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L07_Alg_Analysis_II.iml" filepath="$PROJECT_DIR$/.idea/modules/L07_Alg_Analysis_II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L08_Sorting_I.iml" filepath="$PROJECT_DIR$/.idea/modules/L08_Sorting_I.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L09_Sorting_II.iml" filepath="$PROJECT_DIR$/.idea/modules/L09_Sorting_II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L10_Sorting_III.iml" filepath="$PROJECT_DIR$/.idea/modules/L10_Sorting_III.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L11_Lists_I.iml" filepath="$PROJECT_DIR$/.idea/modules/L11_Lists_I.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L12_Lists_II.iml" filepath="$PROJECT_DIR$/.idea/modules/L12_Lists_II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L13_Stacks_Queues_I.iml" filepath="$PROJECT_DIR$/.idea/modules/L13_Stacks_Queues_I.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L14_Stacks_Queues_II.iml" filepath="$PROJECT_DIR$/.idea/modules/L14_Stacks_Queues_II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L15_Trees.iml" filepath="$PROJECT_DIR$/.idea/modules/L15_Trees.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L15_Trees.main.iml" filepath="$PROJECT_DIR$/.idea/modules/L15_Trees.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L15_Trees.test.iml" filepath="$PROJECT_DIR$/.idea/modules/L15_Trees.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L16_Tree_Traversals.iml" filepath="$PROJECT_DIR$/.idea/modules/L16_Tree_Traversals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L16_Tree_Traversals.main.iml" filepath="$PROJECT_DIR$/.idea/modules/L16_Tree_Traversals.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L16_Tree_Traversals.test.iml" filepath="$PROJECT_DIR$/.idea/modules/L16_Tree_Traversals.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L17_Midterm_Review.iml" filepath="$PROJECT_DIR$/.idea/modules/L17_Midterm_Review.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L18_Midterm.iml" filepath="$PROJECT_DIR$/.idea/modules/L18_Midterm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L19_BST.iml" filepath="$PROJECT_DIR$/.idea/modules/L19_BST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L20_Self_Balancing_Trees_I.iml" filepath="$PROJECT_DIR$/.idea/modules/L20_Self_Balancing_Trees_I.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L21_Self_Balancing_Trees_II.iml" filepath="$PROJECT_DIR$/.idea/modules/L21_Self_Balancing_Trees_II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L22_Self_Balancing_Trees_III.iml" filepath="$PROJECT_DIR$/.idea/modules/L22_Self_Balancing_Trees_III.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L23_Tries_Skiplists_Huffman_I.iml" filepath="$PROJECT_DIR$/.idea/modules/L23_Tries_Skiplists_Huffman_I.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L24_Tries_Skiplists_Huffman_II.iml" filepath="$PROJECT_DIR$/.idea/modules/L24_Tries_Skiplists_Huffman_II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L24_Tries_Skiplists_Huffman_II.main.iml" filepath="$PROJECT_DIR$/.idea/modules/L24_Tries_Skiplists_Huffman_II.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L24_Tries_Skiplists_Huffman_II.test.iml" filepath="$PROJECT_DIR$/.idea/modules/L24_Tries_Skiplists_Huffman_II.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L25_Heaps_Priority_Queues.iml" filepath="$PROJECT_DIR$/.idea/modules/L25_Heaps_Priority_Queues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L25_Heaps_Priority_Queues.main.iml" filepath="$PROJECT_DIR$/.idea/modules/L25_Heaps_Priority_Queues.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L25_Heaps_Priority_Queues.test.iml" filepath="$PROJECT_DIR$/.idea/modules/L25_Heaps_Priority_Queues.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L26_Maps.iml" filepath="$PROJECT_DIR$/.idea/modules/L26_Maps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L27_Sets.iml" filepath="$PROJECT_DIR$/.idea/modules/L27_Sets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L28_Graphs_I.iml" filepath="$PROJECT_DIR$/.idea/modules/L28_Graphs_I.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L29_Graphs_II.iml" filepath="$PROJECT_DIR$/.idea/modules/L29_Graphs_II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/L30_Final_Review.iml" filepath="$PROJECT_DIR$/.idea/modules/L30_Final_Review.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples.iml" filepath="$PROJECT_DIR$/.idea/modules/examples.iml" />
+    </modules>
+  </component>
+</project>

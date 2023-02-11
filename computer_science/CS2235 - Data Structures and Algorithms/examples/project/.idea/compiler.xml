@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="L15_Trees.main" target="11" />
+      <module name="L15_Trees.test" target="11" />
+      <module name="L16_Tree_Traversals.main" target="11" />
+      <module name="L16_Tree_Traversals.test" target="11" />
+      <module name="L24_Tries_Skiplists_Huffman_II.main" target="11" />
+      <module name="L24_Tries_Skiplists_Huffman_II.test" target="11" />
+      <module name="L25_Heaps_Priority_Queues.main" target="11" />
+      <module name="L25_Heaps_Priority_Queues.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

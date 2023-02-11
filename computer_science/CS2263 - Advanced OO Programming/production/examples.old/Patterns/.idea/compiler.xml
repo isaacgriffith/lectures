@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="composite.isu-composite.main" target="11" />
+      <module name="composite.isu-composite.test" target="11" />
+      <module name="flyweight.isu-flyweight.main" target="11" />
+      <module name="flyweight.isu-flyweight.test" target="11" />
+      <module name="isu-adapter.main" target="11" />
+      <module name="isu-adapter.test" target="11" />
+      <module name="isu-composite.main" target="11" />
+      <module name="isu-composite.test" target="11" />
+      <module name="isu-decorator.main" target="11" />
+      <module name="isu-decorator.test" target="11" />
+      <module name="isu-facade.main" target="11" />
+      <module name="isu-facade.test" target="11" />
+      <module name="isu-factory.main" target="11" />
+      <module name="isu-factory.test" target="11" />
+      <module name="isu-flyweight.main" target="11" />
+      <module name="isu-flyweight.test" target="11" />
+      <module name="isu-iterator.main" target="11" />
+      <module name="isu-iterator.test" target="11" />
+      <module name="isu-observer.main" target="11" />
+      <module name="isu-observer.test" target="11" />
+      <module name="isu-singleton.main" target="11" />
+      <module name="isu-singleton.test" target="11" />
+      <module name="isu-state.main" target="11" />
+      <module name="isu-state.test" target="11" />
+      <module name="isu-strategy.main" target="11" />
+      <module name="isu-strategy.test" target="11" />
+      <module name="isu-template.main" target="11" />
+      <module name="isu-template.test" target="11" />
+      <module name="iterator.isu-iterator.main" target="11" />
+      <module name="iterator.isu-iterator.test" target="11" />
+      <module name="state.isu-state.main" target="11" />
+      <module name="state.isu-state.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

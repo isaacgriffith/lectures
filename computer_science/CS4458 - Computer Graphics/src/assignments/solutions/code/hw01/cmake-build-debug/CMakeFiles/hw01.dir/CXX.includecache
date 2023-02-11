@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw01/main.cpp
+cstdlib
+-
+cmath
+-
+iostream
+-
+GL/glew.h
+-
+GL/freeglut.h
+-
+

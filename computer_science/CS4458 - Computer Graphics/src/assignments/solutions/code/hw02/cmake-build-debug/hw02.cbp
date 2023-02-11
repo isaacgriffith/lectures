@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="hw02"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hw02">
+				<Option output="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/hw02" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/lib/gcc/x86_64-unknown-linux-gnu/5.5.0/../../../../include/c++/5.5.0"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/lib/gcc/x86_64-unknown-linux-gnu/5.5.0/../../../../include/c++/5.5.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/lib/gcc/x86_64-unknown-linux-gnu/5.5.0/../../../../include/c++/5.5.0/backward"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/lib/gcc/x86_64-unknown-linux-gnu/5.5.0/include"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/include"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/lib/gcc/x86_64-unknown-linux-gnu/5.5.0/include-fixed"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 hw02"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hw02/fast">
+				<Option output="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/hw02" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/lib/gcc/x86_64-unknown-linux-gnu/5.5.0/../../../../include/c++/5.5.0"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/lib/gcc/x86_64-unknown-linux-gnu/5.5.0/../../../../include/c++/5.5.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/lib/gcc/x86_64-unknown-linux-gnu/5.5.0/../../../../include/c++/5.5.0/backward"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/lib/gcc/x86_64-unknown-linux-gnu/5.5.0/include"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/include"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_4/lib/gcc/x86_64-unknown-linux-gnu/5.5.0/include-fixed"/>
+					<Add directory="/home/linuxbrew/.linuxbrew/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 hw02/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Brick3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Brick3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Camera3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Camera3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Colors.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Door3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Door3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/DoorHandle3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/DoorHandle3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/DriveWay3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/DriveWay3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Floor3DTile.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Floor3DTile.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Garage3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Garage3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/GarageWindow3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/GarageWindow3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/House3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/House3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/HouseWing3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/HouseWing3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Land3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Land3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Object3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Object3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Plot3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Plot3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Roof3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Roof3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/SideWalk3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/SideWalk3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/SideWalkTile3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/SideWalkTile3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Walkway3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Walkway3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Walkway3DTile.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Walkway3DTile.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Window3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/Window3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/WingRoof3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/WingRoof3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/WingWindow3D.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/WingWindow3D.h">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/main.cpp">
+			<Option target="hw02"/>
+		</Unit>
+		<Unit filename="/home/git/isu/courses/cs4458/src/assignments/solutions/code/hw02/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

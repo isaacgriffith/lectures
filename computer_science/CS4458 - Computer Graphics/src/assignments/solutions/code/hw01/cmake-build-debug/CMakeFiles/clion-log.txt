@@ -1,0 +1,7 @@
+/opt/clion-2018.2.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/git/isu/courses/cs4458/src/assignments/solutions/code/hw01
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+-- Found GLUT: /usr/lib/x86_64-linux-gnu/libglut.so  
+-- Found GLEW: /usr/include  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/git/isu/courses/cs4458/src/assignments/solutions/code/hw01/cmake-build-debug

@@ -1,0 +1,41 @@
+sudo: required
+language: java
+install: skip
+os: linux
+dist: focal
+env:
+  global:
+  - AWS_URL=565338450378.dkr.ecr.us-east-2.amazonaws.com
+  - LIVE_SERVICE=tttapp
+  - LIVE_CLUSTER_NAME=fargate-cluster
+  - LIVE_APP_NAME=tictactoe
+  - secure: s2ElIZ81uM7qCxQt9SktJISry5B8YfHXXC6CPoUUNSVXHR6LUJPPDNZHRk1DKhjMVzcogFycRFHNA9JrPUkcPoT9v2V9nY3C77o00DvJoC7VraGwpnLoS+9EZBBuR1AJrIwhW9hQpPTdpICyI5+I2wCSSLTf3xoxCHtYWgb/oAdP9FyGGLuB/jBmld11Yu2dgC/GkCLtyix3xjVmKi6D+0u8CRo+OsvHI57GOtKtvDA4ZEPJhWDOPz5E7ZJFe3qnUTt7ehhURkZ3QQtFHORuW9Dd88JOdK9AptmJtIZaXMmWZOQX2E5l50n1NeeJXrgG5EFEQ8SWMR4vMXrMqqO7Dp67xhJLTipPIIsWHMaLaEBOJHtoc2VKhjxFOgxKSwhG8YE7CmhztPaFJUgL75qqweOW8RB4uzuwvj+mOqMJ2mJiwzmiXnYuRme67DU5ZAmBduPz3fiAcJMJ/sLzbjxj/Eg6onAQobZ6cUFOn3QKygBjFDbCq7UouV5nrVZ/pwD7+KoPAYYHabqg0Kojmn+v5A/LHFEPe83wBXvlBj54DmZNXjQw09oHlaVqFRCKYTasE2ofyoztgba27BWz5H80AGJcSVI2Pav3Hn3jBitgUQzcnFl5TXHlC6u4LFq0Z52S8rSntxmDejF2FPlv+CdWmnDD4ur8DFBSyTPqmXOYUIM=
+  - secure: 0XkDDnemo446Bug98RG+FuXObfadbsxlqhsPZzO8vGT+hoITbkq8NSylUXAksL9Dq1tnf8vQfzSF0g8BLntTlF91pgZxiSaAQ/8k3yNCEjeY2dd/kD8cDscpRQPzkPtAYfdaPn30/iQ+yQdajBhHS3VpwYeLgjiyF1C/ond57KQWp8jT9+e913UuuAybJxDOuSyu+qT10Pb3hyNFBDYE4CSz7GVKt/hvRSLDdZ0Ihg9c7FB+aOLHGR7CzowK7C/OhH0MhFnDEacjThkKSLSpz7se2Gq9MqgCW+TZAkcWDfxBmXcqIhht+7gjIVP55hT3LMVbBNHHVgHtbcUPx+a+oQUpktyxEKZeyRpogZ33eiAbEiVQCC4NbqO5U/WokPHCtA+3dHcX22gTwD39Qqe6a4QPPUVj+7rlstGWInD/ykcnWkULbB74EBNZ6vY4HWgMq/DA7hJYfEpNcKJIMfAQLr+JT6+Qmm6dz4Fl+QlT/bjXYXnzmNCtp6dOxGzKNZClYVg0SKU+k+j8jVk5KkDzP4G3CFcDttdRRNfarqvkujjKLejq0UzRNDk8yaptZnzT/0PaEYMqRpG8eW5A2Jc5ItkZgU1jRIIeLmHUJvxKlc0BGbLQ8e/j2A5k1dTZuEBw4+6cTY1OYJdeXJTN4YsoiRH2DEgWyufGaNlqbPYuwJg=
+services:
+- docker
+before_install:
+- pip install awscli
+- export PATH=$PATH:$HOME/.local/bin
+script:
+- wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
+- chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
+- export JAVA_HOME=$HOME/openjdk17
+- "$TRAVIS_BUILD_DIR/install-jdk.sh -F 17 --target $JAVA_HOME"
+- rm install-jdk.sh
+- rm jdk.tar.gz
+- chmod +x gradlew
+- "./gradlew assemble"
+- cd server
+after_success:
+  - docker --version
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+  - eval $(aws ecr get-login --no-include-email --region us-east-2)
+  - docker build -t "$LIVE_APP_NAME:latest" .
+  - docker tag "$LIVE_APP_NAME:latest" "$AWS_URL/$LIVE_APP_NAME:$TRAVIS_COMMIT"
+  - docker tag "$LIVE_APP_NAME:latest" "$AWS_URL/$LIVE_APP_NAME:latest"
+  - docker push "$AWS_URL/$LIVE_APP_NAME:$TRAVIS_COMMIT"
+  - docker push "$AWS_URL/$LIVE_APP_NAME:latest"
+  - chmod +x $TRAVIS_BUILD_DIR/server/ecs_deploy.sh
+  - chmod +x $TRAVIS_BUILD_DIR/server/ecs.sh
+  - $TRAVIS_BUILD_DIR/server/ecs.sh -c $LIVE_CLUSTER_NAME -n $LIVE_SERVICE -i "$AWS_URL/$LIVE_APP_NAME:latest" -r us-east-2 -t 240

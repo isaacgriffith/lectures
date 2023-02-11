@@ -1,0 +1,202 @@
+\documentclass[a4paper,$if(fontsize)$$fontsize$$else$11pt$endif$]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage[usenames]{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{url}
+\usepackage{hyperref}
+\setmainfont[
+    Ligatures=TeX
+]{Futura}
+
+\geometry{verbose,tmargin=0.75in,bmargin=0.75in,lmargin=0.25in,rmargin=0.25in}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%\setitemize[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+%\setenumerate[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+
+\definecolor{ISUBlack}{RGB}{0, 0, 0}
+\definecolor{ISUOrange}{RGB}{244, 121, 32}
+\definecolor{ISUGrey}{RGB}{88, 89, 91}
+\definecolor{ISULtOrange}{RGB}{247, 148, 30}
+\definecolor{ISUDkOrange}{RGB}{246, 132, 40}
+\definecolor{ISULtGray}{RGB}{167, 169, 172}
+\definecolor{ISUMdGray}{RGB}{109, 110, 113}
+\definecolor{ISUCream}{RGB}{242, 230, 196}
+\definecolor{ISUTan}{RGB}{213, 172, 108}
+\definecolor{ISUBrown}{RGB}{68, 32, 17}
+\definecolor{ISULtGreen}{RGB}{146, 177, 118}
+\definecolor{ISUGreen}{RGB}{123, 152, 78}
+\definecolor{ISULimeGreen}{RGB}{155, 191, 59}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+			\node[shape=circle,fill=ISULtOrange,draw,inner sep=2pt]
+			(char)
+{#1};}}
+
+\setlength{\columnseprule}{3pt}
+\newcommand{\latexcolumnseprulecolor}{\color{ISULtGray}}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@outputdblcol{% find
+  \normalcolor\vrule
+}{% and replace by
+  \latexcolumnseprulecolor\vrule
+}{% success
+}{% failure
+  \@latex@warning{Patching \string\@outputdblcol\space failed}%
+}
+\makeatother
+
+\newlength{\seplinewidth}
+\newlength{\seplinesep}
+\setlength{\seplinewidth}{1mm}
+\setlength{\seplinesep}{2mm}
+\colorlet{sepline}{ISULtOrange}
+\newcommand*{\sepline}{%
+  \par
+  \vspace{\dimexpr\seplinesep+.5\parskip}%
+  \cleaders\vbox{%
+    \begingroup % because of color
+      \color{sepline}%
+      \hrule width\linewidth height\seplinewidth
+    \endgroup
+  }\vskip\seplinewidth
+  \vspace{\dimexpr\seplinesep-.5\parskip}%
+}
+
+\hypersetup{
+  linkcolor=ISUGreen,
+  hidelinks=false,
+  urlcolor=ISUGreen,
+  colorlinks=true
+}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+%\maketitle
+
+%$if(courseInfo)$
+
+\begin{center}
+{\LARGE \color{ISUBrown}$courseInfo.number$ -- $courseInfo.semester$ $courseInfo.year$}\\
+{\huge \color{ISUBrown}$courseInfo.title$}
+\end{center}
+%$endif$
+
+\vskip1em
+
+$if(instructor.photo)$
+\begin{minipage}{1.5in}
+ \includegraphics[height=2in]{$instructor.photo$}
+\end{minipage}
+$endif$
+\begin{minipage}{6in}
+
+$if(instructor.name)$
+\noindent {\LARGE \textbf{Instructor:} $instructor.name$}\\
+$endif$
+
+$if(instructor.office)$
+\textbf{Office:} $instructor.office$\\
+$endif$
+$if(instructor.phone)$
+\textbf{Phone:} $instructor.phone$\\
+$endif$
+$if(instructor.email)$
+\textbf{Email:} $instructor.email$\\
+$endif$
+$if(instructor.url)$
+\textbf{URL:} \url{$instructor.url$}\\
+$endif$
+$if(instructor.officeHours)$
+\textbf{Office Hours:}
+\begin{itemize}[topsep=8pt,itemsep=2pt,partopsep=0pt, parsep=0pt]
+  $for(instructor.officeHours.hours)$
+  \item \textbf{$instructor.officeHours.hours.day$}: $instructor.officeHours.hours.time$
+  $endfor$
+  $if(instructor.officeHours.appointmentLink)$
+  \item By appointment scheduled at: \url{$instructor.officeHours.appointmentLink$}
+  $endif$
+\end{itemize}
+$endif$
+\end{minipage}
+
+\vskip1em
+
+\section*{Course Information}
+$if(courseInfo.meetingTime)$
+\noindent\textbf{Meeting Time:} $courseInfo.meetingTime.day$: $courseInfo.meetingTime.time$
+\noindent\textbf{Room:} $courseInfo.meetingTime.room$
+$endif$
+\vskip1em
+
+\noindent\textbf{Final Exam Dates}
+
+$if(courseInfo.final)$
+$for(courseInfo.final.section)$
+\textbf{Section:} $courseInfo.final.section.number$ -- $courseInfo.final.section.city$
+
+\textbf{Date:} $courseInfo.final.section.date$
+
+\textbf{Time:} $courseInfo.final.section.time$
+
+\textbf{Room:} $courseInfo.final.section.room$
+\vskip1em
+$endfor$
+$endif$
+
+$if(courseInfo.prerequisites)$
+\noindent\textbf{Prerequisites:}
+\begin{itemize}
+  $for(courseInfo.prerequisites)$
+  \item $courseInfo.prerequisites$
+  $endfor$
+\end{itemize}
+$endif$
+
+$if(courseInfo.corequisites)$
+\noindent\textbf{Co-requisites:}
+\begin{itemize}
+  $for(courseInfo.corequisites)$
+  \item $courseInfo.corequisites$
+  $endfor$
+\end{itemize}
+$endif$
+
+\vskip1em
+$if(courseInfo.textbooks)$
+\noindent\textbf{Textbooks:}
+\begin{itemize}
+$for(courseInfo.textbooks.book)$
+ \item \textit{\textbf{$courseInfo.textbooks.book.title$, $courseInfo.textbooks.book.edition$ Edition}} -- $courseInfo.textbooks.book.authors$. ISBN: $courseInfo.textbooks.book.isbn$ $if(courseInfo.textbooks.book.optional)$(\textbf{Optional})$endif$
+$endfor$
+\end{itemize}
+$endif$
+
+\sepline
+
+$if(courseInfo.description)$
+\section*{Course Description}
+\noindent $courseInfo.description$
+$endif$
+
+\sepline
+
+$body$
+
+\end{document}

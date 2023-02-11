@@ -1,0 +1,80 @@
+\documentclass[$if(fontsize)$$fontsize$,$else$12pt$endif$]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage[usenames]{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{url}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{listings}
+\usepackage{titling}
+\setmainfont[
+    Ligatures=TeX
+]{Futura}
+
+\geometry{verbose,tmargin=0.75in,bmargin=0.75in,lmargin=0.25in,rmargin=0.25in}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%\setitemize[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+%\setenumerate[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+
+\definecolor{ISUBlack}{RGB}{0, 0, 0}
+\definecolor{ISUOrange}{RGB}{244, 121, 32}
+\definecolor{ISUGrey}{RGB}{88, 89, 91}
+\definecolor{ISULtOrange}{RGB}{247, 148, 30}
+\definecolor{ISUDkOrange}{RGB}{246, 132, 40}
+\definecolor{ISULtGray}{RGB}{167, 169, 172}
+\definecolor{ISUMdGray}{RGB}{109, 110, 113}
+\definecolor{ISUCream}{RGB}{242, 230, 196}
+\definecolor{ISUTan}{RGB}{213, 172, 108}
+\definecolor{ISUBrown}{RGB}{68, 32, 17}
+\definecolor{ISULtGreen}{RGB}{146, 177, 118}
+\definecolor{ISUGreen}{RGB}{123, 152, 78}
+\definecolor{ISULimeGreen}{RGB}{155, 191, 59}
+
+\setmainfont{Futura Lt BT}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+			\node[shape=circle,fill=ISUDkOrange,draw,inner sep=2pt] (char) {#1};}}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\lstset{%set Code listings styles
+	language=Java, % program language for keywords and comments styles
+	basicstyle=\small, %font size and style
+	identifierstyle=\color{black}, %variable name style
+	stringstyle=\ttfamily, %string style
+	keywordstyle=\color{blue}\bfseries, %language keyword style
+	commentstyle=\color{OliveGreen}\itshape, %commentstyle
+	breaklines=true,  % sets automatic line breaking
+	breakatwhitespace=false,   %break line not just at whitespaces
+	showspaces=false,
+	showstringspaces=false,
+}
+
+\setlist[enumerate]{label=\protect\circled{\arabic*}}
+
+\begin{document}
+
+\title{$course$\\$title$}
+\date{Assigned: $assigned$\\
+      Due: $due$}
+
+\maketitle
+
+$body$
+
+\end{document}

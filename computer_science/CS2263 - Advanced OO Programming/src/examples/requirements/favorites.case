@@ -1,0 +1,18 @@
+Name: Adding a Favorite to Favorites Bar
+Description: As a User I want to add a favorite
+to the favorites bar
+Pre-condition(s): Page has not already been added
+Post-conditions(s): Favorite is added to the bar
+Error Condition:
+Error State:
+Trigger: Have a page that I want to add
+Actor(s): Web Browser User
+Sequence:
+  1. Navigate to page to add
+  2. Click star in location bar
+  3. Favorite is added to bar
+
+Alternatives:
+  (1') Right-click on link and select add to favorites
+  (1'') Add favorite by URL via the menu
+  (2') Favorite is added to bar

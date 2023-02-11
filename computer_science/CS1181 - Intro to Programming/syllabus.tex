@@ -1,0 +1,309 @@
+\documentclass[a4paper,11pt,twocolumn]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage[usenames]{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\setmainfont[
+    Ligatures=TeX
+]{Futura}
+
+\geometry{verbose,tmargin=0.75in,bmargin=0.75in,lmargin=0.25in,rmargin=0.25in}
+
+\definecolor{ISUBlack}{RGB}{0, 0, 0}
+\definecolor{ISUOrange}{RGB}{244, 121, 32}
+\definecolor{ISUGrey}{RGB}{88, 89, 91}
+\definecolor{ISULtOrange}{RGB}{247, 148, 30}
+\definecolor{ISUDkOrange}{RGB}{246, 132, 40}
+\definecolor{ISULtGray}{RGB}{167, 169, 172}
+\definecolor{ISUMdGray}{RGB}{109, 110, 113}
+\definecolor{ISUCream}{RGB}{242, 230, 196}
+\definecolor{ISUTan}{RGB}{213, 172, 108}
+\definecolor{ISUBrown}{RGB}{68, 32, 17}
+\definecolor{ISULtGreen}{RGB}{146, 177, 118}
+\definecolor{ISUGreen}{RGB}{123, 152, 78}
+\definecolor{ISULimeGreen}{RGB}{155, 191, 59}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+			\node[shape=circle,fill=ISULtOrange,draw,inner sep=2pt] 
+			(char)
+{#1};}}
+
+\setlength{\columnseprule}{3pt}
+\newcommand{\latexcolumnseprulecolor}{\color{ISULtGray}}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@outputdblcol{% find
+  \normalcolor\vrule
+}{% and replace by
+  \latexcolumnseprulecolor\vrule
+}{% success
+}{% failure
+  \@latex@warning{Patching \string\@outputdblcol\space failed}%
+}
+\makeatother
+
+\newlength{\seplinewidth}
+\newlength{\seplinesep}
+\setlength{\seplinewidth}{1mm}
+\setlength{\seplinesep}{2mm}
+\colorlet{sepline}{ISULtOrange}
+\newcommand*{\sepline}{%
+  \par
+  \vspace{\dimexpr\seplinesep+.5\parskip}%
+  \cleaders\vbox{%
+    \begingroup % because of color
+      \color{sepline}%
+      \hrule width\linewidth height\seplinewidth
+    \endgroup
+  }\vskip\seplinewidth
+  \vspace{\dimexpr\seplinesep-.5\parskip}%
+}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+%\maketitle
+
+\noindent{\LARGE \color{ISUBrown} CS/INFO 1181}
+
+\noindent{\huge \color{ISUBrown} Programming I}
+
+\noindent{\large \color{ISUBrown} Fall 2018 -- Section 3}\\
+
+\noindent\textbf{Instructor:} Isaac D. Griffith\\
+\textbf{Office:} \,\,\,\,\,\,\,\,\,\,\,BA 336\\
+\textbf{Phone:} \,\,\,\,\,\,\,\,\,208.282.4876\\
+\textbf{Email:} \,\,\,\,\,\,\,\,\,\,\,\,grifisaa@isu.edu\\
+\textbf{URL:}\\
+\textbf{Office Hours:}
+\begin{itemize}[topsep=8pt,itemsep=2pt,partopsep=0pt, parsep=0pt]
+ \item \textbf{MW}: 10:45 -- 12:00
+ \item \textbf{TR}: 15:45 -- 17:00
+\end{itemize}
+
+\vskip1em
+
+\noindent\textbf{Meeting Time:} TR: 14:30 -- 15:45\\
+\textbf{Class Room:} \,\,\,\,\,\,\,REND 118\\
+\textbf{Final Exam:} \,\,\,\,\,\,\,\,Friday, 12/14, 07:30 -- 09:30\\
+
+\noindent\textbf{Prerequisite/Co-requisite:}
+\begin{itemize}
+ \item MATH 1143, or
+ \item MATH 1147
+\end{itemize}
+
+\noindent\textbf{Textbook:}
+\begin{quote}
+ \textit{Starting out with Visual C\# (4th Edition)}, Gaddis, T. ISBN-13: 978-0134382609
+\end{quote} 
+
+\noindent This course will use Microsoft Visual Studio, thus will support only Windows or MacOS X for home users.
+
+\sepline
+
+\section*{Course Description (from the catalog}
+
+\noindent Problem solving methods and algorithm development with an emphasis on programming style. Secure software design/coding concepts for resilient software.
+
+\sepline
+
+\section*{Topic List}
+\begin{itemize}[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+ \item 
+\end{itemize}
+
+\sepline
+
+\section*{Course Objectives}
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+ \item 
+\end{enumerate}
+
+\sepline
+
+\section*{Student Expectations}
+These objectives cannot be met unless the student takes an active role in the educational process. Students are expected to:
+
+\begin{itemize}
+ \item \textbf{Attend class} on a regular basis and devote their attention to the material presented
+ \item Prepare for class by \textbf{reading} assigned material
+ \item \textbf{Ask} questions when presented material is unclear or difficult to understand.
+ \item Devote the necessary \textbf{time} to preparing assignments and turning them in on time.
+ \begin{itemize}
+  \item \textbf{Programming is time intensive}
+  \item Students should be prepared to give the time needed for each assignment
+  \item Earlier assignments require less time (3-4 hours), however you can expect to devote a minimum of 8 hours to complete later assignments.
+ \end{itemize}
+ \item \textbf{NOT PROCRASTINATE}. The amount of time you will need to complete each assignment cannot be predicted. For this reason you are encouraged to begin assignments at the earliest possible date so you will be able to complete them on time.
+
+\end{itemize}
+
+
+\sepline
+
+\section*{Moodle}
+Course material including assignment requirements, handouts, and solutions can be viewed using your Moodle account. Announcement and Help forums will also be available on Moodle. Students are expected to access their Moodle account on a daily basis to keep apprised of developments.
+
+\sepline
+
+\section*{Course Schedule}
+
+\sepline
+
+\section*{Assignments}
+\noindent All assignments must be truned in using Moodle witht he Moodle time stamp used to determine submission time. Assignments are due by 11:00 pm on the date specified on Moodle. Assignments should be submitted in the format specified in each assignment instruction document. All programs must conform to the variable and object naming standards and all other coding and documentation standards and styles specified.
+
+\subsection*{Late Assignments}
+Assignments turned in late will incur an increasing penalty based on lateness. Assignments will not be accepted more than 24 hours late.
+
+\subsection*{Mechanics Assingments}
+Mechanics assignments are simple repetitive coding eercises that help familiarize you with the code syntax and structure. Mechanics Assignments are graded on \textbf{completion and not accuracy}.
+
+\subsection*{Project Assignments}
+Project assignments are larger assignments than the Mechanics assignments. Unlike mechanics assignments, project assignments are vauer and require you to come up with more of the solution on your own. These will be graded on \textbf{completion of requirements}. You will need to plan much more time to complete a project assignment compared to a mechanics assignment. \textbf{Do not procrastinate}.
+
+\subsection*{Extra Credit}
+\noindent No extra credit will be given. Therefore, it is important to begin the semester with the knowledge that exams and assignments will constitute your entire grade.
+
+\subsection*{Exams}
+\noindent You must have a 60\% or higher average on class exams in order to be eligible to earn a C- or above grade for the course. In other words, unless you average a 60\% or higher on the exams your course score will be at most a D.
+
+\subsection*{Make-Up Quizzes or Exams}
+\noindent No make-up exams or quizzes will be given, regardless of the reason for absence. Instead, a comprehensive exam will be given at the end of the semester to those students who have missed an earlier exam. The grade on the comprehensive exam will replace at most one zero score for a missed exam. It may be possible to make arrangements to take an exam early if there is a valid reason. In lieu of makeup quizzes, the lowest quiz grade will be dropped.
+
+\subsection*{Final Exam}
+\noindent The scheduled date for the final exam is shown on the first page of this document. You must take the exam on the scheduled date.
+
+\subsection*{Grade Distribution}
+{\small\begin{tabular}{|c|c|c|c|}
+\hline 
+Grade & \textendash{} &  & +\tabularnewline
+\hline 
+\hline 
+A & 90 -- 92.99 & \multicolumn{2}{c|}{93 -- 100}\tabularnewline
+\hline 
+B & 80 -- 82.99 & 83 -- 86.99 & 87 -- 89.99\tabularnewline
+\hline 
+C & 70 -- 72.99 & 73 -- 76.99 & 77 -- 79.99\tabularnewline
+\hline 
+D & 60 -- 62.99 & 63 -- 66.99 & 67 -- 69.99\tabularnewline
+\hline 
+F & \multicolumn{3}{c|}{0 -- 59.99}\tabularnewline
+\hline 
+\end{tabular}}
+
+\subsection*{Final Grade Determination}
+\begin{tabular}{|l|l|}
+\hline 
+Type & Points\tabularnewline
+\hline 
+\hline 
+Project/Exercises & 40\%\tabularnewline
+\hline 
+Exams & 50\%\tabularnewline
+\hline 
+Quizes/Assignments & 10\%\tabularnewline
+\hline 
+\end{tabular}
+
+\section*{Required Material and Assumed Skills}
+
+Students are assumed to have sufficient skills with computers to install, run and use Visual Studio Enterprise IDE that will be used in the course, interact with Moodle, zip files, use email to interact with faculty and graders, etc. the course is run through Mooodle and all homework must be submitted through Moodle. Visual Studio Enterprise is provided free to CS 1181 students through Microsoft Imagine. If you have not received notifaction of this system, it is up to the student to contact the professor.
+
+Visual Studio is available in the computer labs in Pocatello. It may be run within Linux and Mac environments using a virtual machine and windows 10, which is also available free through Microsoft Imagine. CS and EE students are assumed to be able to organize the use of this software or to use the provided laboratory. For help, please see the tutors.
+
+While real time interactive video is not required for this course, you are probably going to want to download the short video lectures provided for a number of the course modules. You will need a sufficiently fast internet connection.
+
+\section*{Policies \& Procedures}
+
+\subsection*{Academic Integrity}
+\noindent Academic integrity is expected at Idaho State University and the College of Business. All forms of academic dishonesty, including cheating and plagiarism, are strictly prohibited, the penalties for which range up to permanent expulsion from the university with ``Expulsion for Academic Dishonesty'' noted on the student's transcript. If you are unclear as to what constitutes academic dishonesty, read the College of Business Policy on Academic Integrity and the ISU Academic Integrity and Dishonesty Policy.\\
+
+\noindent Some examples of dishonest behavior include, but are not limited to:
+\begin{itemize}[topsep=0pt,itemsep=0pt,partopsep=0pt, parsep=0pt]
+ \item Working on individual assignments with other students.
+ \item Copying material from a source without attributing the source.
+ \item Allowing another student to copy your work and then submit it as his/her own.
+ \item Allowing someone else to complete your assignments for you and then passing off the work as your own.
+ \item Bringing unauthorized material or devices to an exam. Note that you do not have to be caught using them -- just having them is an offense.
+ \item Copying form another student's exam.
+ \item Communicating with someone other than the professor during an exam.
+ \item Removing the exam from the classroom.
+ \item Acquiring exam or assignment answers or questions.
+ \item Taking an exam for someone else or having someone take an exam for you.
+ \item Performing any act designed to give unfair advantage to a student or the attempt to commit such acts.
+\end{itemize}
+
+\subsection*{Professional Demeanor}
+\noindent Part of receiving an education from a professional college is learning about your chosen field. Another part is learning to act like a member of that field. Professional Demeanor is in many ways the most important part of the learning process. How you act affects not only how others perceive you, but can also result in reqards or, alternatively, negative consequences. It will also affect your class grade.\\
+
+\noindent The grade that your receive in this class will consist of two parts: the objective portion that is calculated average of all assignments, quizzes, exams, etc., and a subjective portion that is based on your professional demanor.
+
+{\color{red}\[Final Grade = Calculated Grade * PDM\]}
+
+\noindent The professional demeanor multiplier (PDM) can range from 0.85 to 1.00 and will be multiplied by your calculated average. Students will be assigned a PDM of 1.0 unless behaviors are exhibited that signify unreadiness for the workforce.\\
+
+\noindent Students will demonstrate professional demeanor and commitment in a variety of ways; energetic and respectful participation in class, willing acceptance and completion of obligations; punctuality; and not whining. Professional demeanor includes several subjective items such as attendance, positive attitude, preparation, appropriate language and respectfulness to other students and the professor. Students are expected to come to class prepared, participate in activities and discussions, and treat others with respect in the classroom, which includes listening interactively to classmates and the professor, and respecting others' viewpoints.\\
+
+\noindent Do not text, check social media sites, or eat meals during class.\\
+
+\noindent Some students enroll in a course already having experience in the subject area, and while contributions to discussions are welcomed, arrogance and unwillingness to learn or comply with professor directions will not be tolerated.
+
+\subsection*{Attendance}
+Attendance in class is integral to the learning process. Students are expected to attend every class. Some material may only be covered in class and not made available on the course website. Students should notify their instructors by voicemail or email when they are absent from class.\\
+
+\noindent Students are responsible for all material covered and announcements made within classes, even when absent from classes. Students should rely on classmates and online materials for any course content that is missed.\\
+
+\noindent More than three absences may result in the reduction of one letter grade on the final grade. If a student misses the equivalent of three weeks or more of class, no credit may be received for the course. It is the student's responsibility to contact the professor to check on their status if more than three classes are missed.\\
+
+\noindent Students are expected to remain for the entire duration of the class.
+
+\subsection*{Tardiness}
+Students are expected to arrive for class and be in their seats by the scheduled beginning of class. Repeatedly coming to class late disrupts the teaching/learning environment in the classroom and adversely affects the other students in the class.
+
+\subsection*{Digital Device Policy}
+Increaing nubmers o fstudnets are using digital devices to take notes in class. To maintian an atmosphere conducive to learning in the classroom and to avoid distracting others set your device so that no audible signal can be heard.\\
+
+\noindent Restrict use of digital devices to note taking or class-related web sites. Random browsing, social networking, playing games, and exchanging email are discouraged. If you engage in unauthorized communication or entertainment as described above you will be marked absent. Repeated violations of this policy will result in letter grade reductions.\\
+
+\noindent If a guest speaker comes into the class, please give the person your full attention and close all digital devices.
+
+\subsection*{Reading Materials}
+Students are responsible for thoroughly reading the course syllabus and understanding its content.\\
+
+\noindent Students are expected to read the assigned materials (textbooks and online notes) prior to the class day with which it is associated and to actively participate in class discussions. Unannounced quizzes may be given over reading assignments if students don't appear to be reading the material in advance.
+
+\subsection*{Student Notification}
+All students are responsible for checking the web page and their email on a regular basis, preferably daily, for notification of any class scheduling changes or assignment clarification. Notice of quizzes or assignment clarifications may be posted late at night.
+
+\subsection*{Instructor Availability}
+The instructor will be available during posed office hours, but additional efforts are made to increase accessibility to the students. If the instructor is not available at the telephone number above, the student can leave a detailed voicemail message. However, the instructor's email is check throughout the day and often the student will get an immediate response to questions submitted by email. Email is usually the most reliable means of contact.
+
+\subsection*{Email Etiquette}
+As noted, email is the best way to contact the professor, but please DO NOT use chat or SMS shorthand in your messages. Use full words. While shorthand is fine for casual messages, you are in a professional environment and need to present yourself as such.
+
+\subsection*{Course Fees}
+Course fees are utilized to pay for alb assistants who can tutor, review work, explain concepts, assist in grading, and perform other duties to help students be successful in their classes.
+
+\subsection*{Special Needs}
+Our program is committed to all students achieving their potential. If you have a disability (physical, hearing, vision, psychiatric, or learning disability) that may need a reasonable accommodation, please contact the ADA \& Disabilities Resource Center located in the Rendezvous Complex, Room 125, 282-3599, as early as possible.
+
+\subsection*{Closed Week Policy}
+Information about the ISU Closed Week Policy can be found online. Note that the policy does not prevent the presentation of new material during closed week.
+
+\subsection*{Technology Assistance}
+For technology assistance contact the Help desk at 282-4357 or http://help.isu.edu/
+
+\subsection*{Tutorial Assistance}
+Contact http://www.isu.edu/departments/university-tutoring to request a tutor.
+
+\end{document}

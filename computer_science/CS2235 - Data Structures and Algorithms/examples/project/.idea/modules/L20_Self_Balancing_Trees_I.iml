@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="L20_Self_Balancing_Trees_I" external.linked.project.path="$MODULE_DIR$/../../../L20_Self_Balancing_Trees_I" external.root.project.path="$MODULE_DIR$/../../../L20_Self_Balancing_Trees_I" external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../L20_Self_Balancing_Trees_I">
+      <sourceFolder url="file://$MODULE_DIR$/../../../L20_Self_Balancing_Trees_I/src/main/java" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

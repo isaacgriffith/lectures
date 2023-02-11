@@ -1,0 +1,25 @@
+Lecture 2 Pre-Lecture Quiz
+
+Q1: Which of the following is not a principle of Object Oriented Design identfied in Chapter 2?
+    A. Modularity
+    B. Composition
+    C. Encapsulation
+    D. Modularity
+
+    Ans: B
+
+Q2: Select all of the following that are Object-Oriented Design Goals
+    A. Robustness
+    B. Composition
+    C. Adaptability
+    D. Amortization
+
+    Ans: A, C
+
+Q3: Which of the following must be declared as thrown by a Method?
+    A. Errors
+    B. Checked Exceptions
+    C. Unchecked Exceptions
+    D. None of the Above
+
+    Ans: B

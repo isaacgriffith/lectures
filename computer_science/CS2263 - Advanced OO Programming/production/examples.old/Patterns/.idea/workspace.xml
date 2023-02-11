@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="isu-adapter.test" />
+      <module name="isu-composite.test" />
+      <module name="isu-adapter" />
+      <module name="isu-adapter.main" />
+      <module name="isu-command" />
+      <module name="isu-decorator" />
+      <module name="isu-composite.main" />
+      <module name="isu-composite" />
+      <module name="isu-decorator.test" />
+      <module name="isu-decorator.main" />
+      <module name="isu-factory" />
+      <module name="isu-factory.main" />
+      <module name="isu-flyweight" />
+      <module name="isu-flyweight.main" />
+      <module name="isu-flyweight.test" />
+      <module name="isu-factory.test" />
+      <module name="isu-iterator" />
+      <module name="isu-observer.test" />
+      <module name="isu-observer" />
+      <module name="isu-singleton" />
+      <module name="isu-iterator.main" />
+      <module name="isu-iterator.test" />
+      <module name="isu-observer.main" />
+      <module name="isu-state.main" />
+      <module name="isu-state.test" />
+      <module name="isu-state" />
+      <module name="isu-singleton.main" />
+      <module name="isu-strategy" />
+      <module name="isu-strategy.main" />
+      <module name="isu-singleton.test" />
+      <module name="isu-template.main" />
+      <module name="isu-template.test" />
+      <module name="isu-template" />
+      <module name="isu-strategy.test" />
+    </loaded-modules>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ffdc30c3-51fd-4374-ac78-d830cb4b6527" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/adapter">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/command">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/composite">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/decorator">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/facade">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/factory">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/flyweight">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/iterator">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/observer">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/singleton">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/state">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/strategy">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/template">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/../patterns/composite">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/../patterns/flyweight">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/../patterns/iterator">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/../patterns/state">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/singleton">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="isu-singleton" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="isu-singleton" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="isu-singleton" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GroovyConsoleState">
+    <option name="list">
+      <list>
+        <Entry>
+          <option name="url" value="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy" />
+          <option name="moduleName" value="isu-singleton.main" />
+          <option name="title" value="isu-singleton.main (Bundled Groovy 2.4.17)" />
+        </Entry>
+      </list>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1XiMRLkgf2YyGZhkLWd9gT4wT2J" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/iterator" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.GumballMachineTestDrive (2)">
+    <configuration name="GumballMachineTestDrive (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.isu.cs.grifisaa.patterns.state.gumball.GumballMachineTestDrive" />
+      <module name="state.isu-state.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.isu.cs.grifisaa.patterns.state.gumball.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GumballMachineTestDrive (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.isu.cs.grifisaa.patterns.state.gumballstatewinner.GumballMachineTestDrive" />
+      <module name="state.isu-state.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.isu.cs.grifisaa.patterns.state.gumballstatewinner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuTestDrive (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.isu.cs.grifisaa.patterns.iterator.transition.MenuTestDrive" />
+      <module name="iterator.isu-iterator.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.isu.cs.grifisaa.patterns.iterator.transition.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuTestDrive (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.isu.cs.grifisaa.patterns.iterator.dinermerger.MenuTestDrive" />
+      <module name="iterator.isu-iterator.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.isu.cs.grifisaa.patterns.iterator.dinermerger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuTestDrive (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.isu.cs.grifisaa.patterns.iterator.dinermergercafe.MenuTestDrive" />
+      <module name="iterator.isu-iterator.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.isu.cs.grifisaa.patterns.iterator.dinermergercafe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.MenuTestDrive (1)" />
+      <item itemvalue="Application.MenuTestDrive (2)" />
+      <item itemvalue="Application.MenuTestDrive (3)" />
+      <item itemvalue="Application.GumballMachineTestDrive (1)" />
+      <item itemvalue="Application.GumballMachineTestDrive (2)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GumballMachineTestDrive (2)" />
+        <item itemvalue="Application.GumballMachineTestDrive (1)" />
+        <item itemvalue="Application.MenuTestDrive (3)" />
+        <item itemvalue="Application.MenuTestDrive (2)" />
+        <item itemvalue="Application.MenuTestDrive (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ffdc30c3-51fd-4374-ac78-d830cb4b6527" name="Default Changelist" comment="" />
+      <created>1581524452193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581524452193</updated>
+      <workItem from="1581524456096" duration="1938000" />
+      <workItem from="1581526964424" duration="1960000" />
+      <workItem from="1581697425814" duration="1178000" />
+      <workItem from="1581700761139" duration="2068000" />
+      <workItem from="1581751409447" duration="6248000" />
+      <workItem from="1582133082395" duration="1636000" />
+      <workItem from="1582139317777" duration="5000" />
+      <workItem from="1582305374992" duration="2212000" />
+      <workItem from="1582310379297" duration="1230000" />
+      <workItem from="1582379737365" duration="110000" />
+      <workItem from="1582564352574" duration="1029000" />
+      <workItem from="1582573649879" duration="607000" />
+      <workItem from="1587251645643" duration="4480000" />
+      <workItem from="1587263251431" duration="6055000" />
+      <workItem from="1587270706534" duration="2648000" />
+      <workItem from="1587298710126" duration="6108000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

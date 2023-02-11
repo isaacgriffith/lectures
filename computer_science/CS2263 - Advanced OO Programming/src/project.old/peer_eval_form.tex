@@ -1,0 +1,100 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{fontspec}
+
+\usepackage{hyperref}
+\usepackage[svgnames]{xcolor,colortbl}
+\usepackage{changepage}
+\usepackage{tabulary}
+\usepackage{soul}
+
+\definecolor{ISUBlack}{RGB}{0, 0, 0}
+\definecolor{ISUOrange}{RGB}{244, 121, 32}
+\definecolor{ISUGrey}{RGB}{88, 89, 91}
+\definecolor{ISULtOrange}{RGB}{247, 148, 30}
+\definecolor{ISUDkOrange}{RGB}{246, 132, 40}
+\definecolor{ISULtGray}{RGB}{167, 169, 172}
+\definecolor{ISUMdGray}{RGB}{109, 110, 113}
+\definecolor{ISUCream}{RGB}{242, 230, 196}
+\definecolor{ISUTan}{RGB}{213, 172, 108}
+\definecolor{ISUBrown}{RGB}{68, 32, 17}
+\definecolor{ISULtGreen}{RGB}{146, 177, 118}
+\definecolor{ISUGreen}{RGB}{123, 152, 78}
+\definecolor{ISULimeGreen}{RGB}{155, 191, 59}
+
+\hypersetup{
+  pdfauthor   = {Isaac Griffith}
+  pdfkeywords = {}
+  pdftitle    = {Peer Evaluation Form}
+  linkcolor=ISUGreen,
+  urlcolor=ISUGreen,
+  colorlinks=false
+}
+
+\setmainfont{Futura Lt BT}
+
+\begin{document}
+
+ \title{CS 2263\\Project Peer Evaluation Form}
+ \author{Idaho State University\\Informatics and Computer Science Department}
+ \date{}
+ \maketitle
+
+\section*{Team Member Evaluation}
+\noindent Write the name of each of your group members in a separate column. For each person, excluding yourself, indicate the extent to which you agree with the statement on the left using a scale of 1--5 where:
+
+\vskip1em
+
+\noindent 1=strongly disagree; 2=disagree; 3=neither agree nor disagree; 4=agree; 5=strongly agree
+
+\vskip1em
+
+\noindent Note that the higher numbers mean stronger agreement.
+
+\begin{Form}
+\vskip.5em
+\noindent \textbf{Which Iterations is this evaluation for?}\ChoiceMenu[name=iteration,bordercolor=ISUGrey,combo,charsize=12pt]{}{Iteration 1 \& 2, Iteration 3 \& 4, Iteration 5 \& 6}
+\vskip.5em
+\noindent\begin{tabulary}{\linewidth}{|L|L|L|L|}
+\hline
+Evaluation Criteria & \TextField[bordercolor=ISUGrey,name=name1,width=3cm,charsize=12pt]{Name: } & \TextField[bordercolor=ISUGrey,name=name2,width=3cm,charsize=12pt]{Name: } & \TextField[bordercolor=ISUGrey,name=name3,width=3cm,charsize=12pt]{Name: }\tabularnewline
+\hline
+\hline
+Attended group meetings regularly. & \ChoiceMenu[name=item11,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item12,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item13,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5}\tabularnewline
+\hline
+Arrived on time to meetings. & \ChoiceMenu[name=item21,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item22,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item23,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5}\tabularnewline
+\hline
+Contributed meaningfully to group discussions & \ChoiceMenu[name=item31,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item32,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item33,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5}\tabularnewline
+\hline
+Completed group assignments on time. & \ChoiceMenu[name=item41,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item42,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item43,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5}\tabularnewline
+\hline
+Prepared work in a quality manner. & \ChoiceMenu[name=item51,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item52,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item53,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5}\tabularnewline
+\hline
+Demonstrated a cooperative and supportive attitude. & \ChoiceMenu[name=item61,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item62,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item63,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5}\tabularnewline
+\hline
+Contributed significantly to the success of the project. & \ChoiceMenu[name=item71,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item72,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5} & \ChoiceMenu[name=item73,bordercolor=ISUGrey,combo,charsize=12pt,value=1]{}{1,2,3,4,5}\tabularnewline
+\hline
+% Total & \TextField[readonly,charsize=12pt,value=0,calculate={event.value=
+% this.getField("item11").value+this.getField("item21").value+this.getField("item31").value+this.getField("item41").value+this.getField("item51").value+this.getField("item61").value+this.getField("item71").value;
+% }]{} & \TextField[name=total2,readonly,charsize=12pt]{} & \TextField[name=total3,readonly=true,charsize=12pt]{} \tabularnewline
+% \hline
+\end{tabulary}
+
+\section*{Feedback on team dynamics}
+\begin{enumerate}
+ \item How effectively did your group work?\\
+ \TextField[bordercolor=ISUGrey,name=effect,width=\textwidth,height=4cm,multiline,charsize=12pt]{}
+ \item Were the behaviors of any of your team members particularly valuable or detrimental to the team? Explain.
+ \\
+ \TextField[bordercolor=ISUGrey,name=behaviors,width=\textwidth,height=4cm,multiline,charsize=12pt]{}
+ \item What did you learn about working in a group from this project that you will carry into your next group experience?
+ \\
+ \TextField[bordercolor=ISUGrey,name=learn,width=\textwidth,height=4cm,multiline,charsize=12pt]{}
+\end{enumerate}
+
+\end{Form}
+
+\end{document}

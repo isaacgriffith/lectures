@@ -1,0 +1,26 @@
+IF Team
+ - Brandon Watkins
+ - Blaise Johnson
+ - Robert Nelson
+ - Daniel Walker
+
+Poky Teams
+ Team 1 (3)
+  - Andrew Christiansen
+  - Daniel Cano
+  - Saurav Shah
+
+ Team 2 (3)
+  - Deepson Khadka
+  - Marcus Goeckner
+  - Saurav Gautam
+
+ Team 3 (3)
+  - Dylan Brown
+  - Sanjeev Thakur
+  - Tyler Hedgepeth
+
+ Team 4 (3)
+  - Braeden Tolman
+  - Hyun Se Seo
+  - James Rice

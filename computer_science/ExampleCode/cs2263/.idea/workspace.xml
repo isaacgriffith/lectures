@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ba5a3384-47aa-43b9-a4af-158c46796495" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/cities.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/Example.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/patterns/adapter/Deque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/patterns/adapter/DequeImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/patterns/adapter/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/patterns/iterator/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/patterns/iterator/Iterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/patterns/iterator/LinkedQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/patterns/iterator/LinkedQueueIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/patterns/iterator/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/patterns/iterator/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/patterns/singleton/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/patterns/singleton/WithHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/runnable/Clock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faculty.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prof.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/gson/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/gson/PhoneNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/gson/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/gson/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/gson/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/gson/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/serialization/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/serialization/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/serialization/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs2263/serialization/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1nXfg7qx2toN56YBpuqGySu2xMp" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.Clock">
+    <configuration name="Clock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.isu.cs.cs2263.runnable.Clock" />
+      <module name="cs2263.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.isu.cs.cs2263.runnable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Driver (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.isu.cs.cs2263.patterns.singleton.Driver" />
+      <module name="cs2263.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.isu.cs.cs2263.patterns.singleton.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Driver (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.isu.cs.cs2263.patterns.adapter.Driver" />
+      <module name="cs2263.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.isu.cs.cs2263.patterns.adapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.isu.cs.cs2263.patterns.iterator.Driver" />
+      <module name="cs2263.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.isu.cs.cs2263.patterns.iterator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.isu.cs.cs2263.Example" />
+      <module name="cs2263.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.isu.cs.cs2263.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Clock" />
+        <item itemvalue="Application.Example" />
+        <item itemvalue="Application.Driver (2)" />
+        <item itemvalue="Application.Driver (1)" />
+        <item itemvalue="Application.Driver" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba5a3384-47aa-43b9-a4af-158c46796495" name="Default Changelist" comment="" />
+      <created>1611541464848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611541464848</updated>
+      <workItem from="1611541468027" duration="1941000" />
+      <workItem from="1611545970096" duration="50000" />
+      <workItem from="1612172498753" duration="4385000" />
+      <workItem from="1612979583712" duration="21000" />
+      <workItem from="1614694183230" duration="2734000" />
+      <workItem from="1614703321946" duration="92000" />
+      <workItem from="1615347025821" duration="666000" />
+      <workItem from="1615348593081" duration="279000" />
+      <workItem from="1615348901893" duration="458000" />
+      <workItem from="1615349382884" duration="69000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
